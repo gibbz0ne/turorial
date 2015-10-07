@@ -1,0 +1,4270 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 06, 2015 at 03:30 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `debug`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_applications`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_applications` (
+  `appId` varchar(12) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `appDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `appSOnum` varchar(11) DEFAULT NULL,
+  `appOR` int(11) NOT NULL,
+  `appStatus` tinyint(4) NOT NULL,
+  `appCAR` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_applications`
+--
+
+INSERT INTO `tbl_applications` (`appId`, `cid`, `appDate`, `appSOnum`, `appOR`, `appStatus`, `appCAR`) VALUES
+('20150909001', 1, '2015-09-09 01:44:20', NULL, 0, 0, NULL),
+('20150909002', 2, '2015-09-09 02:39:54', NULL, 0, 0, NULL),
+('20150909003', 3, '2015-09-09 05:47:14', NULL, 0, 0, NULL),
+('20150909005', 5, '2015-09-09 06:38:43', NULL, 0, 0, NULL),
+('20150909006', 6, '2015-09-09 06:46:12', NULL, 0, 0, 'B1-092015-182'),
+('20150909007', 7, '2015-09-09 06:55:29', NULL, 0, 0, NULL),
+('20150909008', 8, '2015-09-09 07:05:59', NULL, 0, 0, NULL),
+('20150909009', 9, '2015-09-09 07:17:07', NULL, 0, 0, NULL),
+('20150909010', 10, '2015-09-09 07:20:55', NULL, 0, 0, NULL),
+('20150909011', 11, '2015-09-09 07:23:48', NULL, 0, 0, NULL),
+('20150909012', 12, '2015-09-09 07:26:32', NULL, 0, 0, NULL),
+('20150909013', 13, '2015-09-09 07:29:32', NULL, 0, 0, NULL),
+('20150909014', 14, '2015-09-09 09:22:39', NULL, 0, 0, NULL),
+('20150910001', 15, '2015-09-10 05:05:18', NULL, 0, 0, 'B1-092015-181'),
+('20150910002', 16, '2015-09-10 08:47:43', NULL, 0, 0, NULL),
+('20150911001', 17, '2015-09-11 01:00:10', 'A05467', 0, 0, 'B1-092015-184'),
+('20150911002', 18, '2015-09-11 01:05:35', NULL, 0, 0, 'B1-092015-183'),
+('20150911003', 19, '2015-09-11 02:33:31', NULL, 0, 0, NULL),
+('20150911004', 20, '2015-09-11 02:59:31', NULL, 0, 0, NULL),
+('20150911006', 22, '2015-09-11 03:42:57', NULL, 0, 0, NULL),
+('20150911007', 23, '2015-09-11 05:36:44', NULL, 0, 0, NULL),
+('20150911008', 24, '2015-09-11 05:51:42', NULL, 0, 0, 'B1-092015-176'),
+('20150911009', 25, '2015-09-11 07:32:29', NULL, 0, 0, NULL),
+('20150911011', 27, '2015-09-11 08:04:36', NULL, 0, 0, 'B1-092015-175'),
+('20150911012', 28, '2015-09-11 08:07:50', 'A05466', 0, 0, 'B1-092015-174'),
+('20150912001', 29, '2015-09-12 01:26:55', NULL, 0, 0, NULL),
+('20150912002', 30, '2015-09-12 02:21:49', NULL, 0, 0, NULL),
+('20150912003', 31, '2015-09-12 07:57:02', NULL, 0, 0, NULL),
+('20150912004', 32, '2015-09-12 08:10:40', NULL, 0, 0, NULL),
+('20150912005', 33, '2015-09-12 08:17:48', NULL, 0, 0, NULL),
+('20150912006', 34, '2015-09-12 08:34:33', NULL, 0, 0, NULL),
+('20150914001', 35, '2015-09-14 00:41:57', 'A05465', 0, 0, 'B1-092015-185'),
+('20150914002', 36, '2015-09-14 01:10:44', NULL, 0, 0, NULL),
+('20150914003', 37, '2015-09-14 01:23:13', NULL, 0, 0, NULL),
+('20150914004', 38, '2015-09-14 06:05:12', NULL, 0, 0, NULL),
+('20150914005', 39, '2015-09-14 06:15:52', NULL, 0, 0, NULL),
+('20150914006', 40, '2015-09-14 06:22:41', NULL, 0, 0, NULL),
+('20150914007', 41, '2015-09-14 06:46:20', NULL, 0, 0, NULL),
+('20150914008', 42, '2015-09-14 06:53:29', NULL, 0, 0, NULL),
+('20150914009', 43, '2015-09-14 07:06:18', NULL, 0, 0, NULL),
+('20150915001', 44, '2015-09-15 00:52:30', NULL, 0, 0, NULL),
+('20150915002', 45, '2015-09-15 01:25:46', NULL, 0, 0, NULL),
+('20150915003', 46, '2015-09-15 05:29:04', NULL, 0, 0, NULL),
+('20150915004', 47, '2015-09-15 05:41:23', NULL, 0, 0, NULL),
+('20150916001', 48, '2015-09-16 05:00:31', NULL, 0, 0, NULL),
+('20150916002', 49, '2015-09-16 08:16:30', NULL, 0, 0, NULL),
+('20150917001', 50, '2015-09-17 02:21:09', NULL, 0, 0, NULL),
+('20150917002', 51, '2015-09-17 07:41:08', NULL, 0, 0, NULL),
+('20150918001', 52, '2015-09-18 05:31:50', NULL, 0, 0, NULL),
+('20150918002', 53, '2015-09-18 06:58:19', NULL, 0, 0, NULL),
+('20150918003', 54, '2015-09-18 07:01:47', NULL, 0, 0, NULL),
+('20150919001', 55, '2015-09-19 01:21:42', NULL, 0, 0, NULL),
+('20150919002', 56, '2015-09-19 06:43:53', NULL, 0, 0, NULL),
+('20150919003', 57, '2015-09-19 08:31:52', NULL, 0, 0, NULL),
+('20150921001', 58, '2015-09-21 01:14:26', NULL, 0, 0, NULL),
+('20150921002', 59, '2015-09-21 09:14:45', NULL, 0, 0, NULL),
+('20150921003', 60, '2015-09-21 09:15:37', NULL, 0, 0, NULL),
+('20150921004', 61, '2015-09-21 09:16:42', NULL, 0, 0, NULL),
+('20150921005', 62, '2015-09-21 09:17:45', NULL, 0, 0, NULL),
+('20150922001', 63, '2015-09-22 02:48:36', NULL, 0, 0, NULL),
+('20150922002', 64, '2015-09-22 05:50:39', NULL, 0, 0, NULL),
+('20150922003', 65, '2015-09-22 05:57:18', NULL, 0, 0, NULL),
+('20150922004', 66, '2015-09-22 07:36:30', NULL, 0, 0, NULL),
+('20150923001', 67, '2015-09-23 05:42:09', NULL, 0, 0, NULL),
+('20150923002', 68, '2015-09-23 08:06:53', NULL, 0, 0, NULL),
+('20150924001', 69, '2015-09-24 01:13:02', NULL, 0, 0, NULL),
+('20150924002', 70, '2015-09-24 02:00:06', NULL, 0, 0, NULL),
+('20150924003', 71, '2015-09-24 04:01:15', NULL, 0, 0, NULL),
+('20150924004', 72, '2015-09-24 06:16:19', NULL, 0, 0, NULL),
+('20150924005', 73, '2015-09-24 07:38:55', NULL, 0, 0, NULL),
+('20150928001', 74, '2015-09-28 01:46:51', NULL, 0, 0, NULL),
+('20150928002', 75, '2015-09-28 02:07:47', NULL, 0, 0, NULL),
+('20150928003', 76, '2015-09-28 02:07:47', NULL, 0, 0, NULL),
+('20150928004', 77, '2015-09-28 06:57:57', NULL, 0, 0, NULL),
+('20150928005', 78, '2015-09-28 07:02:35', NULL, 0, 0, NULL),
+('20150928006', 79, '2015-09-28 07:16:51', NULL, 0, 0, NULL),
+('20150928007', 80, '2015-09-28 08:12:40', NULL, 0, 0, NULL),
+('20150928008', 81, '2015-09-28 08:58:05', NULL, 0, 0, NULL),
+('20150928009', 82, '2015-09-28 09:28:30', NULL, 0, 0, NULL),
+('20150929001', 83, '2015-09-29 01:09:36', NULL, 0, 0, NULL),
+('20150929002', 84, '2015-09-29 01:14:56', NULL, 0, 0, NULL),
+('20150929003', 85, '2015-09-29 01:39:40', NULL, 0, 0, NULL),
+('20150929004', 86, '2015-09-29 02:02:46', NULL, 0, 0, NULL),
+('20150929005', 87, '2015-09-29 02:53:29', NULL, 0, 0, NULL),
+('20150929006', 88, '2015-09-29 02:56:06', NULL, 0, 0, NULL),
+('20150929007', 89, '2015-09-29 05:15:35', NULL, 0, 0, NULL),
+('20150929008', 90, '2015-09-29 06:03:37', NULL, 0, 0, NULL),
+('20150929009', 91, '2015-09-29 06:44:41', NULL, 0, 0, NULL),
+('20150930001', 92, '2015-09-30 06:36:23', NULL, 0, 0, NULL),
+('20150930002', 93, '2015-09-30 06:47:29', NULL, 0, 0, NULL),
+('20150930003', 94, '2015-09-30 07:09:50', NULL, 0, 0, NULL),
+('20151001001', 95, '2015-10-01 08:22:32', NULL, 0, 0, NULL),
+('20151001002', 96, '2015-10-01 08:23:12', NULL, 0, 0, NULL),
+('20151001003', 97, '2015-10-01 08:24:19', NULL, 0, 0, NULL),
+('20151002001', 98, '2015-10-02 00:47:14', NULL, 0, 0, NULL),
+('20151002002', 99, '2015-10-02 00:59:21', NULL, 0, 0, NULL),
+('20151002003', 100, '2015-10-02 01:01:20', NULL, 0, 0, NULL),
+('20151002004', 101, '2015-10-02 01:07:49', NULL, 0, 0, NULL),
+('20151002005', 102, '2015-10-02 05:40:23', NULL, 0, 0, NULL),
+('20151002006', 103, '2015-10-02 05:41:26', NULL, 0, 0, NULL),
+('20151002007', 104, '2015-10-02 07:50:29', NULL, 0, 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_app_service`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_app_service` (
+  `appId` varchar(12) NOT NULL,
+  `serviceId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_app_service`
+--
+
+INSERT INTO `tbl_app_service` (`appId`, `serviceId`) VALUES
+('20150909001', 1),
+('20150909002', 1),
+('20150909003', 1),
+('20150909005', 1),
+('20150909006', 1),
+('20150909007', 1),
+('20150909008', 1),
+('20150909009', 1),
+('20150909010', 1),
+('20150909011', 1),
+('20150909012', 1),
+('20150909014', 1),
+('20150910001', 1),
+('20150910002', 1),
+('20150911001', 1),
+('20150911002', 1),
+('20150911003', 1),
+('20150911004', 1),
+('20150911006', 1),
+('20150911007', 1),
+('20150911008', 1),
+('20150911009', 1),
+('20150911011', 1),
+('20150911012', 1),
+('20150909013', 1),
+('20150912001', 1),
+('20150912002', 1),
+('20150912003', 1),
+('20150912004', 1),
+('20150912005', 1),
+('20150912006', 1),
+('20150914001', 1),
+('20150914002', 1),
+('20150914003', 1),
+('20150914004', 1),
+('20150914005', 1),
+('20150914006', 1),
+('20150914007', 1),
+('20150914008', 1),
+('20150914009', 1),
+('20150915001', 1),
+('20150915002', 1),
+('20150915003', 1),
+('20150915004', 1),
+('20150916001', 1),
+('20150916002', 1),
+('20150917001', 1),
+('20150917002', 1),
+('20150918001', 1),
+('20150918002', 1),
+('20150918003', 1),
+('20150919001', 1),
+('20150919002', 1),
+('20150919003', 1),
+('20150921001', 1),
+('20150921002', 1),
+('20150921003', 1),
+('20150921004', 1),
+('20150921005', 1),
+('20150922001', 1),
+('20150922002', 1),
+('20150922003', 1),
+('20150922004', 1),
+('20150923001', 1),
+('20150923002', 1),
+('20150924001', 1),
+('20150924002', 1),
+('20150924003', 1),
+('20150924004', 1),
+('20150924005', 1),
+('20150928001', 1),
+('20150928002', 1),
+('20150928003', 1),
+('20150928004', 1),
+('20150928005', 1),
+('20150928006', 1),
+('20150928007', 1),
+('20150928008', 1),
+('20150928009', 1),
+('20150929001', 1),
+('20150929002', 1),
+('20150929003', 1),
+('20150929004', 1),
+('20150929005', 1),
+('20150929006', 1),
+('20150929007', 1),
+('20150929008', 1),
+('20150929009', 1),
+('20150930001', 1),
+('20150930002', 1),
+('20150930003', 1),
+('20151001001', 1),
+('20151001002', 1),
+('20151001003', 1),
+('20151002001', 1),
+('20151002002', 1),
+('20151002003', 1),
+('20151002004', 1),
+('20151002005', 1),
+('20151002006', 1),
+('20151002007', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_app_type`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_app_type` (
+  `appId` varchar(12) NOT NULL,
+  `typeId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_app_type`
+--
+
+INSERT INTO `tbl_app_type` (`appId`, `typeId`) VALUES
+('20150909001', 1),
+('20150909002', 1),
+('20150909003', 1),
+('20150909005', 1),
+('20150909006', 1),
+('20150909007', 1),
+('20150909008', 1),
+('20150909009', 1),
+('20150909010', 1),
+('20150909011', 1),
+('20150909012', 1),
+('20150909014', 1),
+('20150910001', 1),
+('20150910002', 1),
+('20150911001', 1),
+('20150911002', 1),
+('20150911003', 1),
+('20150911004', 1),
+('20150911006', 1),
+('20150911007', 1),
+('20150911008', 1),
+('20150911009', 1),
+('20150911011', 1),
+('20150911012', 1),
+('20150912001', 1),
+('20150912002', 1),
+('20150909013', 1),
+('20150912003', 1),
+('20150912004', 1),
+('20150912005', 1),
+('20150912006', 1),
+('20150914001', 1),
+('20150914002', 1),
+('20150914003', 1),
+('20150914004', 1),
+('20150914005', 1),
+('20150914006', 1),
+('20150914007', 1),
+('20150914008', 1),
+('20150914009', 1),
+('20150915001', 1),
+('20150915002', 1),
+('20150915003', 1),
+('20150915004', 1),
+('20150916001', 1),
+('20150916002', 1),
+('20150917001', 1),
+('20150917002', 1),
+('20150918001', 1),
+('20150918002', 1),
+('20150918003', 1),
+('20150919001', 1),
+('20150919002', 1),
+('20150919003', 1),
+('20150921001', 1),
+('20150921002', 1),
+('20150921003', 1),
+('20150921004', 1),
+('20150921005', 1),
+('20150922001', 1),
+('20150922002', 1),
+('20150922003', 1),
+('20150922004', 1),
+('20150923001', 1),
+('20150923002', 1),
+('20150924001', 1),
+('20150924002', 1),
+('20150924003', 1),
+('20150924004', 1),
+('20150924005', 1),
+('20150928001', 1),
+('20150928002', 1),
+('20150928003', 1),
+('20150928004', 1),
+('20150928005', 1),
+('20150928006', 1),
+('20150928007', 1),
+('20150928008', 1),
+('20150928009', 1),
+('20150929001', 1),
+('20150929002', 1),
+('20150929003', 1),
+('20150929004', 1),
+('20150929005', 1),
+('20150929006', 1),
+('20150929007', 1),
+('20150929008', 1),
+('20150929009', 1),
+('20150930001', 1),
+('20150930002', 1),
+('20150930003', 1),
+('20151001001', 1),
+('20151001002', 1),
+('20151001003', 1),
+('20151002001', 1),
+('20151002002', 1),
+('20151002003', 1),
+('20151002004', 1),
+('20151002005', 1),
+('20151002006', 1),
+('20151002007', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_barangay`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_barangay` (
+`brgyId` int(11) NOT NULL,
+  `brgyName` varchar(50) NOT NULL,
+  `munId` int(11) NOT NULL,
+  `subId` int(11) NOT NULL,
+  `feedId` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=830 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_barangay`
+--
+
+INSERT INTO `tbl_barangay` (`brgyId`, `brgyName`, `munId`, `subId`, `feedId`) VALUES
+(1, 'BACLAYON', 1, 0, 0),
+(2, 'BANAO', 1, 0, 0),
+(3, 'BARIW', 1, 0, 0),
+(4, 'BASUD', 1, 0, 0),
+(5, 'BAYANDONG', 1, 0, 0),
+(6, 'BONGA', 1, 0, 0),
+(7, 'BUANG', 1, 0, 0),
+(8, 'BUSDAC (SAN JOSE)', 1, 0, 0),
+(9, 'CABASAN', 1, 0, 0),
+(10, 'CAGBULACAO', 1, 0, 0),
+(11, 'CAGRARAY', 1, 0, 0),
+(12, 'CAJOGUTAN', 1, 0, 0),
+(13, 'CAWAYAN', 1, 0, 0),
+(14, 'DAMACAN', 1, 0, 0),
+(15, 'GUBAT ILAWOD', 1, 0, 0),
+(16, 'GUBAT IRAYA', 1, 0, 0),
+(17, 'HINDI', 1, 0, 0),
+(18, 'IGANG', 1, 0, 0),
+(19, 'LANGATON', 1, 0, 0),
+(20, 'MANAET', 1, 0, 0),
+(21, 'PULANG DAGA', 1, 0, 0),
+(22, 'MATAAS', 1, 0, 0),
+(23, 'MISIBIS', 1, 0, 0),
+(24, 'NAHAPUNAN', 1, 0, 0),
+(25, 'NAMANDAY', 1, 0, 0),
+(26, 'NAMANTAO', 1, 0, 0),
+(27, 'NAPAO', 1, 0, 0),
+(28, 'PANARAYON', 1, 0, 0),
+(29, 'PIGCOBOHAN', 1, 0, 0),
+(30, 'PILI ILAWOD', 1, 0, 0),
+(31, 'PILI IRAYA', 1, 0, 0),
+(32, 'BRGY 1 (POB.)', 1, 0, 0),
+(33, 'BRGY 2 (POB.)', 1, 0, 0),
+(34, 'BRGY 3 (POB.)', 1, 0, 0),
+(35, 'BRGY 4 (POB.)', 1, 0, 0),
+(36, 'BRGY 5 (POB.)', 1, 0, 0),
+(37, 'BRGY 6 (POB.)', 1, 0, 0),
+(38, 'BRGY 7 (POB.)', 1, 0, 0),
+(39, 'BRGY 8 (POB.)', 1, 0, 0),
+(40, 'BRGY 9 (POB.)', 1, 0, 0),
+(41, 'BRGY 10 (POB.)', 1, 0, 0),
+(42, 'BRGY 11 (POB.)', 1, 0, 0),
+(43, 'BRGY 12 (POB.)', 1, 0, 0),
+(44, 'BRGY 13 (POB.)', 1, 0, 0),
+(45, 'BRGY 14 (POB.)', 1, 0, 0),
+(46, 'PONGCO (LOWER BOGÑA)', 1, 0, 0),
+(47, 'SAN PABLO', 1, 0, 0),
+(48, 'SAN PEDRO', 1, 0, 0),
+(49, 'SOGOD', 1, 0, 0),
+(50, 'SULA', 1, 0, 0),
+(51, 'TAMBILAGAO (TAMBOGNON)', 1, 0, 0),
+(52, 'TAMBONGON (TAMBILAGAO)', 1, 0, 0),
+(53, 'TANAGAN', 1, 0, 0),
+(54, 'USON', 1, 0, 0),
+(55, 'VINISITAHAN (MAINLAND)', 1, 0, 0),
+(56, 'VINISITAHAN-NAPAO (ISLAND)', 1, 0, 0),
+(57, 'ANOLING', 2, 0, 0),
+(58, 'BALIGANG', 2, 0, 0),
+(59, 'BANTONAN', 2, 0, 0),
+(60, 'BARIW', 2, 0, 0),
+(61, 'BINANDERAHAN', 2, 0, 0),
+(62, 'BINITAYAN', 2, 0, 0),
+(63, 'BONGABONG', 2, 0, 0),
+(64, 'CABAGÑAN', 2, 0, 0),
+(65, 'CABRARAN PEQUEÑO', 2, 0, 0),
+(66, 'CAGUIBA', 2, 0, 0),
+(67, 'CALABIDONGAN', 2, 0, 0),
+(68, 'COMUN', 2, 0, 0),
+(69, 'COTMON', 2, 0, 0),
+(70, 'DEL ROSARIO', 2, 0, 0),
+(71, 'GAPO', 2, 0, 0),
+(72, 'GOTOB', 2, 0, 0),
+(73, 'ILAWOD', 2, 0, 0),
+(74, 'ILULUAN', 2, 0, 0),
+(75, 'LIBOD', 2, 0, 0),
+(76, 'LIGBAN', 2, 0, 0),
+(77, 'MABUNGA', 2, 0, 0),
+(78, 'MAGOGON', 2, 0, 0),
+(79, 'MANAWAN', 2, 0, 0),
+(80, 'MANINILA', 2, 0, 0),
+(81, 'MINA', 2, 0, 0),
+(82, 'MITI', 2, 0, 0),
+(83, 'PALANOG', 2, 0, 0),
+(84, 'PANOYPOY', 2, 0, 0),
+(85, 'PARIAAN', 2, 0, 0),
+(86, 'QUINARTILAN', 2, 0, 0),
+(87, 'QUIRANGAY', 2, 0, 0),
+(88, 'QUITINDAY', 2, 0, 0),
+(89, 'SALUGAN', 2, 0, 0),
+(90, 'SOLONG', 2, 0, 0),
+(91, 'SUA', 2, 0, 0),
+(92, 'SUMLANG', 2, 0, 0),
+(93, 'TAGAYTAY', 2, 0, 0),
+(94, 'TAGOYTOY', 2, 0, 0),
+(95, 'TALADONG', 2, 0, 0),
+(96, 'TALOTO', 2, 0, 0),
+(97, 'TAPLACON', 2, 0, 0),
+(98, 'TINAGO', 2, 0, 0),
+(99, 'TUMPA', 2, 0, 0),
+(100, 'BRGY 1 (POB.)', 2, 0, 0),
+(101, 'BRGY 2 (POB.)', 2, 0, 0),
+(102, 'BRGY 3 (POB.)', 2, 0, 0),
+(103, 'BRGY 4 (POB.)', 2, 0, 0),
+(104, 'BRGY 5 (POB.)', 2, 0, 0),
+(105, 'BRGY 6 (POB.)', 2, 0, 0),
+(106, 'BRGY 7 (POB.)', 2, 0, 0),
+(107, 'ALCALA', 3, 0, 0),
+(108, 'ALOBO', 3, 0, 0),
+(109, 'ANISLAG', 3, 0, 0),
+(110, 'BAGUMBAYAN', 3, 0, 0),
+(111, 'BALINAD', 3, 0, 0),
+(112, 'BAÑADERO', 3, 0, 0),
+(113, 'BAÑAG', 3, 0, 0),
+(114, 'BASCARAN', 3, 0, 0),
+(115, 'BIGAO', 3, 0, 0),
+(116, 'BINITAYAN', 3, 0, 0),
+(117, 'BONGALON', 3, 0, 0),
+(118, 'BUDIAO', 3, 0, 0),
+(119, 'BURGOS', 3, 0, 0),
+(120, 'BUSAY', 3, 0, 0),
+(121, 'CANAROM', 3, 0, 0),
+(122, 'CULLAT', 3, 0, 0),
+(123, 'DE LA PAZ', 3, 0, 0),
+(124, 'DINORONAN', 3, 0, 0),
+(125, 'GABAWAN', 3, 0, 0),
+(126, 'GAPO', 3, 0, 0),
+(127, 'IBAUGAN', 3, 0, 0),
+(128, 'ILAWOD', 3, 0, 0),
+(129, 'INARADO', 3, 0, 0),
+(130, 'KIDACO', 3, 0, 0),
+(131, 'KILICAO', 3, 0, 0),
+(132, 'KIMANTONG', 3, 0, 0),
+(133, 'KINAWITAN', 3, 0, 0),
+(134, 'KIWALO', 3, 0, 0),
+(135, 'LACAG', 3, 0, 0),
+(136, 'MABINI', 3, 0, 0),
+(137, 'MALABOG', 3, 0, 0),
+(138, 'MALOBAGO', 3, 0, 0),
+(139, 'MAOPI', 3, 0, 0),
+(140, 'MARKET AREA', 3, 0, 0),
+(141, 'MAROROY', 3, 0, 0),
+(142, 'MATNOG', 3, 0, 0),
+(143, 'MAYON', 3, 0, 0),
+(144, 'MI-ISI', 3, 0, 0),
+(145, 'NABASAN', 3, 0, 0),
+(146, 'NAMANTAO', 3, 0, 0),
+(147, 'PANDAN', 3, 0, 0),
+(148, 'PEÑAFRANCIA', 3, 0, 0),
+(149, 'SAGPON', 3, 0, 0),
+(150, 'SALVACION', 3, 0, 0),
+(151, 'SAN RAFAEL', 3, 0, 0),
+(152, 'SAN RAMON', 3, 0, 0),
+(153, 'SAN ROQUE', 3, 0, 0),
+(154, 'SAN VICENTE GRANDE', 3, 0, 0),
+(155, 'SAN VICENTE PEQUEÑO', 3, 0, 0),
+(156, 'SIPI', 3, 0, 0),
+(157, 'TABON-TABON', 3, 0, 0),
+(158, 'TAGAS', 3, 0, 0),
+(159, 'TALAHIB', 3, 0, 0),
+(160, 'VILLAHERMOSA', 3, 0, 0),
+(161, 'AGPAY', 4, 0, 0),
+(162, 'BALITE', 4, 0, 0),
+(163, 'BANAO', 4, 0, 0),
+(164, 'BATBAT', 4, 0, 0),
+(165, 'BINOGSACAN LOWER', 4, 0, 0),
+(166, 'BINOGSACAN UPPER', 4, 0, 0),
+(167, 'BOLOLO', 4, 0, 0),
+(168, 'BUBULUSAN', 4, 0, 0),
+(169, 'CALZADA', 4, 0, 0),
+(170, 'CATOMAG', 4, 0, 0),
+(171, 'DOÑA MERCEDES (NAOLOGAN)', 4, 0, 0),
+(172, 'DOÑA TOMASA (MAGATOL)', 4, 0, 0),
+(173, 'ILAWOD', 4, 0, 0),
+(174, 'INAMNAN PEQUEÑO', 4, 0, 0),
+(175, 'INAMNAN GRANDE', 4, 0, 0),
+(176, 'INASCAN', 4, 0, 0),
+(177, 'IRAYA', 4, 0, 0),
+(178, 'LOMACAO', 4, 0, 0),
+(179, 'MAGUIRON (LIBAS)', 4, 0, 0),
+(180, 'MAIPON', 4, 0, 0),
+(181, 'MALABNIG', 4, 0, 0),
+(182, 'MALIPO', 4, 0, 0),
+(183, 'MALOBAGO', 4, 0, 0),
+(184, 'MANINILA', 4, 0, 0),
+(185, 'MAPACO', 4, 0, 0),
+(186, 'MARCIAL O. RAÑOLA (CABALOAON)', 4, 0, 0),
+(187, 'MASARAWAG', 4, 0, 0),
+(188, 'MAURARO', 4, 0, 0),
+(189, 'MINTO', 4, 0, 0),
+(190, 'MORERA (TUKARAN)', 4, 0, 0),
+(191, 'MULADBUCAD GRANDE (ST. JOHN)', 4, 0, 0),
+(192, 'MULADBUCAD PEQUEÑO', 4, 0, 0),
+(193, 'ONGO', 4, 0, 0),
+(194, 'PALANAS', 4, 0, 0),
+(195, 'POBLACION', 4, 0, 0),
+(196, 'POOD', 4, 0, 0),
+(197, 'QUITAGO', 4, 0, 0),
+(198, 'QUIBONGBONGAN', 4, 0, 0),
+(199, 'SAN FRANCISCO', 4, 0, 0),
+(200, 'SAN JOSE (OGSONG)', 4, 0, 0),
+(201, 'SAN RAFAEL', 4, 0, 0),
+(202, 'SINUNGTAN', 4, 0, 0),
+(203, 'TANDARORAY', 4, 0, 0),
+(204, 'TRAVESIA', 4, 0, 0),
+(205, 'ALONGLONG', 7, 0, 0),
+(206, 'APUD', 7, 0, 0),
+(207, 'BACOLOD', 7, 0, 0),
+(208, 'BARIW', 7, 0, 0),
+(209, 'BONBON', 7, 0, 0),
+(210, 'BUGA', 7, 0, 0),
+(211, 'BULUSAN', 7, 0, 0),
+(212, 'BURABOD', 7, 0, 0),
+(213, 'CAGUSCOS', 7, 0, 0),
+(214, 'CARISAC EAST', 7, 0, 0),
+(215, 'CARISAC WEST', 7, 0, 0),
+(216, 'HARIGUE', 7, 0, 0),
+(217, 'LIBTONG', 7, 0, 0),
+(218, 'LINAO', 7, 0, 0),
+(219, 'MABAYAWAS', 7, 0, 0),
+(220, 'MACABUGOS', 7, 0, 0),
+(221, 'MAGALLANG', 7, 0, 0),
+(222, 'MALABIGA', 7, 0, 0),
+(223, 'MARAYAG', 7, 0, 0),
+(224, 'MATARA', 7, 0, 0),
+(225, 'MOLOSBOLOS', 7, 0, 0),
+(226, 'NATASAN', 7, 0, 0),
+(227, 'NIÑO JESUS (SANTO NIÑO JESUS)', 7, 0, 0),
+(228, 'NOGPO', 7, 0, 0),
+(229, 'PANTAO', 7, 0, 0),
+(230, 'RAWIS', 7, 0, 0),
+(231, 'SAGRADA FAMILIA', 7, 0, 0),
+(232, 'SALVACION', 7, 0, 0),
+(233, 'SAMPONGAN', 7, 0, 0),
+(234, 'SAN AGUSTIN', 7, 0, 0),
+(235, 'SAN ANTONIO', 7, 0, 0),
+(236, 'SAN ISIDRO', 7, 0, 0),
+(237, 'SAN JOSE', 7, 0, 0),
+(238, 'SAN PASCUAL', 7, 0, 0),
+(239, 'SAN RAMON', 7, 0, 0),
+(240, 'SAN VICENTE', 7, 0, 0),
+(241, 'SANTA CRUZ', 7, 0, 0),
+(242, 'TALIN-TALIN', 7, 0, 0),
+(243, 'TAMBO', 7, 0, 0),
+(244, 'VILLA PETRONA', 7, 0, 0),
+(245, 'ZONE I (POB.)', 7, 0, 0),
+(246, 'ZONE II (POB.)', 7, 0, 0),
+(247, 'ZONE III (POB.)', 7, 0, 0),
+(248, 'ZONE IV (POB.)', 7, 0, 0),
+(249, 'ZONE V (POB.)', 7, 0, 0),
+(250, 'ZONE VI (POB.)', 7, 0, 0),
+(251, 'ZONE VII (POB.)', 7, 0, 0),
+(252, 'ABELLA', 8, 0, 0),
+(253, 'ALLANG', 8, 0, 0),
+(254, 'AMTIC', 8, 0, 0),
+(255, 'BACONG', 8, 0, 0),
+(256, 'BAGUMBAYAN (POB.)', 8, 0, 0),
+(257, 'BALANAC', 8, 0, 0),
+(258, 'BALIGANG', 8, 0, 0),
+(259, 'BARAYONG', 8, 0, 0),
+(260, 'BASAG', 8, 0, 0),
+(261, 'BATANG', 8, 0, 0),
+(262, 'BAY', 8, 0, 0),
+(263, 'BINANOWAN', 8, 0, 0),
+(264, 'BINATAGAN (POB.)', 8, 0, 0),
+(265, 'BOBONSURAN', 8, 0, 0),
+(266, 'BONGA', 8, 0, 0),
+(267, 'BUSAC', 8, 0, 0),
+(268, 'BUSAY', 8, 0, 0),
+(269, 'CABARIAN', 8, 0, 0),
+(270, 'CALZADA (POB.)', 8, 0, 0),
+(271, 'CATBURAWAN', 8, 0, 0),
+(272, 'CAVASI (POB.)', 8, 0, 0),
+(273, 'CULLIAT', 8, 0, 0),
+(274, 'DUNAO (POB.)', 8, 0, 0),
+(275, 'FRANCIA', 8, 0, 0),
+(276, 'GUILID (POB.)', 8, 0, 0),
+(277, 'HERRERA', 8, 0, 0),
+(278, 'LAYON', 8, 0, 0),
+(279, 'MACALIDONG', 8, 0, 0),
+(280, 'MAHABA (POB.)', 8, 0, 0),
+(281, 'MALAMA', 8, 0, 0),
+(282, 'MAONON', 8, 0, 0),
+(283, 'NASISI', 8, 0, 0),
+(284, 'NABONTON', 8, 0, 0),
+(285, 'OMA-OMA', 8, 0, 0),
+(286, 'PALAPAS', 8, 0, 0),
+(287, 'PANDAN', 8, 0, 0),
+(288, 'PAULBA', 8, 0, 0),
+(289, 'PAULOG', 8, 0, 0),
+(290, 'PINAMANIQUIAN', 8, 0, 0),
+(291, 'PINIT', 8, 0, 0),
+(292, 'RANAO-RANAO', 8, 0, 0),
+(293, 'SAN VICENTE', 8, 0, 0),
+(294, 'SANTA CRUZ (POB.)', 8, 0, 0),
+(295, 'TAGPO (POB.)', 8, 0, 0),
+(296, 'TAMBO', 8, 0, 0),
+(297, 'TANDARORA', 8, 0, 0),
+(298, 'TASTAS', 8, 0, 0),
+(299, 'TINAGO (POB.)', 8, 0, 0),
+(300, 'TINAMPO', 8, 0, 0),
+(301, 'TIONGSON', 8, 0, 0),
+(302, 'TOMOLIN (POB.)', 8, 0, 0),
+(303, 'TUBURAN (POB.)', 8, 0, 0),
+(304, 'TULA-TULA GRANDE', 8, 0, 0),
+(305, 'TULA-TULA PEQUEÑO', 8, 0, 0),
+(306, 'TUPAS', 8, 0, 0),
+(307, 'BINITAYAN', 9, 0, 0),
+(308, 'CALBAYOG', 9, 0, 0),
+(309, 'CANAWAY', 9, 0, 0),
+(310, 'BRGY I (POB.)', 9, 0, 0),
+(311, 'BRGY II (POB.)', 9, 0, 0),
+(312, 'BRGY III (POB.)', 9, 0, 0),
+(313, 'BRGY IV (POB.)', 9, 0, 0),
+(314, 'BARANGAY V (POB.)', 9, 0, 0),
+(315, 'SALVACION', 9, 0, 0),
+(316, 'SAN ANTONIO SANTICON (POB.)', 9, 0, 0),
+(317, 'SAN ANTONIO SULONG', 9, 0, 0),
+(318, 'SAN FRANCISCO', 9, 0, 0),
+(319, 'SAN ISIDRO ILAWOD', 9, 0, 0),
+(320, 'SAN ISIDRO IRAYA', 9, 0, 0),
+(321, 'SAN JOSE', 9, 0, 0),
+(322, 'SAN ROQUE', 9, 0, 0),
+(323, 'SANTA CRUZ', 9, 0, 0),
+(324, 'SANTA TERESA', 9, 0, 0),
+(325, 'AWANG', 10, 0, 0),
+(326, 'BAGATANGKI', 10, 0, 0),
+(327, 'BAGUMBAYAN', 10, 0, 0),
+(328, 'BALADING', 10, 0, 0),
+(329, 'BALZA', 10, 0, 0),
+(330, 'BARIW', 10, 0, 0),
+(331, 'BAYBAY', 10, 0, 0),
+(332, 'BULANG', 10, 0, 0),
+(333, 'BURABOD', 10, 0, 0),
+(334, 'CABUNTURAN', 10, 0, 0),
+(335, 'COMUN', 10, 0, 0),
+(336, 'DIARO', 10, 0, 0),
+(337, 'ESTANCIA', 10, 0, 0),
+(338, 'JONOP', 10, 0, 0),
+(339, 'LABNIG', 10, 0, 0),
+(340, 'LIBOD', 10, 0, 0),
+(341, 'MALOLOS', 10, 0, 0),
+(342, 'MATALIPNI', 10, 0, 0),
+(343, 'OGOB', 10, 0, 0),
+(344, 'PAWA', 10, 0, 0),
+(345, 'PAYAHAN', 10, 0, 0),
+(346, 'POBLACION', 10, 0, 0),
+(347, 'QUINARABASAHAN', 10, 0, 0),
+(348, 'STA. ELENA', 10, 0, 0),
+(349, 'SOA', 10, 0, 0),
+(350, 'SUGCAD', 10, 0, 0),
+(351, 'TAGOYTOY', 10, 0, 0),
+(352, 'TANAWAN', 10, 0, 0),
+(353, 'TULIW', 10, 0, 0),
+(354, 'BALABAGON', 11, 0, 0),
+(355, 'BALASBAS', 11, 0, 0),
+(356, 'BAMBAN', 11, 0, 0),
+(357, 'BUYO', 11, 0, 0),
+(358, 'CABACONGAN', 11, 0, 0),
+(359, 'CAVIT', 11, 0, 0),
+(360, 'CAWAYAN', 11, 0, 0),
+(361, 'CAWIT', 11, 0, 0),
+(362, 'HOLUGAN', 11, 0, 0),
+(363, 'IT-BA (POBLACION)', 11, 0, 0),
+(364, 'MALOBAGO', 11, 0, 0),
+(365, 'MANUMBALAY', 11, 0, 0),
+(366, 'NAGOTGOT', 11, 0, 0),
+(367, 'PAWA', 11, 0, 0),
+(368, 'TINAPIAN', 11, 0, 0),
+(369, 'BADBAD', 12, 0, 0),
+(370, 'BADIAN', 12, 0, 0),
+(371, 'BAGSA', 12, 0, 0),
+(372, 'BAGUMBAYAN', 12, 0, 0),
+(373, 'BALOGO', 12, 0, 0),
+(374, 'BANAO', 12, 0, 0),
+(375, 'BANGYAWON', 12, 0, 0),
+(376, 'BOGTONG', 12, 0, 0),
+(377, 'BONGORAN', 12, 0, 0),
+(378, 'BUSAC', 12, 0, 0),
+(379, 'CADAWAG', 12, 0, 0),
+(380, 'CAGMANABA', 12, 0, 0),
+(381, 'CALAGUIMIT', 12, 0, 0),
+(382, 'CALPI', 12, 0, 0),
+(383, 'CALZADA', 12, 0, 0),
+(384, 'CAMAGONG', 12, 0, 0),
+(385, 'CASINAGAN', 12, 0, 0),
+(386, 'CENTRO POBLACION', 12, 0, 0),
+(387, 'COLIAT', 12, 0, 0),
+(388, 'DEL ROSARIO', 12, 0, 0),
+(389, 'GUMABAO', 12, 0, 0),
+(390, 'ILAOR NORTE', 12, 0, 0),
+(391, 'ILAOR SUR', 12, 0, 0),
+(392, 'IRAYA NORTE', 12, 0, 0),
+(393, 'IRAYA SUR', 12, 0, 0),
+(394, 'MANGA', 12, 0, 0),
+(395, 'MAPORONG', 12, 0, 0),
+(396, 'MARAMBA', 12, 0, 0),
+(397, 'MATAMBO', 12, 0, 0),
+(398, 'MAYAG', 12, 0, 0),
+(399, 'MAYAO', 12, 0, 0),
+(400, 'MOROPONROS', 12, 0, 0),
+(401, 'NAGAS', 12, 0, 0),
+(402, 'OBALIW-RINAS', 12, 0, 0),
+(403, 'PISTOLA', 12, 0, 0),
+(404, 'RAMAY', 12, 0, 0),
+(405, 'RIZAL', 12, 0, 0),
+(406, 'SABAN', 12, 0, 0),
+(407, 'SAN AGUSTIN', 12, 0, 0),
+(408, 'SAN ANTONIO', 12, 0, 0),
+(409, 'SAN ISIDRO', 12, 0, 0),
+(410, 'SAN JOSE', 12, 0, 0),
+(411, 'SAN JUAN', 12, 0, 0),
+(412, 'SAN MIGUEL', 12, 0, 0),
+(413, 'SAN PASCUAL', 12, 0, 0),
+(414, 'SAN RAMON', 12, 0, 0),
+(415, 'SAN VICENTE', 12, 0, 0),
+(416, 'TABLON', 12, 0, 0),
+(417, 'TALISAY', 12, 0, 0),
+(418, 'TALONGOG', 12, 0, 0),
+(419, 'TAPEL', 12, 0, 0),
+(420, 'TOBGON', 12, 0, 0),
+(421, 'TOBOG', 12, 0, 0),
+(422, 'AGOL', 13, 0, 0),
+(423, 'ALABANGPURO', 13, 0, 0),
+(424, 'BASICAO COASTAL', 13, 0, 0),
+(425, 'BASICAO INTERIOR (PAWIKAN)', 13, 0, 0),
+(426, 'BANAWAN (BINAWAN)', 13, 0, 0),
+(427, 'BINODEGAHAN', 13, 0, 0),
+(428, 'BUENAVISTA', 13, 0, 0),
+(429, 'BUYO', 13, 0, 0),
+(430, 'CARATAGAN', 13, 0, 0),
+(431, 'CUYAOYAO', 13, 0, 0),
+(432, 'FLORES', 13, 0, 0),
+(433, 'LAWINON', 13, 0, 0),
+(434, 'MACASITAS', 13, 0, 0),
+(435, 'MALAPAY', 13, 0, 0),
+(436, 'MALIDONG', 13, 0, 0),
+(437, 'MAMLAD', 13, 0, 0),
+(438, 'MARIGONDON', 13, 0, 0),
+(439, 'MATANGLAD', 13, 0, 0),
+(440, 'NABLANGBULOD', 13, 0, 0),
+(441, 'ORINGON', 13, 0, 0),
+(442, 'PALAPAS', 13, 0, 0),
+(443, 'PANGANIRAN NEW', 13, 0, 0),
+(444, 'PANGANIRAN OLD', 13, 0, 0),
+(445, 'BARANGAY I (POB.)', 13, 0, 0),
+(446, 'BARANGAY II (POB.)', 13, 0, 0),
+(447, 'BARANGAY III (POB.)', 13, 0, 0),
+(448, 'BARANGAY IV (POB.)', 13, 0, 0),
+(449, 'BARANGAY V (POB.)', 13, 0, 0),
+(450, 'RAWIS', 13, 0, 0),
+(451, 'SALVACION', 13, 0, 0),
+(452, 'SANTO CRISTO', 13, 0, 0),
+(453, 'SUKIP', 13, 0, 0),
+(454, 'TIBABO', 13, 0, 0),
+(455, 'LA MEDALLA (SAWMILL)', 13, 0, 0),
+(456, 'AGOS', 14, 0, 0),
+(457, 'ALNAY', 14, 0, 0),
+(458, 'ALOMON', 14, 0, 0),
+(459, 'AMOGUIS', 14, 0, 0),
+(460, 'ANOPOL', 14, 0, 0),
+(461, 'APAD', 14, 0, 0),
+(462, 'BALABA', 14, 0, 0),
+(463, 'BALANGIBANG', 14, 0, 0),
+(464, 'BALINAD', 14, 0, 0),
+(465, 'BASUD', 14, 0, 0),
+(466, 'BUYO', 14, 0, 0),
+(467, 'CENTRO OCCIDENTAL', 14, 0, 0),
+(468, 'CENTRO ORIENTAL', 14, 0, 0),
+(469, 'CEPRES', 14, 0, 0),
+(470, 'COTMON', 14, 0, 0),
+(471, 'COTNOGAN', 14, 0, 0),
+(472, 'DANAO', 14, 0, 0),
+(473, 'GABON', 14, 0, 0),
+(474, 'GAMOT', 14, 0, 0),
+(475, 'ITARAN', 14, 0, 0),
+(476, 'KINALE', 14, 0, 0),
+(477, 'KINUARTELAN', 14, 0, 0),
+(478, 'LA MEDALLA', 14, 0, 0),
+(479, 'LANIGAY', 14, 0, 0),
+(480, 'LA PURISIMA', 14, 0, 0),
+(481, 'LIDONG', 14, 0, 0),
+(482, 'LOURDES', 14, 0, 0),
+(483, 'MAGPANAMBO', 14, 0, 0),
+(484, 'MAGURANG', 14, 0, 0),
+(485, 'MATACON', 14, 0, 0),
+(486, 'MAYNAGA', 14, 0, 0),
+(487, 'MAYSUA', 14, 0, 0),
+(488, 'MENDEZ', 14, 0, 0),
+(489, 'NAPO', 14, 0, 0),
+(490, 'PINAGDAPUGAN', 14, 0, 0),
+(491, 'PINTOR (BINANGBANGAN)', 14, 0, 0),
+(492, 'PONSO', 14, 0, 0),
+(493, 'SALVACION', 14, 0, 0),
+(494, 'SAN ROQUE', 14, 0, 0),
+(495, 'SANTICON', 14, 0, 0),
+(496, 'STS. CRUZ', 14, 0, 0),
+(497, 'STA. TERESITA', 14, 0, 0),
+(498, 'SUGCAD', 14, 0, 0),
+(499, 'UBALIW', 14, 0, 0),
+(500, 'BAGAOBAWAN', 15, 0, 0),
+(501, 'BATAN', 15, 0, 0),
+(502, 'BILBAO', 15, 0, 0),
+(503, 'BINOSAWAN', 15, 0, 0),
+(504, 'BOGTONG', 15, 0, 0),
+(505, 'BUENAVISTA', 15, 0, 0),
+(506, 'BUHATAN', 15, 0, 0),
+(507, 'CALANAGA', 15, 0, 0),
+(508, 'CARACARAN', 15, 0, 0),
+(509, 'CAROGCOG', 15, 0, 0),
+(510, 'DAP-DAP', 15, 0, 0),
+(511, 'GABA', 15, 0, 0),
+(512, 'GALICIA', 15, 0, 0),
+(513, 'GUADALUPE', 15, 0, 0),
+(514, 'HAMORAWON', 15, 0, 0),
+(515, 'LAGUNDI', 15, 0, 0),
+(516, 'LIGUAN', 15, 0, 0),
+(517, 'LINAO', 15, 0, 0),
+(518, 'MALOBAGO', 15, 0, 0),
+(519, 'MANANAO', 15, 0, 0),
+(520, 'MANCAO', 15, 0, 0),
+(521, 'MANILA', 15, 0, 0),
+(522, 'MASAGA', 15, 0, 0),
+(523, 'MOROCBOROCAN', 15, 0, 0),
+(524, 'NAGCALSOT', 15, 0, 0),
+(525, 'PAGCOLBON', 15, 0, 0),
+(526, 'POBLACION', 15, 0, 0),
+(527, 'SAGRADA', 15, 0, 0),
+(528, 'SAN RAMON', 15, 0, 0),
+(529, 'SANTA BARBARA', 15, 0, 0),
+(530, 'TINOCAWAN', 15, 0, 0),
+(531, 'TINOPAN', 15, 0, 0),
+(532, 'VIGA', 15, 0, 0),
+(533, 'VILLAHERMOSA', 15, 0, 0),
+(534, 'ALIMSOG', 16, 0, 0),
+(535, 'BUHATAN', 16, 0, 0),
+(536, 'CALAYUCAY', 16, 0, 0),
+(537, 'FIDEL SURTIDA', 16, 0, 0),
+(538, 'LIDONG', 16, 0, 0),
+(539, 'BAGONG SAN ROQUE', 16, 0, 0),
+(540, 'SAN JUAN', 16, 0, 0),
+(541, 'SANTO DOMINGO', 16, 0, 0),
+(542, 'SAN PEDRO', 16, 0, 0),
+(543, 'SAN VICENTE', 16, 0, 0),
+(544, 'SAN RAFAEL', 16, 0, 0),
+(545, 'DEL ROSARIO', 16, 0, 0),
+(546, 'SAN FRANCISCO', 16, 0, 0),
+(547, 'NAGSIYA', 16, 0, 0),
+(548, 'SALVACION', 16, 0, 0),
+(549, 'SAN ANDRES', 16, 0, 0),
+(550, 'SAN FERNANDO', 16, 0, 0),
+(551, 'SAN ISIDRO', 16, 0, 0),
+(552, 'SAN ROQUE', 16, 0, 0),
+(553, 'SANTA MISERICORDIA', 16, 0, 0),
+(554, 'STO NIÑO', 16, 0, 0),
+(555, 'MARKET SITE', 16, 0, 0),
+(556, 'PANDAYAN', 16, 0, 0),
+(557, 'AGNAS (SAN MIGUEL ISLAND)', 17, 0, 0),
+(558, 'BACOLOD', 17, 0, 0),
+(559, 'BANGKILINGAN', 17, 0, 0),
+(560, 'BANTAYAN', 17, 0, 0),
+(561, 'BARANGHAWON', 17, 0, 0),
+(562, 'BASAGAN', 17, 0, 0),
+(563, 'BASUD (POB.)', 17, 1, 1),
+(564, 'BOGÑABONG', 17, 0, 0),
+(565, 'BOMBON (POB.)', 17, 0, 0),
+(566, 'BONOT', 17, 0, 0),
+(567, 'SAN ISIDRO', 17, 0, 0),
+(568, 'BUANG', 17, 0, 0),
+(569, 'BUHIAN', 17, 0, 0),
+(570, 'CABAGÑAN', 17, 1, 1),
+(571, 'COBO', 17, 1, 1),
+(572, 'COMON', 17, 0, 0),
+(573, 'Cormidal', 17, 0, 0),
+(574, 'DIVINO ROSTRO (POB.)', 17, 0, 0),
+(575, 'FATIMA', 17, 1, 1),
+(576, 'GUINOBAT', 17, 1, 1),
+(577, 'HACIENDA', 17, 0, 0),
+(578, 'MAGAPO', 17, 0, 0),
+(579, 'MARIROC', 17, 0, 0),
+(580, 'MATAGBAC', 17, 0, 0),
+(581, 'ORAS', 17, 0, 0),
+(582, 'OSON', 17, 0, 0),
+(583, 'PANAL', 17, 0, 0),
+(584, 'PAWA', 17, 1, 1),
+(585, 'PINAGBOBONG', 17, 0, 0),
+(586, 'QUINALE CABASAN (POB.)', 17, 1, 1),
+(587, 'QUINASTILLOJAN', 17, 0, 0),
+(588, 'RAWIS (SAN MIGUEL ISLAND)', 17, 0, 0),
+(589, 'SAGURONG (SAN MIGUEL ISLAND)', 17, 0, 0),
+(590, 'SALVACION', 17, 1, 1),
+(591, 'SAN ANTONIO', 17, 0, 0),
+(592, 'SAN CARLOS', 17, 1, 1),
+(593, 'SAN JUAN (POB.)', 17, 0, 0),
+(594, 'SAN LORENZO', 17, 1, 1),
+(595, 'SAN RAMON', 17, 1, 1),
+(596, 'SAN ROQUE', 17, 1, 1),
+(597, 'SAN VICENTE', 17, 0, 0),
+(598, 'SANTO CRISTO (POB.)', 17, 1, 1),
+(599, 'SUA-IGOT', 17, 0, 0),
+(600, 'TABIGUIAN', 17, 0, 0),
+(601, 'TAGAS', 17, 1, 1),
+(602, 'TAYHI (POB.)', 17, 0, 0),
+(603, 'VISITA (SAN MIGUEL ISLAND)', 17, 0, 0),
+(604, 'BAGUMBAYAN', 18, 0, 0),
+(605, 'BARIIS', 18, 0, 0),
+(606, 'BAYBAY', 18, 0, 0),
+(607, 'BELEN (MALABOG)', 18, 0, 0),
+(608, 'BIYONG', 18, 0, 0),
+(609, 'BOLO', 18, 0, 0),
+(610, 'CALE', 18, 0, 0),
+(611, 'CARARAYAN', 18, 0, 0),
+(612, 'CORO-CORO', 18, 0, 0),
+(613, 'DAP-DAP', 18, 0, 0),
+(614, 'GAJO', 18, 0, 0),
+(615, 'JOROAN', 18, 0, 0),
+(616, 'LIBJO', 18, 0, 0),
+(617, 'LIBTONG', 18, 0, 0),
+(618, 'MATALIBONG', 18, 0, 0),
+(619, 'MAYNONONG', 18, 0, 0),
+(620, 'MAYONG', 18, 0, 0),
+(621, 'MISIBIS', 18, 0, 0),
+(622, 'NAGA', 18, 0, 0),
+(623, 'NAGAS', 18, 0, 0),
+(624, 'OYAMA', 18, 0, 0),
+(625, 'PUTSAN', 18, 0, 0),
+(626, 'SAN BERNARDO', 18, 0, 0),
+(627, 'SOGOD', 18, 0, 0),
+(628, 'TIGBI (POBLACION)', 18, 0, 0),
+(659, 'BAGACAY', 5, 0, 0),
+(660, 'RIZAL POB. (BGY. 1)', 5, 0, 0),
+(661, 'MABINI POB. (BGY. 2)', 5, 0, 0),
+(662, 'PLAZA POB. (BGY. 3)', 5, 0, 0),
+(663, 'MAGSAYSAY POB (BGY. 4)', 5, 0, 0),
+(664, 'CALZADA POB. (BGY. 7)', 5, 0, 0),
+(665, 'QUITINDAY POB. (BGY. 8)', 5, 0, 0),
+(666, 'WHITE DEER POB. (BGY. 9)', 5, 0, 0),
+(667, 'BAUTISTA', 5, 0, 0),
+(668, 'CABRARAN', 5, 0, 0),
+(669, 'DEL ROSARIO', 5, 0, 0),
+(670, 'ESTRELLA', 5, 0, 0),
+(671, 'FLORISTA', 5, 0, 0),
+(672, 'MAMLAD', 5, 0, 0),
+(673, 'MAOGOG', 5, 0, 0),
+(674, 'MERCADO POB. (BGY. 5)', 5, 0, 0),
+(675, 'SALVACION', 5, 0, 0),
+(676, 'SAN ISIDRO', 5, 0, 0),
+(677, 'SAN ROQUE', 5, 0, 0),
+(678, 'SAN VICENTE', 5, 0, 0),
+(679, 'SINAGARAN', 5, 0, 0),
+(680, 'VILLA PAZ', 5, 0, 0),
+(681, 'AURORA POB. (BGY. 6)', 5, 0, 0),
+(718, 'BRGY 01 - EM''S BARRIO (POB.)', 19, 0, 0),
+(719, 'BRGY 02 - EM''S BARRIO SOUTH (POB.)', 19, 0, 0),
+(720, 'BRGY 03 - EM''S BARRIO EAST (POB.)', 19, 0, 0),
+(721, 'BRGY 04 - SAGPON POB. (SAGPON 1)', 19, 0, 0),
+(722, 'BARANGAY 05 - SAGMIN POB. (SAGPON 2)', 19, 0, 0),
+(723, 'BRGY 06 - BAÑADERO POB. (SAGPON 3)', 19, 0, 0),
+(724, 'BRGY 07 - BAÑO (POB.)', 19, 0, 0),
+(725, 'BRGY 08 - BAGUMBAYAN (POB.)', 19, 0, 0),
+(726, 'BRGY 09 - PINARIC (POB.)', 19, 0, 0),
+(727, 'BRGY 11 - MAOYOD POB. (BRGY 10 & 11)', 19, 0, 0),
+(728, 'BRGY 12 - TULA-TULA (POB.)', 19, 0, 0),
+(729, 'BRGY 13 - ILAWOD WEST POB. (ILAWOD 1)', 19, 0, 0),
+(730, 'BRGY 14 - ILAWOD POB. (ILAWOD 2)', 19, 0, 0),
+(731, 'BRGY 15 - ILAWOD EAST POB. (ILAWOD 3)', 19, 0, 0),
+(732, 'BRGY 16 - KAWIT-EAST WASHINGTON DRIVE (POB.)', 19, 0, 0),
+(733, 'BRGY 17 - RIZAL STREET ILAWOD (POB.)', 19, 0, 0),
+(734, 'BRGY 17 - RIZAL STREET ILAWOD (POB.)', 19, 0, 0),
+(735, 'BRGY 18 - CABAGÑAN WEST (POB.)', 19, 0, 0),
+(736, 'BRGY 24 - RIZAL STREET', 19, 0, 0),
+(737, 'BRGY 25 - LAPU-LAPU (POB.)', 19, 0, 0),
+(738, 'BRGY 27 - VICTORY VILLAGE  SOUTH (POB.)', 19, 0, 0),
+(739, 'BRGY 33 - PNR-PEÑARANDA STREET IRAYA (POB.)', 19, 0, 0),
+(740, 'BRGY 34 - ORO SITE-MAGALLANES STREET (POB.)', 19, 0, 0),
+(741, 'BRGY 35 - TINAGO (POB.)', 19, 0, 0),
+(742, 'BRGY 37 - BITANO (POB.)', 19, 0, 0),
+(743, 'BRGY 40 - CRUZADA (BRGY 52)', 19, 0, 0),
+(744, 'BRGY 41 - BOGTONG (BRGY 45)', 19, 0, 0),
+(745, 'BRGY 55 - ESTANZA (BRGY 53)', 19, 0, 0),
+(746, 'BRGY 56 - TAYSAN (BRGY 68)', 19, 0, 0),
+(747, 'BRGY 59 - PURO (BRGY 63)', 19, 0, 0),
+(748, 'BRGY 61 - MASLOG (BRGY 58)', 19, 0, 0),
+(749, 'BRGY 62 - HOMAPON (BRGY 55)', 19, 0, 0),
+(750, 'BRGY 63 - MARIAWA (BRGY 56)', 19, 0, 0),
+(751, 'BRGY 64 - BAGACAY (BRGY 41)', 19, 0, 0),
+(752, 'BRGY 65 - IMALNOD (BRGY 57)', 19, 0, 0),
+(753, 'BRGY 66 - BANQUEROHAN (BRGY 43)', 19, 0, 0),
+(754, 'BRGY 67 - BARIIS (BRGY 46)', 19, 0, 0),
+(755, 'BRGY 68 - SAN FRANCISCO (BRGY 62)', 19, 0, 0),
+(756, 'BRGY 69 - BUENAVISTA (BRGY 47)', 19, 0, 0),
+(757, 'TAGAS', 19, 0, 0),
+(794, 'BRGY 05 - SAGMIN POB. (SAGPON 2)', 6, 0, 0),
+(795, 'BRGY 06 - BAÑADERO POB. (SAGPON 3)', 6, 0, 0),
+(796, 'BRGY 07 - BAÑO (POB.)', 6, 0, 0),
+(797, 'BRGY 08 - BAGUMBAYAN (POB.)', 6, 0, 0),
+(798, 'BRGY 09 - PINARIC (POB.)', 6, 0, 0),
+(799, 'BRGY 40 - CRUZADA (BRGY 52)', 6, 0, 0),
+(800, 'BRGY 41 - BOGTONG (BRGY 45)', 6, 0, 0),
+(801, 'BRGY 42 - RAWIS (BRGY 65)', 6, 0, 0),
+(802, 'BRGY 43 - TAMAOYAN (BRGY 67)', 6, 0, 0),
+(803, 'BRGY 44 - PAWA (BRGY 61)', 6, 0, 0),
+(804, 'BRGY 45 - DITA (BRGY 51)', 6, 0, 0),
+(805, 'BRGY 46 - SAN JOAQUIN (BRGY 64)', 6, 0, 0),
+(806, 'BRGY 47 - ARIMBAY', 6, 0, 0),
+(807, 'BRGY 48 - BAGONG ABRE (BRGY 42)', 6, 0, 0),
+(808, 'BRGY 49 - BIGAA (BRGY 44)', 6, 0, 0),
+(809, 'BRGY 50 - PADANG (BRGY 60)', 6, 0, 0),
+(810, 'BRGY 51 - BUYUAN (BRGY 49)', 6, 0, 0),
+(811, 'BRGY 52 - MATANAG', 6, 0, 0),
+(812, 'BRGY 53 - BONGA (BRGY 48)', 6, 0, 0),
+(813, 'BRGY 54 - MABINIT (BRGY 59)', 6, 0, 0),
+(814, 'BRGY 55 - ESTANZA (BRGY 53)', 6, 0, 0),
+(815, 'BRGY 56 - TAYSAN (BRGY 68)', 6, 0, 0),
+(816, 'BRGY 57 - DAP-DAP (BRGY 69)', 6, 0, 0),
+(817, 'BRGY 58 - BURAGWIS', 6, 0, 0),
+(818, 'BRGY 59 - PURO (BRGY 63)', 6, 0, 0),
+(819, 'BRGY 60 - LAMBA', 6, 0, 0),
+(820, 'BRGY 61 - MASLOG (BRGY 58)', 6, 0, 0),
+(821, 'BRGY 62 - HOMAPON (BRGY 55)', 6, 0, 0),
+(822, 'BRGY 63 - MARIAWA (BRGY 56)', 6, 0, 0),
+(823, 'BRGY 64 - BAGACAY (BRGY 41 BAGACAY)', 6, 0, 0),
+(824, 'BRGY 65 - IMALNOD (BRGY 57)', 6, 0, 0),
+(825, 'BRGY 66 - BANQUEROHAN (BRGY 43)', 6, 0, 0),
+(826, 'BRGY 67 - BARIIS (BRGY 46)', 6, 0, 0),
+(827, 'BRGY 68 - SAN FRANCISCO (BRGY 62)', 6, 0, 0),
+(828, 'BRGY 69 - BUENAVISTA (BRGY47)', 6, 0, 0),
+(829, 'BRGY 70 - CAGBACONG (BRGY 50)', 6, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_connection_sub`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_connection_sub` (
+`subId` int(11) NOT NULL,
+  `conId` int(11) NOT NULL,
+  `subCode` varchar(5) DEFAULT NULL,
+  `subDesc` varchar(25) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_connection_sub`
+--
+
+INSERT INTO `tbl_connection_sub` (`subId`, `conId`, `subCode`, `subDesc`) VALUES
+(1, 3, NULL, 'Commercial'),
+(2, 3, NULL, 'Industrial'),
+(3, 3, NULL, 'TELCO'),
+(4, 3, NULL, 'Government');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_connection_type`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_connection_type` (
+`conId` int(11) NOT NULL,
+  `conCode` varchar(5) NOT NULL,
+  `conDesc` varchar(25) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_connection_type`
+--
+
+INSERT INTO `tbl_connection_type` (`conId`, `conCode`, `conDesc`) VALUES
+(1, 'RES', 'Residential'),
+(2, 'HV', 'High Voltage'),
+(3, 'LV', 'Low Voltage');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_consumers`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_consumers` (
+`cid` int(11) NOT NULL,
+  `acctNo` varchar(15) DEFAULT NULL,
+  `sysPro` varchar(15) DEFAULT NULL,
+  `alecoNo` varchar(15) DEFAULT NULL,
+  `bapa` tinyint(4) NOT NULL,
+  `fname` varchar(30) NOT NULL,
+  `mname` varchar(30) NOT NULL,
+  `lname` varchar(30) NOT NULL,
+  `bname` varchar(100) DEFAULT NULL,
+  `ename` varchar(30) NOT NULL,
+  `flag` tinyint(4) NOT NULL,
+  `civilStatus` varchar(10) NOT NULL,
+  `hasPendingSO` tinyint(1) NOT NULL DEFAULT '0',
+  `forBilling` tinyint(1) NOT NULL DEFAULT '0',
+  `acctCount` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_consumers`
+--
+
+INSERT INTO `tbl_consumers` (`cid`, `acctNo`, `sysPro`, `alecoNo`, `bapa`, `fname`, `mname`, `lname`, `bname`, `ename`, `flag`, `civilStatus`, `hasPendingSO`, `forBilling`, `acctCount`) VALUES
+(1, '500000000010102', NULL, NULL, 0, 'ALEX', 'COMPETENTE', 'BORRES', NULL, '', 0, 'MARRIED', 0, 0, 1),
+(2, '500000000020203', NULL, NULL, 0, 'SHERYL', 'CUYA', 'CALCIS', NULL, '', 0, 'SINGLE', 0, 0, 1),
+(3, '500000000030304', NULL, NULL, 0, 'MARIBEL', 'BARSAGA', 'BERGONIO', NULL, '', 0, 'SINGLE', 0, 0, 1),
+(4, '500000000040405', NULL, NULL, 0, 'FATIMA', 'PEÑA', 'CORTEZA', NULL, '', 0, 'MARRIED', 0, 0, 1),
+(5, '500000000050506', NULL, NULL, 0, 'FATIMA', 'PEÑA', 'CORTEZA', NULL, '', 0, 'SINGLE', 0, 0, 1),
+(6, '500000000060607', '100002246441413', NULL, 0, 'RAYNARD', 'BERDIN', 'BELARDO', NULL, '', 0, 'SINGLE', 0, 0, 1),
+(7, '500000000070708', NULL, NULL, 0, 'JERRY', 'BELLO', 'BELLEN', NULL, '', 0, 'MARRIED', 0, 0, 1),
+(8, '500000000080809', NULL, NULL, 0, 'RODOLFO', 'BARCEBAL', 'VIÑAS', NULL, '', 0, 'MARRIED', 0, 0, 1),
+(9, '500000000090910', NULL, NULL, 0, 'CHERRY', 'BIESCAS', 'BAUTISTA', NULL, '', 0, 'WIDOWED', 0, 0, 0),
+(10, '500000000100101', NULL, NULL, 0, 'RODRIGO', '', 'PEPANO', 'LC BIGMAK BURGERS INC.', 'JR.', 0, 'SINGLE', 0, 0, 1),
+(11, '500000000110202', NULL, NULL, 0, 'MARISSA', 'BUENSALIDA', 'BADIOLA', NULL, '', 0, 'SINGLE', 0, 0, 1),
+(12, '500000000120303', NULL, NULL, 0, 'HONEYLENE', 'BERANGO', 'ORLAIN', NULL, '', 0, 'MARRIED', 0, 0, 1),
+(13, '500000000130404', NULL, NULL, 0, 'SHIRLEY', 'BOMBITA', 'VALENZUELA', NULL, '', 0, 'MARRIED', 0, 0, 1),
+(14, '500000000140505', NULL, NULL, 0, 'EDGAR', 'CAMBARE', 'RENEGADO', 'PERYAHAN(TEMPORARY)', 'JR', 0, 'MARRIED', 0, 0, 1),
+(15, '500000000150606', '100002246451514', NULL, 0, 'SALVADOR', 'BERMAS', 'BENITEZ', '', '', 0, 'SINGLE', 0, 0, 1),
+(16, '500000000160707', NULL, NULL, 0, 'RANULFO', 'CAL', 'BALAORO', 'TEMPORARY', '', 0, 'MARRIED', 0, 0, 1),
+(17, '500000000170808', '100002246421211', NULL, 0, 'CORAZON', 'BARNEDO', 'EDIC', '', '', 0, 'MARRIED', 1, 0, 1),
+(18, '500000000180909', '100002246431312', NULL, 0, 'ROSEMARIE', 'BERTIZ', 'ESQUILADOR', '', '', 0, 'MARRIED', 0, 0, 1),
+(19, '500000000191010', NULL, NULL, 0, 'DEBORAH', 'BALTAR', 'BANZUELA', '', '', 0, 'WIDOWED', 0, 0, 1),
+(20, '500000000200201', NULL, NULL, 0, 'ROLANDO', 'BEGIL', 'BUEZA', '', '', 0, 'MARRIED', 0, 0, 1),
+(22, '500000000220403', NULL, NULL, 0, 'MIELYN', 'BOHOLANO', 'BOLAÑOS', '', '', 0, 'MARRIED', 0, 0, 1),
+(23, '500000000230504', NULL, NULL, 0, 'RASHIEL', 'COMPETENTE', 'RANGASA', '', '', 0, 'SINGLE', 0, 0, 1),
+(24, '500000000240605', '100002246501109', NULL, 0, 'RYAN', 'ONRUBIA', 'BORRA', '', '', 0, 'SINGLE', 0, 0, 1),
+(25, '500000000250706', NULL, NULL, 0, 'HELEN', 'BIGTAS', 'BITAS', '', '', 0, 'MARRIED', 0, 0, 1),
+(27, '500000000270908', '100002246511210', NULL, 0, 'SANTOS', 'CONDAT', 'BUBAN', '', '', 0, 'MARRIED', 0, 0, 1),
+(28, '500000000281009', '100002246521311', NULL, 0, 'FLORDILISA', 'BORINGOT', 'ARCILLA', '', '', 0, 'MARRIED', 1, 0, 1),
+(29, '500000000291110', NULL, NULL, 0, 'MILAGROS', 'VILLAFUERTE', 'CABRIA', '', '', 0, 'WIDOWED', 0, 0, 1),
+(30, '500000000300301', NULL, NULL, 0, 'GERALD', 'BALINGBING', 'BANSALE', '', '', 0, 'MARRIED', 0, 0, 1),
+(31, '500000000310402', NULL, NULL, 0, 'WENIFREDA', 'BUBAN', 'BARAQUIEL', '', '', 0, 'MARRIED', 0, 0, 1),
+(32, '500000000320503', NULL, NULL, 0, 'JENNIFER', 'TAYAM', 'ARCENUE', '', '', 0, 'WIDOWED', 0, 0, 1),
+(33, '500000000330604', NULL, NULL, 0, 'HANITA', 'ALONDRA', 'BALANTA', '', '', 0, 'MARRIED', 0, 0, 1),
+(34, '500000000340705', NULL, NULL, 0, 'RANDY', 'LLANETA', 'BEA', '', '', 0, 'MARRIED', 0, 0, 1),
+(35, '500000000350806', '100002246411110', NULL, 0, 'JANICE', 'MARBELLA', 'BASILONIA', '', '', 0, 'MARRIED', 1, 0, 1),
+(36, '500000000360907', NULL, NULL, 0, 'NELIA', 'CRISPINO', 'BORAGAY', '', '', 0, 'SINGLE', 0, 0, 1),
+(37, '500000000371008', NULL, NULL, 0, 'ROMEO', 'NOBLE', 'ALCERA', '', '', 0, 'MARRIED', 0, 0, 1),
+(38, '500000000381109', NULL, NULL, 0, 'DANILO', 'BRIGUELA', 'BOGÑALOS', '', '', 0, 'MARRIED', 0, 0, 1),
+(39, '500000000391210', NULL, NULL, 0, 'JONATHAN', 'CASI', 'BOBIS', '', '', 0, 'SINGLE', 0, 0, 1),
+(40, '500000000400401', NULL, NULL, 0, 'ERIKA GAIL', 'BALUTE', 'BANZUELA', '', '', 0, 'SINGLE', 0, 0, 1),
+(41, '500000000410502', NULL, NULL, 0, 'MARIVIC', 'BUID', 'PEREGRINO', '', '', 0, 'MARRIED', 0, 0, 1),
+(42, '500000000420603', NULL, NULL, 0, 'ANNIEGRACE', 'HILOTIN', 'BASILLA', '', '', 0, 'MARRIED', 0, 0, 1),
+(43, '500000000430704', NULL, NULL, 0, 'MANUEL', 'CAM', 'CONDE', '', '', 0, 'WIDOWED', 0, 0, 1),
+(44, '500000000440805', NULL, NULL, 0, 'NOELITO', 'BELANDO', 'PELAEZ', '', '', 0, 'MARRIED', 0, 0, 1),
+(45, '500000000450906', NULL, NULL, 0, 'MARY ANN', 'BALAGUER', 'BALEDA', '', '', 0, 'MARRIED', 0, 0, 1),
+(46, '500000000461007', NULL, NULL, 0, 'ANTONIO', 'BALDERAMA', 'BALUNSAY', '', '', 0, 'MARRIED', 0, 0, 2),
+(47, '500000000471108', NULL, NULL, 0, 'MARCIAL', 'CALLEJA', 'BARBECHO', '', '', 0, 'MARRIED', 0, 0, 1),
+(48, '500000000481209', NULL, NULL, 0, 'RESHELL', 'JOZO', 'FERNANDEZ', '', '', 0, 'SINGLE', 0, 0, 1),
+(49, '500000000491310', NULL, NULL, 0, 'JOMAR', 'CILOT', 'CORRAL', '', '', 0, 'SINGLE', 0, 0, 1),
+(50, '500000000500501', NULL, NULL, 0, 'SANTIAGO', 'BAÑARES', 'CONDE', '', '', 0, 'MARRIED', 0, 0, 1),
+(51, '500000000510602', NULL, NULL, 0, 'EMMA', 'CASTELO', 'BIEN', '', '', 0, 'MARRIED', 0, 0, 1),
+(52, '500000000520703', NULL, NULL, 0, 'ELVIE', 'PERMITO', 'CASITAS', '', '', 0, 'MARRIED', 0, 0, 1),
+(53, '500000000530804', NULL, NULL, 0, 'PERLA', 'BONGALOS', 'CUERDO', '', '', 0, 'MARRIED', 0, 0, 1),
+(54, '500000000540905', NULL, NULL, 0, 'MARY ANN', 'CUATE', 'EVANGELIO', '', '', 0, 'MARRIED', 0, 0, 1),
+(55, '500000000551006', NULL, NULL, 0, 'JOSE', 'BERMILLO', 'CERVANTES', '', '', 0, 'MARRIED', 0, 0, 1),
+(56, '500000000561107', NULL, NULL, 0, 'JENNELYN', 'ROMUALDO', 'BELLEN', '', '', 0, 'SINGLE', 0, 0, 1),
+(57, '500000000571208', NULL, NULL, 0, 'PATRICK LOUIE', 'LIM', 'SANTIAGO', '', '', 0, 'MARRIED', 0, 0, 1),
+(58, '500000000581309', NULL, NULL, 0, 'REY', 'BARIA', 'BERMUNDO', '', '', 0, 'MARRIED', 0, 0, 1),
+(59, '500000000591410', NULL, NULL, 0, 'GINALYN', 'CORTEZA', 'DEL BARRIO', '', '', 0, 'WIDOWED', 0, 0, 1),
+(60, '500000000600601', NULL, NULL, 0, 'SOLEDAD', 'BRAGAIS', 'CAM', '', '', 0, 'WIDOWED', 0, 0, 1),
+(61, '500000000610702', NULL, NULL, 0, 'MELANIE', 'BALINGASA', 'BON', '', '', 0, 'MARRIED', 0, 0, 1),
+(62, '500000000620803', NULL, NULL, 0, 'JOEL', 'BRILLANTES', 'SILOS', '', '', 0, 'MARRIED', 0, 0, 1),
+(63, '500000000630904', NULL, NULL, 0, 'CELERINA', 'BARNEDO', 'GREGORIO', '', '', 0, 'MARRIED', 0, 0, 1),
+(64, '500000000641005', NULL, NULL, 0, 'DOLORES', 'BALINO', 'REGINO', '', '', 0, 'MARRIED', 0, 0, 1),
+(65, '500000000651106', NULL, NULL, 0, 'LANI', 'BALANA', 'DAMAN', '', '', 0, 'MARRIED', 0, 0, 1),
+(66, '500000000661207', NULL, NULL, 0, 'SANROQUESA', 'ALAGADMO', 'DACUYA', '', '', 0, 'MARRIED', 0, 0, 1),
+(67, '500000000671308', NULL, NULL, 0, 'REGINA', 'REBLANDO', 'BILO', '', '', 0, 'SINGLE', 0, 0, 1),
+(68, '500000000681409', NULL, NULL, 0, 'NELSON', 'BONAOBRA', 'BASCO', '', '', 0, 'MARRIED', 0, 0, 3),
+(69, '500000000691510', NULL, NULL, 0, 'JANIECE', 'BUENABAJO', 'BONUS', '', '', 0, 'SINGLE', 0, 0, 1),
+(70, '500000000700701', NULL, NULL, 0, 'MA. HERMILINA', 'SAMBAJON', 'CASIMIRO', '', '', 0, 'MARRIED', 0, 0, 1),
+(71, '500000000710802', NULL, NULL, 0, 'MARYLAND', 'AUSTRIA', 'DAGTING', '', '', 0, 'MARRIED', 0, 0, 1),
+(72, '500000000720903', NULL, NULL, 0, 'ROSA', 'BERUELA', 'BORROMEO', '', '', 0, 'MARRIED', 0, 0, 1),
+(73, '500000000731004', NULL, NULL, 0, 'ELENA', 'BALIZA', 'GUZON', '', '', 0, 'WIDOWED', 0, 0, 1),
+(74, '500000000741105', NULL, NULL, 0, 'ROSARIO', 'BIEN', 'SAMBAJON', '', '', 0, 'SINGLE', 0, 0, 1),
+(75, '500000000751206', NULL, NULL, 0, 'MATEA', 'BIRON', 'BONAVENTE', '', '', 0, 'SINGLE', 0, 0, 1),
+(76, '500000000761307', NULL, NULL, 0, 'ROSEMARIE', 'CASAUL', 'CALUBAD', '', '', 0, 'MARRIED', 0, 0, 1),
+(77, '500000000771408', NULL, NULL, 0, 'ANGIRIE', 'BOLILAN', 'BAÑEZ', '', '', 0, 'MARRIED', 0, 0, 1),
+(78, '500000000781509', NULL, NULL, 0, 'ELIZER', 'CANOPIN', 'CAMPOS', '', '', 0, 'MARRIED', 0, 0, 1),
+(79, '500000000791610', NULL, NULL, 0, 'MA. CRISTINA', 'BELAOS', 'ZEPEDA', '', '', 0, 'MARRIED', 0, 0, 1),
+(80, '500000000800801', NULL, NULL, 0, 'LORIVIE', 'CASIN', 'BUENCONSEJO', '', '', 0, 'MARRIED', 0, 0, 1),
+(81, '500000000810902', NULL, NULL, 0, 'ROGELIO', 'VILLAR', 'CASAIS', '', '', 0, 'SINGLE', 0, 0, 1),
+(82, '500000000821003', NULL, NULL, 0, 'ADELIA', 'NOGALES', 'DOMANAIS', '', '', 0, 'MARRIED', 0, 0, 1),
+(83, '500000000831104', NULL, NULL, 0, 'JUAN', 'BOBIER', 'BUENCONSEJO', '', '', 0, 'SINGLE', 0, 0, 1),
+(84, '500000000841205', NULL, NULL, 0, 'ANTONIO', 'BOLANTE', 'BERUELA', '', '', 0, 'SINGLE', 0, 0, 1),
+(85, '500000000851306', NULL, NULL, 0, 'ROGERIO', 'BORRERO', 'MILLA', '', '', 0, 'MARRIED', 0, 0, 1),
+(86, '500000000861407', NULL, NULL, 0, 'ZEILLYMAR', 'NORIEGA', 'IDOS', '', '', 0, 'SINGLE', 0, 0, 1),
+(87, '500000000871508', NULL, NULL, 0, 'EDWIN', 'MORAN', 'NOBORA', '', '', 0, 'MARRIED', 0, 0, 1),
+(88, '500000000881609', NULL, NULL, 0, 'ANTHONY', 'CANTES', 'CIRUJALES', '', '', 0, 'SINGLE', 0, 0, 1),
+(89, '500000000891710', NULL, NULL, 0, 'ARACELI', 'BARQUILLA', 'DATILES', '', '', 0, 'MARRIED', 0, 0, 1),
+(90, '500000000900901', NULL, NULL, 0, 'REBECCA', 'BANZUELA', 'LEUTERIO', '', '', 0, 'MARRIED', 0, 0, 1),
+(91, '500000000911002', NULL, NULL, 0, 'SHERYLL', 'BORILLA', 'RILEY', '', '', 0, 'MARRIED', 0, 0, 1),
+(92, '500000000921103', NULL, NULL, 0, 'KIMMY', 'SALAZAR', 'ECHALUCE', '', '', 0, 'MARRIED', 0, 0, 1),
+(93, '500000000931204', NULL, NULL, 0, 'NELSON', 'BOMBALES', 'BARSAGA', '', '', 0, 'SINGLE', 0, 0, 1),
+(94, '500000000941305', NULL, NULL, 0, 'HERBERT', 'SY', 'ABRAHAM', '', '', 0, 'SINGLE', 0, 0, 1),
+(95, '500000000951406', NULL, NULL, 0, 'VICTOR', 'BAÑARES', 'VALENZUELA', '', '', 0, 'MARRIED', 0, 0, 1),
+(96, '500000000961507', NULL, NULL, 0, 'ERIC', 'CAPA', 'BARRIOS', '', '', 0, 'SINGLE', 0, 0, 1),
+(97, '500000000971608', NULL, NULL, 0, 'MARICEL', 'BONDAD', 'DE LIMA', '', '', 0, 'MARRIED', 0, 0, 1),
+(98, '500000000981709', NULL, NULL, 0, 'REY', 'BOLAÑOS ', 'LATOSA', '', '', 0, 'SINGLE', 0, 0, 1),
+(99, '500000000991810', NULL, NULL, 0, 'MARIA VICTORIA', 'PUZON', 'BIGUERAS', '', '', 0, 'MARRIED', 0, 0, 1),
+(100, '500000001000002', NULL, NULL, 1, '', '', 'BAPA ANGAS #5', '', '', 0, 'SINGLE', 0, 0, 1),
+(101, '500000001010103', NULL, NULL, 0, 'ANNIE', 'PANONG', 'COLINA', '', '', 0, 'MARRIED', 0, 0, 1),
+(102, '500000001020204', NULL, NULL, 0, 'JUVENAL', '', 'CAÑOTAL', '', '', 0, 'MARRIED', 0, 0, 1),
+(103, '500000001030305', NULL, NULL, 0, 'JOSEPH', 'BALAORO', 'VILLANUEVA', '', '', 0, 'SINGLE', 0, 0, 1),
+(104, '500000001040406', NULL, NULL, 0, 'RAMIL', 'BELGA', 'COPINO', '', '', 0, 'MARRIED', 0, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_consumer_address`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_consumer_address` (
+  `cid` int(11) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `brgyId` int(11) NOT NULL,
+  `munId` int(11) NOT NULL,
+  `purok` varchar(10) NOT NULL,
+  `bookNo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_consumer_address`
+--
+
+INSERT INTO `tbl_consumer_address` (`cid`, `address`, `brgyId`, `munId`, `purok`, `bookNo`) VALUES
+(1, '', 611, 18, 'PUROK 4', 0),
+(2, 'SITIO SAN MIGUEL', 626, 18, 'PUROK 5', 0),
+(3, '', 17, 1, 'PUROK 3', 0),
+(5, '', 607, 18, 'PUROK 3', 0),
+(6, '', 17, 1, 'PUROK 6', 0),
+(7, '', 49, 1, 'PUROK 7', 0),
+(8, '', 28, 1, 'PUROK 1', 0),
+(9, '', 28, 1, 'PUROK 3', 0),
+(10, '', 602, 17, 'PUROK 6', 0),
+(11, '', 564, 17, 'PUROK 4', 0),
+(12, '', 17, 1, 'PUROK 3', 0),
+(13, '', 564, 17, 'PUROK 7', 0),
+(14, '', 49, 1, 'PUROK 6', 0),
+(15, '', 309, 9, 'PUROK 1', 0),
+(16, '', 594, 17, 'PUROK 2', 0),
+(17, '', 31, 1, 'PUROK 2', 0),
+(18, 'SITIO LABANON', 4, 1, 'PUROK 5', 0),
+(19, 'RESETTLEMENT', 549, 16, 'PUROK 4', 0),
+(20, '', 579, 17, 'PUROK 3', 0),
+(22, '', 308, 9, 'PUROK 3', 0),
+(23, '', 627, 18, 'PUROK 4', 0),
+(24, '', 563, 17, 'PUROK 6', 0),
+(25, '', 324, 9, 'PUROK 3', 0),
+(27, '', 591, 17, 'PUROK 3', 0),
+(28, '', 568, 17, 'PUROK 1', 0),
+(29, '', 585, 17, 'PUROK 4', 0),
+(30, '', 547, 16, 'PUROK 2', 0),
+(31, '', 6, 1, 'PUROK 5', 0),
+(32, '', 551, 16, 'PUROK 4', 0),
+(33, '', 555, 16, '', 0),
+(34, '', 321, 9, 'PUROK 1', 0),
+(35, '', 4, 1, 'PUROK 4', 0),
+(36, '', 598, 17, 'PUROK 4', 0),
+(37, '', 598, 17, 'PUROK 3', 0),
+(38, '', 321, 9, 'PUROK 1', 0),
+(39, '', 340, 10, 'PUROK 7', 0),
+(40, '', 550, 16, 'PUROK 5', 0),
+(41, '', 337, 10, 'PUROK 9', 0),
+(42, '', 49, 1, 'PUROK 6', 0),
+(43, '', 329, 10, 'PUROK 6', 0),
+(44, 'LABANON', 4, 1, 'PUROK 5', 0),
+(45, '', 549, 16, 'PUROK 7', 0),
+(46, 'SITIO SAN ANTONIO', 537, 16, 'PUROK 6', 0),
+(47, '', 48, 1, 'PUROK 6', 0),
+(48, '', 606, 18, 'PUROK 3', 0),
+(49, '', 611, 18, 'PUROK 7', 0),
+(50, '', 353, 10, 'PUROK 2', 0),
+(51, 'CADACULAAN', 49, 1, 'PUROK 7', 0),
+(52, '', 626, 18, 'PUROK 6', 0),
+(53, '', 627, 18, 'PUROK 6', 0),
+(54, '', 627, 18, 'PUROK 6', 0),
+(55, '', 333, 10, 'PUROK 1', 0),
+(56, '', 536, 16, 'PUROK 1', 0),
+(57, '', 538, 16, 'PUROK 1', 0),
+(58, '', 55, 1, 'PUROK 2', 0),
+(59, '', 627, 18, 'PUROK 6', 0),
+(60, '', 583, 17, 'PUROK 7', 0),
+(61, '', 568, 17, 'PUROK 4', 0),
+(62, '', 597, 17, 'PUROK 1A', 0),
+(63, 'RESETTLEMENT SITE', 549, 16, 'PUROK 4', 0),
+(64, '', 553, 16, 'PUROK 5', 0),
+(65, '', 541, 16, 'PUROK 3', 0),
+(66, '', 627, 18, 'PUROK 5', 0),
+(67, 'BASUD ST.', 313, 9, 'PUROK 4', 0),
+(68, 'TABACO CITY MALL PARKING AREA', 574, 17, '', 0),
+(69, '', 319, 9, 'PUROK 3', 0),
+(70, '', 4, 1, 'PUROK 5', 0),
+(71, '', 554, 16, 'PUROK 2', 0),
+(72, '', 49, 1, 'PUROK 7', 0),
+(73, '', 4, 1, 'PUROK 2', 0),
+(74, '', 1, 1, 'PUROK 6', 0),
+(75, '', 17, 1, 'PUROK 3', 0),
+(76, '', 336, 10, 'PUROK 6', 0),
+(77, '', 579, 17, 'PUROK 4', 0),
+(78, '', 580, 17, 'PUROK 7', 0),
+(79, '', 624, 18, 'PUROK 1', 0),
+(80, '', 350, 10, 'PUROK 3', 0),
+(81, '', 584, 17, 'PUROK 7', 0),
+(82, 'BLANCE ST.', 314, 9, '', 0),
+(83, '', 583, 17, 'PUROK 1', 0),
+(84, '', 583, 17, 'PUROK 1', 0),
+(85, '', 597, 17, 'PUROK 4', 0),
+(86, '', 328, 10, 'PUROK 3', 0),
+(87, 'BOCAYA ST.', 594, 17, 'PUROK 4', 0),
+(88, '', 628, 18, 'PUROK 4', 0),
+(89, '', 597, 17, 'PUROK 4', 0),
+(90, '', 550, 16, 'PUROK 3', 0),
+(91, 'BALANDRA', 48, 1, '', 0),
+(92, 'RESETTLEMENT SITE', 549, 16, 'PUROK 4', 0),
+(93, '', 584, 17, 'PUROK 6', 0),
+(94, '', 583, 17, 'PUROK 1', 0),
+(95, '', 565, 17, 'PUROK 6', 0),
+(96, '', 628, 18, 'PUROK 2', 0),
+(97, '', 597, 17, 'PUROK 1B', 0),
+(98, '', 608, 18, '', 0),
+(99, '', 551, 16, '', 0),
+(100, '', 557, 17, '', 0),
+(101, 'LIBOD', 40, 1, '', 0),
+(102, '', 353, 10, 'PUROK 1', 0),
+(103, '', 538, 16, 'PUROK 5', 0),
+(104, '', 331, 10, 'PUROK 3', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_consumer_connection`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_consumer_connection` (
+  `cId` int(11) NOT NULL,
+  `conId` int(11) NOT NULL,
+  `subId` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_consumer_connection`
+--
+
+INSERT INTO `tbl_consumer_connection` (`cId`, `conId`, `subId`) VALUES
+(1, 1, NULL),
+(2, 1, NULL),
+(3, 1, NULL),
+(5, 1, NULL),
+(6, 1, NULL),
+(7, 1, NULL),
+(8, 1, NULL),
+(9, 1, NULL),
+(10, 3, 1),
+(11, 1, NULL),
+(12, 1, NULL),
+(14, 3, 1),
+(15, 1, NULL),
+(16, 3, 2),
+(13, 1, NULL),
+(17, 1, NULL),
+(18, 1, NULL),
+(19, 1, NULL),
+(20, 1, NULL),
+(22, 1, NULL),
+(23, 1, NULL),
+(24, 1, NULL),
+(25, 1, NULL),
+(27, 1, NULL),
+(28, 1, NULL),
+(29, 1, NULL),
+(30, 1, NULL),
+(31, 1, NULL),
+(32, 1, NULL),
+(33, 3, 1),
+(34, 1, NULL),
+(35, 1, NULL),
+(36, 1, NULL),
+(37, 1, NULL),
+(38, 1, NULL),
+(39, 1, NULL),
+(40, 1, NULL),
+(41, 1, NULL),
+(42, 1, NULL),
+(43, 1, NULL),
+(44, 1, NULL),
+(45, 1, NULL),
+(46, 1, NULL),
+(47, 1, NULL),
+(48, 1, NULL),
+(49, 1, NULL),
+(50, 1, NULL),
+(51, 1, NULL),
+(52, 1, NULL),
+(53, 1, NULL),
+(54, 1, NULL),
+(55, 1, NULL),
+(56, 1, NULL),
+(57, 1, NULL),
+(58, 1, NULL),
+(59, 1, NULL),
+(60, 1, NULL),
+(61, 1, NULL),
+(62, 1, NULL),
+(63, 1, NULL),
+(64, 1, NULL),
+(65, 1, NULL),
+(66, 1, NULL),
+(67, 1, NULL),
+(68, 3, 1),
+(69, 1, NULL),
+(70, 1, NULL),
+(71, 1, NULL),
+(72, 1, NULL),
+(73, 1, NULL),
+(74, 1, NULL),
+(75, 1, NULL),
+(76, 1, NULL),
+(77, 1, NULL),
+(78, 1, NULL),
+(79, 3, 1),
+(80, 1, NULL),
+(81, 1, NULL),
+(82, 3, 1),
+(83, 1, NULL),
+(84, 1, NULL),
+(85, 1, NULL),
+(86, 1, NULL),
+(87, 1, NULL),
+(88, 1, NULL),
+(89, 1, NULL),
+(90, 1, NULL),
+(91, 1, NULL),
+(92, 1, NULL),
+(93, 1, NULL),
+(94, 3, 1),
+(95, 1, NULL),
+(96, 1, NULL),
+(97, 1, NULL),
+(98, 1, NULL),
+(99, 1, NULL),
+(100, 1, NULL),
+(101, 1, NULL),
+(102, 1, NULL),
+(103, 1, NULL),
+(104, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_consumer_contact`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_consumer_contact` (
+  `cid` int(11) NOT NULL,
+  `contactType` tinyint(4) NOT NULL COMMENT '1-phone, 2-tel, 3-email',
+  `contactValue` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_consumer_contact`
+--
+
+INSERT INTO `tbl_consumer_contact` (`cid`, `contactType`, `contactValue`) VALUES
+(1, 1, '09494707770'),
+(1, 2, ''),
+(2, 1, '09480184156'),
+(2, 2, ''),
+(3, 1, '09995171747'),
+(3, 2, ''),
+(5, 1, '09214184725'),
+(5, 2, ''),
+(6, 1, '09185936775'),
+(6, 2, ''),
+(7, 1, '09092260040'),
+(7, 2, ''),
+(8, 1, '09103653018'),
+(8, 2, ''),
+(9, 1, '09185029211'),
+(9, 2, ''),
+(10, 1, '09213884925'),
+(10, 2, ''),
+(11, 1, '09071462727'),
+(11, 2, ''),
+(12, 1, '09467390112'),
+(12, 2, ''),
+(13, 1, '09109497269'),
+(13, 2, ''),
+(14, 1, '09277919376'),
+(14, 2, ''),
+(15, 1, '09487031601'),
+(15, 2, ''),
+(16, 1, '09175560185'),
+(16, 2, ''),
+(17, 1, '09205439399'),
+(17, 2, ''),
+(18, 1, '09277203753'),
+(18, 2, ''),
+(19, 1, '09301458319'),
+(19, 2, ''),
+(20, 1, '09197289191'),
+(20, 2, ''),
+(22, 1, '09284836792'),
+(22, 2, ''),
+(23, 1, '09362788293'),
+(23, 2, ''),
+(24, 1, '09480185883'),
+(24, 2, ''),
+(25, 1, '09102442464'),
+(25, 2, ''),
+(27, 1, '09307413195'),
+(27, 2, ''),
+(28, 1, '09098827475'),
+(28, 2, ''),
+(29, 1, '09129282215'),
+(29, 2, ''),
+(30, 1, '09982448952'),
+(30, 2, ''),
+(31, 1, '09468030627'),
+(31, 2, ''),
+(32, 1, '09093468362'),
+(32, 2, ''),
+(33, 1, '09488050875'),
+(33, 2, ''),
+(34, 1, '09129489909'),
+(34, 2, ''),
+(35, 1, '09207484038'),
+(35, 2, ''),
+(36, 1, '09079656407'),
+(36, 2, ''),
+(37, 1, '09064379042'),
+(37, 2, ''),
+(38, 1, '09072526192'),
+(38, 2, ''),
+(39, 1, '09489460867'),
+(39, 2, ''),
+(40, 1, '09205436405'),
+(40, 2, ''),
+(41, 1, '09089324454'),
+(41, 2, ''),
+(42, 1, '09273380246'),
+(42, 2, ''),
+(43, 1, ''),
+(43, 2, ''),
+(44, 1, '09461116423'),
+(44, 2, ''),
+(45, 1, '09105250416'),
+(45, 2, ''),
+(46, 1, ''),
+(46, 2, ''),
+(47, 1, '09297087011'),
+(47, 2, ''),
+(48, 1, '09125930551'),
+(48, 2, ''),
+(49, 1, '09297244586'),
+(49, 2, ''),
+(50, 1, ''),
+(50, 2, ''),
+(51, 1, ''),
+(51, 2, ''),
+(52, 1, ''),
+(52, 2, ''),
+(53, 1, ''),
+(53, 2, ''),
+(54, 1, '09078745276'),
+(54, 2, ''),
+(55, 1, ''),
+(55, 2, ''),
+(56, 1, '09212013932'),
+(56, 2, ''),
+(57, 1, '09285889671'),
+(57, 2, ''),
+(58, 1, '09205041780'),
+(58, 2, ''),
+(59, 1, '09477040987'),
+(59, 2, ''),
+(60, 1, '0928671158'),
+(60, 2, ''),
+(61, 1, '09469797680'),
+(61, 2, ''),
+(62, 1, '09101299481'),
+(62, 2, ''),
+(63, 1, '09353337164'),
+(63, 2, ''),
+(64, 1, '09283955470'),
+(64, 2, ''),
+(65, 1, '09301813563'),
+(65, 2, ''),
+(66, 1, '09498632087'),
+(66, 2, ''),
+(67, 1, '09489449587'),
+(67, 2, ''),
+(68, 1, '09203718890'),
+(68, 2, ''),
+(69, 1, '09205663912'),
+(69, 2, ''),
+(70, 1, '09070229273'),
+(70, 2, ''),
+(71, 1, '09062253430'),
+(71, 2, ''),
+(72, 1, '09103738453'),
+(72, 2, ''),
+(73, 1, '09468367864'),
+(73, 2, ''),
+(74, 1, '09227593775'),
+(74, 2, ''),
+(75, 1, '09498304631'),
+(75, 2, ''),
+(76, 1, '09488321511'),
+(76, 2, ''),
+(77, 1, '09055815568'),
+(77, 2, ''),
+(78, 1, '09083788424'),
+(78, 2, ''),
+(79, 1, '09268015499'),
+(79, 2, ''),
+(80, 1, '09103903255'),
+(80, 2, ''),
+(81, 1, ''),
+(81, 2, ''),
+(82, 1, '09278703403'),
+(82, 2, ''),
+(83, 1, '09072644048'),
+(83, 2, ''),
+(84, 1, ''),
+(84, 2, ''),
+(85, 1, '09192591985'),
+(85, 2, ''),
+(86, 1, '09491980576'),
+(86, 2, ''),
+(87, 1, '09066190241'),
+(87, 2, ''),
+(88, 1, '09087772517'),
+(88, 2, ''),
+(89, 1, '09093511249'),
+(89, 2, ''),
+(90, 1, '09098631920'),
+(90, 2, ''),
+(91, 1, ''),
+(91, 2, ''),
+(92, 1, '09306579703'),
+(92, 2, ''),
+(93, 1, '09092782118'),
+(93, 2, ''),
+(94, 1, ''),
+(94, 2, ''),
+(95, 1, '09309561544'),
+(95, 2, ''),
+(96, 1, '09199581429'),
+(96, 2, ''),
+(97, 1, '09053797116'),
+(97, 2, ''),
+(98, 1, ''),
+(98, 2, ''),
+(99, 1, '09305745179'),
+(99, 2, ''),
+(100, 1, ''),
+(100, 2, ''),
+(101, 1, '09106324105'),
+(101, 2, ''),
+(102, 1, '09428717710'),
+(102, 2, ''),
+(103, 1, ''),
+(103, 2, ''),
+(104, 1, '09301650858'),
+(104, 2, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_consumer_photos`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_consumer_photos` (
+  `cid` int(11) NOT NULL,
+  `imageType` varchar(20) DEFAULT NULL,
+  `imageData` mediumblob
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_consumer_photos`
+--
+
+INSERT INTO `tbl_consumer_photos` (`cid`, `imageType`, `imageData`) VALUES
+(1, '', ''),
+(2, '', ''),
+(3, '', ''),
+(5, '', ''),
+(6, '', ''),
+(7, '', ''),
+(8, '', ''),
+(9, '', ''),
+(10, '', ''),
+(11, '', ''),
+(12, '', ''),
+(13, '', ''),
+(14, '', ''),
+(15, '', ''),
+(16, '', ''),
+(17, '', ''),
+(18, '', ''),
+(19, '', ''),
+(20, '', ''),
+(21, '', ''),
+(22, '', ''),
+(23, '', ''),
+(24, '', ''),
+(25, '', ''),
+(27, '', ''),
+(28, '', ''),
+(29, '', ''),
+(30, '', ''),
+(31, '', ''),
+(32, '', ''),
+(33, '', ''),
+(34, '', ''),
+(35, '', ''),
+(36, '', ''),
+(37, '', ''),
+(38, '', ''),
+(39, '', ''),
+(40, '', ''),
+(41, '', ''),
+(42, '', ''),
+(43, '', ''),
+(44, '', ''),
+(45, '', ''),
+(46, '', ''),
+(47, '', ''),
+(48, '', ''),
+(49, '', ''),
+(50, '', ''),
+(51, '', ''),
+(52, '', ''),
+(53, '', ''),
+(54, '', ''),
+(55, '', ''),
+(56, '', ''),
+(57, '', ''),
+(58, '', ''),
+(59, '', ''),
+(60, '', ''),
+(61, '', ''),
+(62, '', ''),
+(63, '', ''),
+(64, '', ''),
+(65, '', ''),
+(66, '', ''),
+(67, '', ''),
+(68, '', ''),
+(69, '', ''),
+(70, '', ''),
+(71, '', ''),
+(72, '', ''),
+(73, '', ''),
+(74, '', ''),
+(75, '', ''),
+(76, '', ''),
+(77, '', ''),
+(78, '', ''),
+(79, '', ''),
+(80, '', ''),
+(81, '', ''),
+(82, '', ''),
+(83, '', ''),
+(84, '', ''),
+(85, '', ''),
+(86, '', ''),
+(87, '', ''),
+(88, '', ''),
+(89, '', ''),
+(90, '', ''),
+(91, '', ''),
+(92, '', ''),
+(93, '', ''),
+(94, '', ''),
+(95, '', ''),
+(96, '', ''),
+(97, '', ''),
+(98, '', ''),
+(99, '', ''),
+(100, '', ''),
+(101, '', ''),
+(102, '', ''),
+(103, '', ''),
+(104, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_consumer_relation`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_consumer_relation` (
+  `cid` int(11) NOT NULL,
+  `relationName` varchar(100) NOT NULL,
+  `relationStatus` tinyint(4) NOT NULL,
+  `relationType` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_consumer_relation`
+--
+
+INSERT INTO `tbl_consumer_relation` (`cid`, `relationName`, `relationStatus`, `relationType`) VALUES
+(1, 'JUBY ANN G. BORRES', 0, 0),
+(5, 'JOSE B. CORTEZA', 0, 0),
+(6, 'EDEN ROSE V. BELARDO', 0, 0),
+(7, 'EDITA R. BELLEN', 0, 0),
+(8, 'NELDA  V. VIÑAS', 0, 0),
+(12, 'KARLO S. ORLAIN', 0, 0),
+(13, 'MANUEL VALEZUELA', 0, 0),
+(14, 'JUDITH C. RENEGADO', 0, 0),
+(16, 'MA. JENELITA L. BALAORO', 0, 0),
+(17, 'JOSE B. EDIC', 0, 0),
+(18, 'ALDEN G. ESQUILADOR', 0, 0),
+(20, 'MIZIEL BUEZA', 0, 0),
+(22, 'JOSE BIBUT B. BOLAÑOS', 0, 0),
+(25, 'ROGELIO BITAS', 0, 0),
+(27, 'CRISTITA', 0, 0),
+(28, 'ROGER M. ARCILLA', 0, 0),
+(30, 'SAINA B. BANSALE', 0, 0),
+(31, 'ERWIN BARAQUIEL', 0, 0),
+(33, 'ROLAND P. BALANTA', 0, 0),
+(34, 'ELLANIE S. BEA', 0, 0),
+(35, 'REY B. BASILONIA', 0, 0),
+(37, 'FE C. ALCERA', 0, 0),
+(38, 'GEMMA B. BOGÑALOS', 0, 0),
+(41, 'ROLANDO O. PEREGRINO', 0, 0),
+(42, 'RICKY B. BASILLA', 0, 0),
+(44, 'IRMA B. PELAEZ', 0, 0),
+(45, 'RONNIE B. BALEDA', 0, 0),
+(46, 'ERMA A. BALUNSAY', 0, 0),
+(47, 'BIBIANA B. BARBECHO', 0, 0),
+(50, 'JASMIN C. CONDE', 0, 0),
+(51, 'EDMUND BIEN', 0, 0),
+(52, 'GILBERT C. CASITAS', 0, 0),
+(53, 'ALEX D. CUERDO', 0, 0),
+(54, 'JOEL R. EVANGELIO', 0, 0),
+(55, 'ELENA C. CERVANTES', 0, 0),
+(57, 'MARIECHRIS SANTIAGO', 0, 0),
+(58, 'EVELYN B. BERMUNDO', 0, 0),
+(61, 'RUBEN BON', 0, 0),
+(62, 'MARIA NENETTE SILOS', 0, 0),
+(63, 'FIDEL B. GREGORIO', 0, 0),
+(64, 'CECILIO REGINO', 0, 0),
+(65, 'HASER M. DAMAN', 0, 0),
+(66, 'ROLANDO C. DACUYA', 0, 0),
+(68, 'MELINDA BASCO', 0, 0),
+(70, 'VICTOR CASIMIRO SR.', 0, 0),
+(71, 'RUSSEL N. DAGTING', 0, 0),
+(72, 'GLENN S. BORROMEO', 0, 0),
+(76, 'LEONARDO B. CALUBAD', 0, 0),
+(77, 'RANJIE R. BAÑEZ', 0, 0),
+(78, 'FE B. CAMPOS', 0, 0),
+(79, 'HANS-MAGNUS B. ZEPEDA', 0, 0),
+(80, 'MARK JOSEPH C. BUENCONSEJO', 0, 0),
+(82, 'ROMEO D. DOMANAIS', 0, 0),
+(85, 'GRACE R. MILLA', 0, 0),
+(87, 'ELIZABETH P. NOBORA', 0, 0),
+(89, 'EDUARDO S. DATILES', 0, 0),
+(90, 'EDWIN O. LEUTERIO', 0, 0),
+(91, 'GEORGE WILSON RILEY', 0, 0),
+(92, 'DANTE M. ECHALUCE', 0, 0),
+(95, 'MAY B. VALENZUELA', 0, 0),
+(97, 'LEONEL T. DE LIMA', 0, 0),
+(99, 'EDSEL BUEN BIGUERAS', 0, 0),
+(101, 'WILSON S. COLINA', 0, 0),
+(102, 'GIRLIE L. CAÑOTAL', 0, 0),
+(104, 'SHERYL R. COPINO', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_entrance_type`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_entrance_type` (
+`eid` int(11) NOT NULL,
+  `eDescription` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_entrance_type`
+--
+
+INSERT INTO `tbl_entrance_type` (`eid`, `eDescription`) VALUES
+(1, 'PDX'),
+(2, 'THHN'),
+(3, 'INSULATED');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_fee`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_fee` (
+`feeId` int(11) NOT NULL,
+  `feeDesc` varchar(40) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_fee`
+--
+
+INSERT INTO `tbl_fee` (`feeId`, `feeDesc`) VALUES
+(1, 'Membership Fee'),
+(2, 'Bill Deposit'),
+(3, 'Reconnection Fee'),
+(4, 'Tempo. Light Fee'),
+(5, 'Service Fee'),
+(6, 'Transfer Fee'),
+(7, 'Testing Fee'),
+(8, 'Mounting Fee');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_feeder`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_feeder` (
+  `subId` int(11) NOT NULL,
+  `feederName` varchar(10) NOT NULL,
+`feedId` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_feeder`
+--
+
+INSERT INTO `tbl_feeder` (`subId`, `feederName`, `feedId`) VALUES
+(1, 'TF1', 1),
+(1, 'TF2', 2),
+(1, 'TF3', 3),
+(1, 'TF4', 4),
+(2, 'MF1', 5),
+(2, 'MF2', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inspection`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_inspection` (
+  `inspectionId` int(100) NOT NULL,
+  `appId` varchar(11) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `inspectedBy` varchar(100) NOT NULL,
+  `iRemarks` varchar(100) NOT NULL,
+  `dateInspected` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_inspection`
+--
+
+INSERT INTO `tbl_inspection` (`inspectionId`, `appId`, `cid`, `inspectedBy`, `iRemarks`, `dateInspected`) VALUES
+(1, '20150909006', 6, 'ALEMAR B. BODINO', '', '2015-09-14'),
+(2, '20150909013', 13, 'ALEMAR B. BODINO', 'POST METERING', '2015-09-17'),
+(3, '20150909011', 11, 'ALEMAR B. BODINO', 'HOUSE METERING', '2015-09-17'),
+(4, '20150911008', 24, 'ALEMAR B. BODINO', 'POST METERING', '2015-09-17'),
+(5, '20150909002', 2, 'RANDEEH DELFIN', '', '2015-09-17'),
+(6, '20150911007', 23, 'RANDEEH DELFIN', '', '2015-09-17'),
+(7, '20150910001', 15, 'RONNEL ZAPATA', '', '2015-09-21'),
+(8, '20150911009', 25, 'RONNEL ZAPATA', 'NEW CONNECTION- RESIDENTIAL', '2015-09-21'),
+(9, '20150911012', 28, 'ALEMAR B. BODINO', 'NEW CONNECTION-RESIDENTIAL', '2015-09-21'),
+(10, '20150911011', 27, 'ALEAMAR B. BODINO', 'NEW CONNECTION- RESIDENTIAL', '2015-09-21'),
+(11, '20150914001', 35, 'RANDEEH DELFIN/ CHRISTIAN JEREZA', 'NEW CONNECTION', '2015-09-21'),
+(12, '20150911002', 18, 'RANDEEH DELFIN/ CHRISTIAN JEREZA', 'NEW CONNECTION- RESIDENTIAL', '2015-09-21'),
+(13, '20150911001', 17, 'RANDEEH DELFIN/ CHRISTIAN JEREZA', 'NEW CONNECTION- RESIDENTIAL', '2015-09-21'),
+(14, '20150909005', 5, 'RANDEEH DELFIN/ CHRISTIAN JEREZA', 'NEW CONNECTION-RESIDENTIAL', '2015-09-20'),
+(15, '20150917001', 50, 'ALEMAR B. BODINO', '', '2015-09-24'),
+(16, '20150923001', 67, 'ALEMAR B. BODINO', '', '2015-09-24'),
+(17, '20150914007', 41, 'ALEMAR B. BODINO', '', '2015-09-24'),
+(18, '20150914005', 39, 'ALEMAR B. BODINO', '', '2015-09-24'),
+(19, '20150914009', 43, 'ALEMAR B. BODINO', 'METER 2', '2015-09-25'),
+(20, '20150915001', 44, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(21, '20150914008', 42, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(22, '20150914003', 37, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(23, '20150914002', 36, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(24, '20150915004', 47, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(25, '20150921003', 60, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(26, '20150921004', 61, 'RONNEL L. ZAPATA', '', '2015-09-25'),
+(27, '20150917002', 51, 'RONNEL L. ZAPATA', '', '2015-09-25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inspection_meter`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_inspection_meter` (
+  `inspectionId` int(100) NOT NULL,
+  `meterForm` varchar(100) NOT NULL,
+  `meterClass` varchar(100) NOT NULL,
+  `totalVa` varchar(100) NOT NULL,
+  `subId` int(11) NOT NULL,
+  `feedId` int(11) NOT NULL,
+  `phase` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_inspection_meter`
+--
+
+INSERT INTO `tbl_inspection_meter` (`inspectionId`, `meterForm`, `meterClass`, `totalVa`, `subId`, `feedId`, `phase`) VALUES
+(1, '1A MK31', '10(60)', '656 W', 1, 3, 1),
+(2, '1A MK31', '10(60)', '210 W', 1, 2, 1),
+(3, '1A MK31', '10(60)', '390 W', 1, 2, 1),
+(4, '1A MK31 ', '10(60)', '198 W', 1, 3, 1),
+(5, '1A MK31', '10(60)', '198 W', 2, 6, 1),
+(6, '1A MK31', '10(60)', '440 W', 2, 6, 1),
+(7, '1A MK31', '10(60)', '234 W', 1, 3, 1),
+(8, '1A MK31', '10(60)', '198 W', 1, 3, 1),
+(9, '1A MK31', '10(60)', '195 W', 1, 4, 1),
+(10, '1A MK31', '10 (60)', '210 W', 1, 4, 1),
+(11, '1A MK31', '10(60)', '240 W', 1, 3, 1),
+(12, '1A MK31', '10(60)', '190 W', 1, 3, 1),
+(13, '1A MK31', '10(60)', '216 W', 1, 3, 1),
+(14, '1A MK31', '10(60)', '594 w', 2, 6, 1),
+(15, '1A MK31', '10(60)', '195 W', 2, 5, 1),
+(16, '1A MK31', '10(60)', '195 W', 1, 3, 1),
+(17, '1A MK31', '10(60)', '195 W', 1, 4, 1),
+(18, '1A MK31', '10(60)', '210 W', 2, 5, 1),
+(19, '1A MK31', '10(60)', '210 W', 2, 5, 1),
+(20, '1A MK31', '10(60)', '234', 1, 3, 1),
+(21, '1A MK31', '10(60)', '414 W', 1, 3, 1),
+(22, '1A MK31', '10(60)', '594 W', 1, 1, 1),
+(23, '1A MK31', '10(60)', '198 W', 1, 1, 1),
+(24, '1A MK31', '10(60)', '216 W', 1, 1, 1),
+(25, '1A MK31', '10(60)', '1112 W', 1, 2, 1),
+(26, '1A MK31', '10(60)', '198 W', 1, 4, 1),
+(27, '1A MK31', '10(60)', '216 W', 1, 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inspection_type`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_inspection_type` (
+  `inspectionId` int(100) NOT NULL,
+  `protectionId` tinyint(4) NOT NULL,
+  `pRating` varchar(100) NOT NULL,
+  `wireSize` varchar(100) NOT NULL,
+  `eid` int(11) NOT NULL,
+  `eSize` varchar(100) NOT NULL,
+  `length` varchar(100) NOT NULL,
+  `servicePole` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_inspection_type`
+--
+
+INSERT INTO `tbl_inspection_type` (`inspectionId`, `protectionId`, `pRating`, `wireSize`, `eid`, `eSize`, `length`, `servicePole`) VALUES
+(1, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, 'NO. 10', '170', '5'),
+(2, 1, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '25', '0'),
+(3, 2, '30 AT', 'DUPLEX DROPWIRE NO.6', 1, '2.6 mm', '6', '0'),
+(4, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '21 m', '0'),
+(5, 1, '30 AT', 'DUPLEX NO. 6', 1, '6', '40', '1'),
+(6, 2, '40 AT', 'DUPLEX DROPWIRE NO. 6', 2, '14', '30', '1'),
+(7, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 2, '8', '10 M', ''),
+(8, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 MM', '20 M', ''),
+(9, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 MM', '100 M', '3'),
+(10, 1, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 MM', '110 M', '3'),
+(11, 1, '30 AT', 'DUPLEX NO. 6', 1, 'NO. 10', '55 M', '1'),
+(12, 1, '30 AT', 'DUPLEX  NO. 6', 1, 'NO. 10', '30 M', '1'),
+(13, 1, '30 AT', 'DUPLEX DROPWIRE NO.6', 1, 'NO.10', '40 M', '1'),
+(14, 1, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '85 m', '2'),
+(15, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '60 m', '2'),
+(16, 1, '30 AT', 'DUPLEX DROPWIRE NO. 6', 2, '8', '30 m', '1'),
+(17, 2, '30 AT', 'DUPLEX DROPWIRE NO.6', 1, '2.0 mm', '30 m', '1'),
+(18, 2, '30 AT', 'DUPLEX DROPWIRE NO.6', 1, '2.6 mm', '106 m', '3'),
+(19, 1, '30 AT', 'DUPLEX DROPWIRE NO.6', 2, '8', '50 m', '1'),
+(20, 2, '30 AT', 'DUPLEX DROPWIRE NO.6', 1, '2.6 mm', '25', ''),
+(21, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '45 m', '1'),
+(22, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.0 mm', '17 m', ''),
+(23, 1, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '10 m', '0'),
+(24, 2, '30 AT', '2.6 mm', 1, '2.6 mm', '35 m', '1'),
+(25, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 2, '8', '35 m', '1'),
+(26, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 2, '2.0 mm', '35 m', '1'),
+(27, 2, '30 AT', 'DUPLEX DROPWIRE NO. 6', 1, '2.6 mm', '30 m', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_materials`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_materials` (
+  `entry_id` int(11) NOT NULL,
+  `materialCode` varchar(100) NOT NULL,
+  `materialDesc` varchar(100) NOT NULL,
+  `unit` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_materials`
+--
+
+INSERT INTO `tbl_materials` (`entry_id`, `materialCode`, `materialDesc`, `unit`) VALUES
+(1737, '0050 01 00', 'AMPACT CARTIDGE SHELL, BLUE', ''),
+(1738, '0050 01 40', 'AMPACT CARTIDGE SHELL, BLUE, #4/0', ''),
+(1739, '0050 05 00', 'AMPACT CARTIDGE SHELL, YELLOW', ''),
+(1740, '0050 05 33', 'AMPACT CARTIDGE SHELL, YELLOW, #336 MCM', ''),
+(1741, '0050 28 00', 'AMPACT LOG, 8 HOLES', ''),
+(1742, '0050 40 00', 'AMPACT TAP', ''),
+(1743, '0050 52 33', 'AMPACT TERMINAL LUG, 2 HOLE PADDLE, #336 MCM', ''),
+(1744, '0050 54 00', 'AMPACT TERMINAL LUG, 4 HOLE PADDLE', ''),
+(1745, '0050 52 40', 'AMPACT, TERMINAL LUG 2 HOLE PADDLE, #4/0', ''),
+(1746, '0093 38 10', 'ANCHOR, EXPANDING, 10,000 LBS., 8 WAY, GALVANIZED', ''),
+(1747, '0093 38 06', 'ANCHOR, EXPANDING, 6,000 IBS, 2 WAY, GALVANIZED', ''),
+(1748, '0093 38 08', 'ANCHOR, EXPANDING, 8,000 LBS, 4 WAY, GALVANIZED', ''),
+(1749, '0099 54 08', 'ANCHOR, LOG, 08" X 4''', ''),
+(1750, '0099 55 10', 'ANCHOR, LOG, 10" X 5''', ''),
+(1751, '0099 55 12', 'ANCHOR, LOG, 12" X 5''', ''),
+(1752, '0096 30 18', 'ANCHOR, ROCK, 18"', ''),
+(1753, '5371 00 21', 'ARMOR, ROD, 21" LONG', ''),
+(1754, '5371 02 00', 'ARMOR, ROD, ALLUMINUM, DOUBLE', ''),
+(1755, '5371 33 02', 'ARMOR, ROD, PREF., #336.4 ACSR, DOUBLE SUPPORT', ''),
+(1756, '5371 33 01', 'ARMOR, ROD, PREF., #336.4 ACSR, SINGLE SUPPORT', ''),
+(1757, '5371 10 02', 'ARMOR, ROD, PREFORMED, #1/0 ACSR, DOUBLE SET', ''),
+(1758, '5371 10 10', 'ARMOR, ROD, PREFORMED, #1/0 ACSR, SINGLE SET', ''),
+(1759, '5371 02 01', 'ARMOR, ROD, PREFORMED, #2 ACSR, SINGLE SET', ''),
+(1760, '5371 20 02', 'ARMOR, ROD, PREFORMED, #2/0 ACSR, DOUBLE SET', ''),
+(1761, '5371 20 01', 'ARMOR, ROD, PREFORMED, #2/0 ACSR, SINGLE SET', ''),
+(1762, '5371 30 02', 'ARMOR, ROD, PREFORMED, #3/0 ACSR, DOUBLE SET', ''),
+(1763, '5371 30 01', 'ARMOR, ROD, PREFORMED, #3/0 ACSR, SINGLE SET', ''),
+(1764, '5371 04 02', 'ARMOR, ROD, PREFORMED, #4 ACSR, DOUBLE SET', ''),
+(1765, '5371 04 01', 'ARMOR, ROD, PREFORMED, #4 ACSR, SINGLE SET', ''),
+(1766, '5371 40 02', 'ARMOR, ROD, PREFORMED, #4/0 ACSR, DOUBLE SET', ''),
+(1767, '5371 40 01', 'ARMOR, ROD, PREFORMED, #4/0 ACSR, SINGLE SET', ''),
+(1768, '5371 11 25', 'ARMOR, ROD, PREFORMED, 25" LONG, 11 PCS/SET', ''),
+(1769, '5371 13 27', 'ARMOR, ROD, PREFORMED, 27" LONG, 13 PCS/SET', ''),
+(1770, '5371 08 31', 'ARMOR, ROD, PREFORMED, 31" LONG, 8 PCS/SET', ''),
+(1771, '5371 09 31', 'ARMOR, ROD, PREFORMED, 31" LONG, 9 PCS/SET', ''),
+(1772, '5371 09 64', 'ARMOR, ROD, PREFORMED, 64" LONG, 9 PCS/SET', ''),
+(1773, '5371 10 00', 'ARMOR, ROD, TAPPING, PREFORMED, #1/0 ACSR', ''),
+(1774, '5371 20 00', 'ARMOR, ROD, TAPPING, PREFORMED, #2/0 ACSR', ''),
+(1775, '5371 30 00', 'ARMOR, ROD, TAPPING, PREFORMED, #3/0 ACSR', ''),
+(1776, '5371 33 00', 'ARMOR, ROD, TAPPING, PREFORMED, #336.40 ACSR', ''),
+(1777, '5371 04 00', 'ARMOR, ROD, TAPPING, PREFORMED, #4 ACSR', ''),
+(1778, '5371 40 00', 'ARMOR, ROD, TAPPING, PREFORMED, #4/0 ACSR', ''),
+(1779, '0152 10 52', 'ARRESTER, LIGHTNING, 10 KV', 'UNIT'),
+(1780, '0152 10 62', 'ARRESTER, LIGHTNING, 10 KV, POLYMER', 'UNIT'),
+(1781, '0154 12 12', 'ARRESTER, LIGHTNING, 12 KV, PVN STATION', 'UNIT'),
+(1782, '0152 15 12', 'ARRESTER, LIGHTNING, 15 KV', 'UNIT'),
+(1783, '0154 00 12', 'ARRESTER, LIGHTNING, STATION TYPE', 'UNIT'),
+(1784, '0154 02 00', 'ATTACHMENT, GUY, MALLEABLE, W/ 11/16" HOLE DIA.', 'PIECE'),
+(1785, '0631 04 06', 'BOLT, CARRIAGE, 1/2" X 06"', 'PIECE'),
+(1786, '0631 04 08', 'BOLT, CARRIAGE, 1/2" X 08"', 'PIECE'),
+(1787, '0631 03 04', 'BOLT, CARRIAGE, 3/8" X 04-1/2"', 'PIECE'),
+(1788, '0631 03 05', 'BOLT, CARRIAGE, 3/8" X 05-1/2"', 'PIECE'),
+(1789, '0631 03 08', 'BOLT, CARRIAGE, 3/8" X 08"', 'PIECE'),
+(1790, '0631 04 10', 'BOLT, CARRIAGE, 3/8" X 10"', 'PIECE'),
+(1791, '0631 03 06', 'BOLT, CARRIAGE, 3/8" X 6"', 'PIECE'),
+(1792, '0632 06 14', 'BOLT, CLEVIS, 3/4" X 14"', 'PIECE'),
+(1793, '0632 05 12', 'BOLT, CLEVIS, 5/8" X 12"', 'PIECE'),
+(1794, '0632 05 14', 'BOLT, CLEVIS, 5/8" X 14"', 'PIECE'),
+(1795, '0633 06 26', 'BOLT, DOUBLE ARMING, 3/4" X 26"', 'PIECE'),
+(1796, '0633 05 08', 'BOLT, DOUBLE ARMING, 5/8" X 08"', 'PIECE'),
+(1797, '0633 05 09', 'BOLT, DOUBLE ARMING, 5/8" X 09"', 'PIECE'),
+(1798, '0633 05 10', 'BOLT, DOUBLE ARMING, 5/8" X 10"', 'PIECE'),
+(1799, '0633 05 12', 'BOLT, DOUBLE ARMING, 5/8" X 12"', 'PIECE'),
+(1800, '0633 05 13', 'BOLT, DOUBLE ARMING, 5/8" X 13"', 'PIECE'),
+(1801, '0633 05 14', 'BOLT, DOUBLE ARMING, 5/8" X 14"', 'PIECE'),
+(1802, '0633 05 15', 'BOLT, DOUBLE ARMING, 5/8" X 15"', 'PIECE'),
+(1803, '0633 05 16', 'BOLT, DOUBLE ARMING, 5/8" X 16"', 'PIECE'),
+(1804, '0633 05 17', 'BOLT, DOUBLE ARMING, 5/8" X 17"', 'PIECE'),
+(1805, '0633 05 18', 'BOLT, DOUBLE ARMING, 5/8" X 18"', 'PIECE'),
+(1806, '0633 05 19', 'BOLT, DOUBLE ARMING, 5/8" X 19"', 'PIECE'),
+(1807, '0633 05 20', 'BOLT, DOUBLE ARMING, 5/8" X 20"', 'PIECE'),
+(1808, '0633 05 22', 'BOLT, DOUBLE ARMING, 5/8" X 22"', 'PIECE'),
+(1809, '0633 05 23', 'BOLT, DOUBLE ARMING, 5/8" X 23"', 'PIECE'),
+(1810, '0633 05 24', 'BOLT, DOUBLE ARMING, 5/8" X 24"', 'PIECE'),
+(1811, '0633 05 26', 'BOLT, DOUBLE ARMING, 5/8" X 26"', 'PIECE'),
+(1812, '0633 05 28', 'BOLT, DOUBLE ARMING, 5/8" X 28"', 'PIECE'),
+(1813, '0635 05 08', 'BOLT, DOUBLE UPSET, 5/8" X 08"', 'PIECE'),
+(1814, '0635 05 09', 'BOLT, DOUBLE UPSET, 5/8" X 09"', 'PIECE'),
+(1815, '0635 05 10', 'BOLT, DOUBLE UPSET, 5/8" X 10', 'PIECE'),
+(1816, '0635 05 12', 'BOLT, DOUBLE UPSET, 5/8" X 12"', 'PIECE'),
+(1817, '0635 05 14', 'BOLT, DOUBLE UPSET, 5/8" X 14"', 'PIECE'),
+(1818, '0635 05 18', 'BOLT, DOUBLE UPSET, 5/8" X 18"', 'PIECE'),
+(1819, '0630 05 12', 'BOLT, EXTENSION, 5/8" X 12"', 'PIECE'),
+(1820, '0638 04 04', 'BOLT, MACHINE, 1/2" X  04"', 'PIECE'),
+(1821, '0638 04 05', 'BOLT, MACHINE, 1/2" X 05"', 'PIECE'),
+(1822, '0638 04 06', 'BOLT, MACHINE, 1/2" X 06"', 'PIECE'),
+(1823, '0638 04 08', 'BOLT, MACHINE, 1/2" X 08"', 'PIECE'),
+(1824, '0638 04 09', 'BOLT, MACHINE, 1/2" X 09"', 'PIECE'),
+(1825, '0638 04 10', 'BOLT, MACHINE, 1/2" X 10"', 'PIECE'),
+(1826, '0638 04 12', 'BOLT, MACHINE, 1/2" X 12"', 'PIECE'),
+(1827, '0638 04 14', 'BOLT, MACHINE, 1/2" X 14"', 'PIECE'),
+(1828, '0638 04 16', 'BOLT, MACHINE, 1/2" X 16"', 'PIECE'),
+(1829, '0638 06 08', 'BOLT, MACHINE, 3/4" X 08"', 'PIECE'),
+(1830, '0638 06 10', 'BOLT, MACHINE, 3/4" X 10"', 'PIECE'),
+(1831, '0638 06 12', 'BOLT, MACHINE, 3/4" X 12"', 'PIECE'),
+(1832, '0638 06 14', 'BOLT, MACHINE, 3/4" X 14"', 'PIECE'),
+(1833, '0638 06 16', 'BOLT, MACHINE, 3/4" X 16"', 'PIECE'),
+(1834, '0638 06 18', 'BOLT, MACHINE, 3/4" X 18"', 'PIECE'),
+(1835, '0638 06 20', 'BOLT, MACHINE, 3/4" X 20"', 'PIECE'),
+(1836, '0638 06 22', 'BOLT, MACHINE, 3/4" X 22"', 'PIECE'),
+(1837, '0638 06 24', 'BOLT, MACHINE, 3/4" X 24"', 'PIECE'),
+(1838, '0638 06 26', 'BOLT, MACHINE, 3/4" X 26"', 'PIECE'),
+(1839, '0638 05 03', 'BOLT, MACHINE, 5/8" X 03"', 'PIECE'),
+(1840, '0638 05 04', 'BOLT, MACHINE, 5/8" X 04"', 'PIECE'),
+(1841, '0638 05 05', 'BOLT, MACHINE, 5/8" X 05"', 'PIECE'),
+(1842, '0638 05 06', 'BOLT, MACHINE, 5/8" X 06"', 'PIECE'),
+(1843, '0638 05 08', 'BOLT, MACHINE, 5/8" X 08"', 'PIECE'),
+(1844, '0638 05 09', 'BOLT, MACHINE, 5/8" X 09"', 'PIECE'),
+(1845, '0638 05 10', 'BOLT, MACHINE, 5/8" X 10"', 'PIECE'),
+(1846, '0638 05 11', 'BOLT, MACHINE, 5/8" X 11"', 'PIECE'),
+(1847, '0638 05 12', 'BOLT, MACHINE, 5/8" X 12"', 'PIECE'),
+(1848, '0638 05 14', 'BOLT, MACHINE, 5/8" X 14"', 'PIECE'),
+(1849, '0638 05 16', 'BOLT, MACHINE, 5/8" X 16"', 'PIECE'),
+(1850, '0638 05 18', 'BOLT, MACHINE, 5/8" X 18"', 'PIECE'),
+(1851, '0638 05 20', 'BOLT, MACHINE, 5/8" X 20"', 'PIECE'),
+(1852, '0636 16 10', 'BOLT, OVAL EYE, 3/4" X 10"', 'PIECE'),
+(1853, '0636 16 12', 'BOLT, OVAL EYE, 3/4" X 12"', 'PIECE'),
+(1854, '0636 16 14', 'BOLT, OVAL EYE, 3/4" X 14"', 'PIECE'),
+(1855, '0636 15 08', 'BOLT, OVAL EYE, 5/8" X 08"', 'PIECE'),
+(1856, '0636 15 09', 'BOLT, OVAL EYE, 5/8" X 09"', 'PIECE'),
+(1857, '0636 15 10', 'BOLT, OVAL EYE, 5/8" X 10"', 'PIECE'),
+(1858, '0636 15 12', 'BOLT, OVAL EYE, 5/8" X 12"', 'PIECE'),
+(1859, '0636 15 14', 'BOLT, OVAL EYE, 5/8" X 14"', 'PIECE'),
+(1860, '0636 15 18', 'BOLT, OVAL EYE, 5/8" X 18"', 'PIECE'),
+(1861, '0636 15 20', 'BOLT, OVAL EYE, 5/8" X 20"', 'PIECE'),
+(1862, '0630 12 02', 'BOLT, S.S., 1/2" X 2" WITH 2 S.S. FLAT WASHERS', 'PIECE'),
+(1863, '0636 36 14', 'BOLT, SHOULDER EYE, 3/4" X 14"', 'PIECE'),
+(1864, '0636 36 16', 'BOLT, SHOULDER EYE, 3/4" X 16"', 'PIECE'),
+(1865, '0639 05 08', 'BOLT, SINGLE UPSET, 5/8" X 08"', 'PIECE'),
+(1866, '0639 05 09', 'BOLT, SINGLE UPSET, 5/8" X 09"', 'PIECE'),
+(1867, '0639 05 10', 'BOLT, SINGLE UPSET, 5/8" X 10"', 'PIECE'),
+(1868, '0639 05 12', 'BOLT, SINGLE UPSET, 5/8" X 12"', 'PIECE'),
+(1869, '0639 05 14', 'BOLT, SINGLE UPSET, 5/8" X 14"', 'PIECE'),
+(1870, '0639 05 16', 'BOLT, SINGLE UPSET, 5/8" X 16"', 'PIECE'),
+(1871, '0630 00 03', 'BOLT, STAINLESS, 1/4" X 3", WITH NUT AND WASHER', 'PIECE'),
+(1872, '0636 55 07', 'BOLT, THIMBLE EYE, 5/8" X  07", STRAIGHT TYPE', 'PIECE'),
+(1873, '0636 55 08', 'BOLT, THIMBLE EYE, 5/8" X  08", STRAIGHT TYPE', 'PIECE'),
+(1874, '0636 55 09', 'BOLT, THIMBLE EYE, 5/8" X  09", STRAIGHT TYPE', 'PIECE'),
+(1875, '0636 45 10', 'BOLT, THIMBLE EYE, 5/8" X 10", ANGLE', 'PIECE'),
+(1876, '0636 55 10', 'BOLT, THIMBLE EYE, 5/8" X 10", STRAIGHT TYPE', 'PIECE'),
+(1877, '0636 55 11', 'BOLT, THIMBLE EYE, 5/8" X 11", STRAIGHT TYPE', 'PIECE'),
+(1878, '0636 55 12', 'BOLT, THIMBLE EYE, 5/8" X 12", STRAIGHT TYPE', 'PIECE'),
+(1879, '0636 55 13', 'BOLT, THIMBLE EYE, 5/8" X 13", STRAIGHT TYPE', 'PIECE'),
+(1880, '0636 55 14', 'BOLT, THIMBLE EYE, 5/8" X 14", STRAIGHT TYPE', 'PIECE'),
+(1881, '0636 55 20', 'BOLT, THIMBLE EYE, 5/8" X 20", STRAIGHT TYPE', 'PIECE'),
+(1882, '0755 34 48', 'BRACE, ALLEY ARM, STEEL, 4 FT.', 'PIECE'),
+(1883, '0755 34 84', 'BRACE, ALLEY ARM, STEEL, 7 FT.', 'PIECE'),
+(1884, '0755 34 42', 'BRACE, ANGLE, 42" SPAN', 'PIECE'),
+(1885, '0751 34 60', 'BRACE, ANGLE, 60" SPAN', 'PIECE'),
+(1886, '0753 51 28', 'BRACE, STEEL, CROSSARM, 28"', 'PIECE'),
+(1887, '0753 51 50', 'BRACE, STEEL, CROSSARM, 50" - 18" DROP', 'PIECE'),
+(1888, '0753 51 68', 'BRACE, STEEL, CROSSARM, 60" - 18" DROP', 'PIECE'),
+(1889, '0755 32 50', 'BRACE, STEEL, SIDEARM, 50"', 'PIECE'),
+(1890, '0755 32 84', 'BRACE, STEEL, SIDEARM, DIAGONAL, 7 FEET', 'PIECE'),
+(1891, '0780 06 00', 'BRACKET, ANGLE SUSPENSION, 3/4"', 'PIECE'),
+(1892, '0780 05 00', 'BRACKET, ANGLE SUSPENSION, 5/8"', 'PIECE'),
+(1893, '0780 45 00', 'BRACKET, CLEVIS DEADEND WITHOUT SPOOL', 'PIECE'),
+(1894, '0780 55 00', 'BRACKET, CLUSTER TYPE', 'PIECE'),
+(1895, '0780 60 00', 'BRACKET, EXTENSION, L TYPE', 'PIECE'),
+(1896, '0780 65 00', 'BRACKET, INSULATOR, POST TYPE', 'PIECE'),
+(1897, '0780 70 00', 'BRACKET, LUMINAIRE SUPPORT', 'PIECE'),
+(1898, '0780 75 02', 'BRACKET, MOUNTING, 2 TRANSFORMER', 'PIECE'),
+(1899, '0780 75 03', 'BRACKET, MOUNTING, 3 TRANSFORMER', 'PIECE'),
+(1900, '0780 75 10', 'BRACKET, MOUNTING, PRIMARY METERING', 'PIECE'),
+(1901, '0780 80 24', 'BRACKET, SCREW, #24', 'PIECE'),
+(1902, '0780 85 01', 'BRACKET, SECONDARY, DEAD END, BIG', 'PIECE'),
+(1903, '0780 85 02', 'BRACKET, SECONDARY, DEAD END, SMALL', 'PIECE'),
+(1904, '0780 85 03', 'BRACKET, SECONDARY, WITHOUT SPOOL, INSULATED', 'PIECE'),
+(1905, '0780 90 00', 'BRACKET, TRANSFORMER ADAPTOR', 'PIECE'),
+(1906, '0780 90 11', 'BRACKET, TRANSFORMER, SEC., WITH 1-3/4" SPOOL', 'PIECE'),
+(1907, '0780 90 10', 'BRACKET, TRANSFORMER, SECONDARY', 'PIECE'),
+(1908, '1171 12 10', 'CLAMP, ANCHOR BONDING, 3/4", TWIN EYE ROD', 'PIECE'),
+(1909, '1171 11 10', 'CLAMP, ANCHOR BONDING, SINGLE EYE ROD', 'PIECE'),
+(1910, '1172 57 33', 'CLAMP, CONDUCTOR, DEAD END, AL ALLOY', 'PIECE'),
+(1911, '1172 10 00', 'CLAMP, DEADEND STRAIN, #1/0 ACSR', 'PIECE'),
+(1912, '1172 02 00', 'CLAMP, DEADEND STRAIN, #2 ACSR', 'PIECE'),
+(1913, '1172 20 00', 'CLAMP, DEADEND STRAIN, #2/0 ACSR', 'PIECE'),
+(1914, '1172 30 00', 'CLAMP, DEADEND STRAIN, #3/0 ACSR', 'PIECE'),
+(1915, '1172 33 00', 'CLAMP, DEADEND STRAIN, #336.40 ACSR', 'PIECE'),
+(1916, '1172 04 33', 'CLAMP, DEADEND STRAIN, #4 - #336.40 ACSR', 'PIECE'),
+(1917, '1172 04 00', 'CLAMP, DEADEND STRAIN, #4 ACSR', 'PIECE'),
+(1918, '1172 40 00', 'CLAMP, DEADEND STRAIN, #4/0 ACSR', 'PIECE'),
+(1919, '1731 00 30', 'CLAMP, GROUND ROD, 5/8"', 'PIECE'),
+(1920, '1172 48 87', 'CLAMP, GROUNDWIRE, DEADEND, STRAIN, CLEVIS TYPE', 'PIECE'),
+(1921, '1173 00 00', 'CLAMP, GUY BOND', 'PIECE'),
+(1922, '1173 22 91', 'CLAMP, GUY STRAIGHT, 3 BOLT, HEAVY DUTY STEEL', 'PIECE'),
+(1923, '1741 29 07', 'CLAMP, HOT LINE, #2 - #4/0 ACSR MAIN TO #2 - #4/0', 'PIECE'),
+(1924, '1741 39 07', 'CLAMP, HOT LINE, #336.40 ACSR MAIN TO #2 - #4/0', 'PIECE'),
+(1925, '1741 19 07', 'CLAMP, HOT LINE, #4/0', 'PIECE'),
+(1926, '1172 10 25', 'CLAMP, LOOP DEADEND, #1/0 ACSR', 'PIECE'),
+(1927, '1172 02 25', 'CLAMP, LOOP DEADEND, #2 ACSR', 'PIECE'),
+(1928, '1172 20 25', 'CLAMP, LOOP DEADEND, #2/0 ACSR', 'PIECE'),
+(1929, '1172 04 25', 'CLAMP, LOOP DEADEND, #4 ACSR', 'PIECE'),
+(1930, '1172 06 25', 'CLAMP, LOOP DEADEND, #6 ACSR', 'PIECE'),
+(1931, '1188 10 00', 'CLAMP, POLE, 10" DIAMETER', 'PIECE'),
+(1932, '1189 00 00', 'CLAMP, POLE, DOUBLE SUPPORT', 'PIECE'),
+(1933, '1188 00 00', 'CLAMP, POLE, SINGLE SUPPORT', 'PIECE'),
+(1934, '1174 02 01', 'CLAMP, SUSPENSION, 2 BOLTS #2 ACSR MAX.', 'PIECE'),
+(1935, '1174 20 01', 'CLAMP, SUSPENSION, 2 BOLTS #2/0 ACSR MAX.', 'PIECE'),
+(1936, '1174 33 26', 'CLAMP, SUSPENSION, 2 BOLTS #336.40 ACSR MAX.', 'PIECE'),
+(1937, '1174 22 19', 'CLAMP, SUSPENSION, AL. ALLOY CLEVIS', 'PIECE'),
+(1938, '1174 00 01', 'CLAMP, SUSPENSION, E-TYPE', 'PIECE'),
+(1939, '1174 25 87', 'CLAMP, SUSPENSION, GROUNDWIRE 3/8", 15,000 LBS', 'PIECE'),
+(1940, '1174 39 33', 'CLAMP, SUSPENSION, SOCKET TYPE', 'PIECE'),
+(1941, '1230 00 20', 'CLEVIS, BALL', ''),
+(1942, '1230 13 01', 'CLEVIS, DEADEND WITHOUT SPOOL', 'PIECE'),
+(1943, '1230 12 01', 'CLEVIS, SECONDARY, SWINGING WITHOUT SPOOL', 'PIECE'),
+(1944, '1230 14 01', 'CLEVIS, SERVICE, SWINGING WITHOUT SPOOL', 'PIECE'),
+(1945, '1260 10 00', 'CLIP, GROUND WIRE', ''),
+(1946, '1260 20 00', 'CLIP, GUY WIRE', ''),
+(1947, '1260 30 12', 'CLIP. BAND-IT, STEEL, 1/2"', ''),
+(1948, '3980 00 01', 'CLUSTER BOX, METER, 120 X 25 X 20', ''),
+(1949, '3980 00 02', 'CLUSTER BOX, METER, 150 X 55 X 20', ''),
+(1950, '1701 35 35', 'COMPRESSION TAP, CONNECTOR, CAH-35A35, YHD-100', ''),
+(1951, '1701 49 38', 'COMPRESSION TAP, CONNECTOR, CAH-49A38, YHD-150', ''),
+(1952, '1511 10 61', 'CONDUCTOR, BARE, ACSR #1/0, AWG 6/1', 'METER'),
+(1953, '1511 02 61', 'CONDUCTOR, BARE, ACSR #2,   AWG 6/1', 'METER'),
+(1954, '1511 20 61', 'CONDUCTOR, BARE, ACSR #2/0, AWG 6/1', 'METER'),
+(1955, '1511 30 61', 'CONDUCTOR, BARE, ACSR #3/0, AWG 6/1', 'METER'),
+(1956, '1511 04 61', 'CONDUCTOR, BARE, ACSR #4,   AWG 6/1', 'METER'),
+(1957, '1511 40 61', 'CONDUCTOR, BARE, ACSR #4/0, AWG 6/1', 'METER'),
+(1958, '1511 06 61', 'CONDUCTOR, BARE, ACSR #6, AWG 6/1', 'METER'),
+(1959, '1511 33 26', 'CONDUCTOR, BARE, ACSR, #336.4 MCM', 'METER'),
+(1960, '1612 10 01', 'CONDUCTOR, DUPLEX, #1/0, AWG 6/1', 'METER'),
+(1961, '1612 02 01', 'CONDUCTOR, DUPLEX, #2, AWG 6/1', 'METER'),
+(1962, '1612 20 01', 'CONDUCTOR, DUPLEX, #2/0, AWG 6/1', 'METER'),
+(1963, '1612 30 01', 'CONDUCTOR, DUPLEX, #3/0, AWG 6/1', 'METER'),
+(1964, '1612 40 01', 'CONDUCTOR, DUPLEX, #4/0, AWG 6/1', 'METER'),
+(1965, '1612 06 01', 'CONDUCTOR, DUPLEX, #6, AWG 6/1', 'METER'),
+(1966, '1615 10 00', 'CONDUCTOR, INS., COPPER, #1/0, THHN/THWN', 'METER'),
+(1967, '1615 10 10', 'CONDUCTOR, INS., COPPER, #10, THHN/THWN', 'METER'),
+(1968, '1615 00 12', 'CONDUCTOR, INS., COPPER, #12, THHN/THWN', 'METER'),
+(1969, '1615 00 14', 'CONDUCTOR, INS., COPPER, #14, THHN/THWN', 'METER'),
+(1970, '1615 02 00', 'CONDUCTOR, INS., COPPER, #2, THHN/THWN', 'METER'),
+(1971, '1615 20 00', 'CONDUCTOR, INS., COPPER, #2/0, THHN/THWN', 'METER'),
+(1972, '1615 40 00', 'CONDUCTOR, INS., COPPER, #4/0, THHN/THWN', 'METER'),
+(1973, '1615 06 00', 'CONDUCTOR, INS., COPPER, #6, THHN/THWN', 'METER'),
+(1974, '1615 08 00', 'CONDUCTOR, INS., COPPER, #8, THHN/THWN', 'METER'),
+(1975, '1615 00 10', 'CONDUCTOR, INS., COPPER, THHN, 10 MM^2', 'METER'),
+(1976, '1614 10 61', 'CONDUCTOR, INS., POLYTHENE, ACSR #1/0, AWG 6/1', 'METER'),
+(1977, '1614 02 61', 'CONDUCTOR, INS., POLYTHENE, ACSR #2,   AWG 6/1', 'METER'),
+(1978, '1614 20 61', 'CONDUCTOR, INS., POLYTHENE, ACSR #2/0, AWG 6/1', 'METER'),
+(1979, '1614 30 61', 'CONDUCTOR, INS., POLYTHENE, ACSR #3/0, AWG 6/1', 'METER'),
+(1980, '1614 33 26', 'CONDUCTOR, INS., POLYTHENE, ACSR #336.40, MCM', 'METER'),
+(1981, '1614 04 61', 'CONDUCTOR, INS., POLYTHENE, ACSR #4,   AWG 6/1', 'METER'),
+(1982, '1614 40 61', 'CONDUCTOR, INS., POLYTHENE, ACSR #4/0, AWG 6/1', 'METER'),
+(1983, '1613 10 61', 'CONDUCTOR, INSULATED, ACSR #1/0, AWG 6/1', 'METER'),
+(1984, '1613 02 61', 'CONDUCTOR, INSULATED, ACSR #2, AWG 6/1', 'METER'),
+(1985, '1613 20 61', 'CONDUCTOR, INSULATED, ACSR #2/0, AWG 6/1', 'METER'),
+(1986, '1613 30 61', 'CONDUCTOR, INSULATED, ACSR #3/0, AWG 6/1', 'METER'),
+(1987, '1613 04 61', 'CONDUCTOR, INSULATED, ACSR #4, AWG 6/1', 'METER'),
+(1988, '1613 40 61', 'CONDUCTOR, INSULATED, ACSR #4/0, AWG 6/1', 'METER'),
+(1989, '1615 22 10', 'CONDUCTOR, PDX #10', 'METER'),
+(1990, '1746 16 36', 'CONNECTOR, ALUMINUM, BOLTED "TEE"', 'PIECE'),
+(1991, '1705 16 13', 'CONNECTOR, COMP., B-YCS33R', 'PIECE'),
+(1992, '1701 16 07', 'CONNECTOR, COMPRESSION TAP, YHD-7', 'PIECE'),
+(1993, '1701 16 02', 'CONNECTOR, COMPRESSION, B-YPC-2A8U', 'PIECE'),
+(1994, '1705 70 07', 'CONNECTOR, COMPRESSION, B-YSS6RG2', 'PIECE'),
+(1995, '1701 12 12', 'CONNECTOR, COMPRESSION, CAH-120, A120', 'PIECE'),
+(1996, '1701 24 70', 'CONNECTOR, COMPRESSION, CAH-120, A70', 'PIECE'),
+(1997, '1701 58 70', 'CONNECTOR, COMPRESSION, CAH-240, A70', 'PIECE'),
+(1998, '1701 58 35', 'CONNECTOR, COMPRESSION, CAH-58, A35', 'PIECE'),
+(1999, '1701 95 95', 'CONNECTOR, COMPRESSION, CAH-95, A95', 'PIECE'),
+(2000, '1701 16 45', 'CONNECTOR, COMPRESSION, YHD 200', 'PIECE'),
+(2001, '1701 16 47', 'CONNECTOR, COMPRESSION, YHD 250', 'PIECE'),
+(2002, '1701 16 50', 'CONNECTOR, COMPRESSION, YHD 300', 'PIECE'),
+(2003, '1701 16 55', 'CONNECTOR, COMPRESSION, YHD 350', 'PIECE'),
+(2004, '1701 16 40', 'CONNECTOR, COMPRESSION, YHD-150', 'PIECE'),
+(2005, '1701 16 59', 'CONNECTOR, COMPRESSION, YHD-400', 'PIECE'),
+(2006, '1701 16 35', 'CONNECTOR, COMPRESSION, YHO 100', 'PIECE'),
+(2007, '1701 16 37', 'CONNECTOR, COMPRESSION, YHO-125', 'PIECE'),
+(2008, '1737 00 03', 'CONNECTOR, GROUNDWIRE 3/8" FOR 3/4" BOLT', ''),
+(2009, '1741 83 85', 'CONNECTOR, GROUNDWIRE 3/8" FOR 5/8" BOLT', ''),
+(2010, '1179 20 40', 'CONNECTOR, PARALLEL GROOVE, #2/0 - 4/0', ''),
+(2011, '1750 00 00', 'CONNECTOR, SOLDERLESS', ''),
+(2012, '1760 10 00', 'CONNECTOR, SPLIT BOLT, #1/0', 'PIECE'),
+(2013, '1760 10 40', 'CONNECTOR, SPLIT BOLT, #1/0 - #4/0', 'PIECE'),
+(2014, '1760 02 00', 'CONNECTOR, SPLIT BOLT, #2', 'PIECE'),
+(2015, '1760 20 00', 'CONNECTOR, SPLIT BOLT, #2/0, BRASS, 50MM^2', 'PIECE'),
+(2016, '1760 30 00', 'CONNECTOR, SPLIT BOLT, #3/0, BRASS, 50MM^2', 'PIECE'),
+(2017, '1762 20 39', 'CONNECTOR, STIRRUP, #2/0 - 397.5 ACSR', 'PIECE'),
+(2018, '1751 40 10', 'CONNECTOR, WEDGE TYPE, AMPACT, #4/0 - #1/0', 'PIECE'),
+(2019, '1751 40 40', 'CONNECTOR, WEDGE TYPE, AMPACT, #4/0 - #4/0', 'PIECE'),
+(2020, '1751 40 33', 'CONNECTOR, WEDGE TYPE, AMPACT, #4/0 - 336 MCM', 'PIECE'),
+(2021, '1751 33 33', 'CONNECTOR, WEDGE TYPE, AMPACT, 336 - 336 MCM', 'PIECE'),
+(2022, '1751 33 40', 'CONNECTOR, WEDGE TYPE, AMPACT, 336 MCM - #4/0', 'PIECE'),
+(2023, '1751 00 63', 'CONNECTOR, WEDGE TYPE, AMPACT, WCY63PB', 'PIECE'),
+(2024, '1751 08 20', 'CONNECTOR, WEDGE TYPE, AMPACT, WCY820', 'PIECE'),
+(2025, '1824 34 08', 'CROSSARM, STEEL, 3" X 4" X 08''', 'PIECE'),
+(2026, '1824 34 10', 'CROSSARM, STEEL, 3" X 4" X 10''', 'PIECE'),
+(2027, '1824 34 20', 'CROSSARM, STEEL, 3" X 4" X 20''', 'PIECE'),
+(2028, '1824 43 20', 'CROSSARM, STEEL, 4-5/8" X 3-5/8" X 20''', 'PIECE'),
+(2029, '1823 43 08', 'CROSSARM, WOOD, 4-5/8" X 3-5/8" X 08''', 'PIECE'),
+(2030, '1823 43 10', 'CROSSARM, WOOD, 4-5/8" X 3-5/8" X 10''', 'PIECE'),
+(2031, '1177 20 85', 'DEADEND GRIP, GUY, 3/8", 7 W', ''),
+(2032, '1177 30 19', 'DEADEND GRIP, SERVICE, PREFORMED, #6 ACSR', ''),
+(2033, '1170 30 29', 'DEADEND SERVICE, WEDGE TYPE, #4 ACSR', ''),
+(2034, '6792 10 00', 'DISTRIBUTION TIE, #1/0', ''),
+(2035, '6792 02 00', 'DISTRIBUTION TIE, #2', ''),
+(2036, '6792 20 00', 'DISTRIBUTION TIE, #2/0', ''),
+(2037, '6792 40 00', 'DISTRIBUTION TIE, #4/0, VTC - 1108', ''),
+(2038, '6792 22 00', 'DISTRIBUTION TIE, SIDE, #2/0', ''),
+(2039, '6529 01 00', 'FITTINGS, POWER FUSE HOLDER, SMD 1A', 'SET'),
+(2040, '6529 50 00', 'FITTINGS, POWER FUSE HOLDER, SMD-50', 'SET'),
+(2041, '1910 00 00', 'FUSE CUT-OUT, PRIMARY, 100 A, COOPER', 'SET'),
+(2042, '3501 00 02', 'FUSE CUT-OUT, PRIMARY, 100 AMPS., AB CHANCE', 'SET'),
+(2043, '1920 00 00', 'FUSE CUT-OUT, PRIMARY, 200 A, ABB', 'SET'),
+(2044, '3502 00 02', 'FUSE CUT-OUT, PRIMARY, 200 AMPS., AB CHANCE', 'SET'),
+(2045, '3501 00 08', 'FUSE CUT-OUT, 100 AMPS., 15 KV, JFI', 'SET'),
+(2046, '3502 00 08', 'FUSE CUT-OUT, 100 AMPS., 15 KV, JFI', 'SET'),
+(2047, '3646 01 40', 'FUSE LINK, UNIVERSAL, BOTTOM HEAD, 140 AMPERES', 'PIECE'),
+(2048, '3646 01 50', 'FUSE LINK, UNIVERSAL, BOTTOM HEAD, 150 AMP', 'PIECE'),
+(2049, '3646 02 00', 'FUSE LINK, UNIVERSAL, BOTTOM HEAD, 200 AMPERES', 'PIECE'),
+(2050, '3646 20 10', 'FUSELINK, TYPE K, 10 AMPS.', 'PIECE'),
+(2051, '3646 21 00', 'FUSELINK, TYPE K, 100 AMPS.', 'PIECE'),
+(2052, '3646 20 12', 'FUSELINK, TYPE K, 12 AMPS.', 'PIECE'),
+(2053, '3646 20 15', 'FUSELINK, TYPE K, 15 AMPS.', 'PIECE'),
+(2054, '3646 20 20', 'FUSELINK, TYPE K, 20 AMPS.', 'PIECE'),
+(2055, '3646 20 25', 'FUSELINK, TYPE K, 25 AMPS.', 'PIECE'),
+(2056, '3646 20 03', 'FUSELINK, TYPE K, 3 AMPS.', 'PIECE'),
+(2057, '3646 20 30', 'FUSELINK, TYPE K, 30 AMPS.', 'PIECE'),
+(2058, '3646 20 40', 'FUSELINK, TYPE K, 40 AMPS.', 'PIECE'),
+(2059, '3646 20 50', 'FUSELINK, TYPE K, 50 AMPS.', 'PIECE'),
+(2060, '3646 20 06', 'FUSELINK, TYPE K, 6 AMPS.', 'PIECE'),
+(2061, '3646 20 65', 'FUSELINK, TYPE K, 65 AMPS.', 'PIECE'),
+(2062, '3646 20 08', 'FUSELINK, TYPE K, 8 AMPS.', 'PIECE'),
+(2063, '3646 20 80', 'FUSELINK, TYPE K, 80 AMPS.', 'PIECE'),
+(2064, '3150 10 00', 'HOOK, BALL', 'PIECE'),
+(2065, '3150 20 00', 'HOOK, GUY', 'PIECE'),
+(2066, '3422 00 69', 'INSULATOR, PIN TYPE, PORCELAIN, ANSI, 69 KV', 'PIECE'),
+(2067, '3422 31 10', 'INSULATOR, PIN TYPE, PORCELAIN, ANSI, CLASS 55 - 3', 'PIECE'),
+(2068, '3422 51 10', 'INSULATOR, PIN TYPE, PORCELAIN, ANSI, CLASS 55 - 5', 'PIECE'),
+(2069, '3429 13 04', 'INSULATOR, POST TYPE, 13.2 KV, 4 GROOVES', 'PIECE'),
+(2070, '3429 13 05', 'INSULATOR, POST TYPE, 13.2 KV, 5 GROOVES', 'PIECE'),
+(2071, '3429 13 06', 'INSULATOR, POST TYPE, 13.2 KV, 6 GROOVES', 'PIECE'),
+(2072, '3429 69 17', 'INSULATOR, POST TYPE, 69 KV, 17 GROOVES', 'PIECE'),
+(2073, '3426 20 11', 'INSULATOR, SPOOL, 1-3/4", ANSI, CLASS 53 - 2', 'PIECE'),
+(2074, '3426 10 11', 'INSULATOR, SPOOL, 1-3/8", ANSI, CLASS 53 - 1', 'PIECE'),
+(2075, '3426 00 00', 'INSULATOR, SPOOL, 1-3/8", SERVICE', 'PIECE'),
+(2076, '3426 40 11', 'INSULATOR, SPOOL, 3", ANSI, CLASS 53 - 4', 'PIECE'),
+(2077, '3426 50 11', 'INSULATOR, SPOOL, ANSI, CLASS 53 - 5', 'PIECE'),
+(2078, '3429 03 34', 'INSULATOR, STATION POST, HIGH VOLTAGE SIDE, 34.5 K', 'PIECE'),
+(2079, '3429 03 69', 'INSULATOR, STATION POST, HIGH VOLTAGE SIDE, 69 KV', 'PIECE'),
+(2080, '3429 03 15', 'INSULATOR, STATION POST, LOW VOLTAGE SIDE, 15 KV', 'PIECE'),
+(2081, '3429 03 23', 'INSULATOR, STATION POST, LOW VOLTAGE SIDE, 23 KV', 'PIECE'),
+(2082, '3429 03 08', 'INSULATOR, STATION POST, LOW VOLTAGE SIDE, 7.5 KV', 'PIECE'),
+(2083, '3428 10 11', 'INSULATOR, SUSPENSION, 5-1/2" X 6", ANSI 52-1', 'PIECE'),
+(2084, '3428 30 11', 'INSULATOR, SUSPENSION, 5-3/4" X 10", ANSI 52-3', 'PIECE'),
+(2085, '3428 69 12', 'INSULATOR, SUSPENSION, 69 KV, CLEVIS TYPE', 'PIECE'),
+(2086, '3428 00 12', 'INSULATOR, SUSPENSION, DIST., POLYMER', 'PIECE'),
+(2087, '3428 00 13', 'INSULATOR, SUSPENSION, SILICON RUBBER', 'PIECE'),
+(2088, '5550 44 40', 'LAG, SCREW, 1/2" X 4"', ''),
+(2089, '5550 44 60', 'LAG, SCREW, 1/2" X 6"', ''),
+(2090, '5550 33 40', 'LAG, SCREW, 5/8" X 4"', ''),
+(2091, '3991 53 40', 'METER BASE, 4 JAWS, (METER KING)', 'UNIT'),
+(2092, '3991 03 50', 'METER BASE, 5 JAWS, RECTANGULAR', 'UNIT'),
+(2093, '3991 03 60', 'METER BASE, 6 JAWS, 3R TYPE', 'UNIT'),
+(2094, '3991 03 47', 'METER BASE, CL-100, 4 JAWS, RING TYPE, CIRCULAR', 'UNIT'),
+(2095, '3991 03 84', 'METER BASE, CL-10A, 8 JAWS, RINGLESS', 'UNIT'),
+(2096, '3992 00 00', 'METER CABINET', ''),
+(2097, '3992 00 03', 'METER CABINET, 3 SLOTS', ''),
+(2098, '3991 03 40', 'METER SOCKET, 4 JAWS', ''),
+(2099, '5910 16 00', 'METER, KWHR., 1 PHASE, CLASS 100, 2 W, FORM 1S', ''),
+(2100, '5910 17 00', 'METER, KWHR., 1 PHASE, CLASS 200, 30 A, FORM 2S', ''),
+(2101, '3991 00 00', 'METER, KWHR., 1 PHASE,30 A, BOTTOM CONNECTED', ''),
+(2102, '5910 36 00', 'METER, KWHR., 3 PHASE, CLASS 100, 5 TERMINAL', ''),
+(2103, '5910 35 00', 'METER, KWHR., 3 PHASE, CLASS 20, 240 V, 4 W, F 9S', ''),
+(2104, '5910 37 00', 'METER, KWHR., 3 PHASE, CLASS 200, 3 W, 30 A, F 12S', ''),
+(2105, '5910 30 00', 'METER, KWHR., 3 PHASE, ELECTRONIC, 120/480 V, F 48', ''),
+(2106, '3994 00 00', 'METER, KWHR., BOTTOM CONNECTED, THREE PHASE', ''),
+(2107, '5910 30 06', 'METER, KWHR., CL 100, FM1S, EDMI NC30, W/ METER SOCKET BASE', 'SET'),
+(2108, '5910 00 05', 'METER, KWHR., CL-20, 4 W, 240 V, FORM 5S', ''),
+(2109, '5910 40 05', 'METER, KWHR., CL-20, G.E., KV2C, 3P, 4W, 120-240 V', ''),
+(2110, '5910 05 05', 'METER, KWHR., CL-20, KV2C, 2 W, 240 V, FORM 3S', ''),
+(2111, '5910 10 05', 'METER, KWHR., CL-20, KV2C, 240 V, FORM 48A', ''),
+(2112, '5910 15 08', 'METER, KWHR., CL-200, FM 2S, 240 V, DUNCAN', ''),
+(2113, '5910 60 08', 'METER, KWHR., CL-200, FM 2S, 240 V, LANDIS & GYR', ''),
+(2114, '5910 85 08', 'METER, KWHR., CL-200, FM 2S, 240 V, SANGAMO', ''),
+(2115, '5910 90 08', 'METER, KWHR., CL-200, FM 2S, 240 V, W.H., W/ M BAS', ''),
+(2116, '5910 00 08', 'METER, KWHR., CL-200, G.E., FM2S, 3W, (BENECO)', 'SET'),
+(2117, '5910 46 08', 'METER, KWHR., CL-200, G.E., FM2S, 3W, TA30', ''),
+(2118, '5910 42 08', 'METER, KWHR., CL-200, G.E., KV2C, 1P, 3W, 240 V', ''),
+(2119, '5910 41 08', 'METER, KWHR., CL-200, G.E., KV2C, 3P, 4W, 120-480V', ''),
+(2120, '5910 43 08', 'METER, KWHR., CL-200, G.E., KV2C, 4 JAWS', ''),
+(2121, '5910 44 08', 'METER, KWHR., CL-200, G.E., KV2C, 7 JAWS', ''),
+(2122, '5910 45 08', 'METER, KWHR., CL-200, G.E., M-1210', ''),
+(2123, '5910 65 08', 'METER, KWHR., CL-200, METRIX', ''),
+(2124, '5910 80 08', 'METER, KWHR., CL-200, W.H.', ''),
+(2125, '5910 11 00', 'METER, KWHR., ELEC., 1P, 15(30), SOCKET TYPE', ''),
+(2126, '5910 15 07', 'METER, KWHR., ELEC., 1P, CL-100, ENERTECH', ''),
+(2127, '3991 05 03', 'METER, KWHR., ELECTRONIC, 1P, 10(30), ACESTAR', 'PIECE'),
+(2128, '3991 10 03', 'METER, KWHR., ELECTRONIC, 1P, 10(30), HOLLEY', 'PIECE'),
+(2129, '3991 15 03', 'METER, KWHR., ELECTRONIC, 1P, 10(30), MELCOINDA', 'PIECE'),
+(2130, '3991 20 03', 'METER, KWHR., ELECTRONIC, 1P, 10(30), METRIX', 'PIECE'),
+(2131, '3991 05 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), ACCURA', 'PIECE'),
+(2132, '3991 10 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), ALFA', 'PIECE'),
+(2133, '3991 15 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), AMERICO', 'PIECE'),
+(2134, '3991 20 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), CHINT', 'PIECE'),
+(2135, '3991 30 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), EDMI MK31', 'PIECE'),
+(2136, '3991 25 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), EVER', 'PIECE'),
+(2137, '3991 35 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), HOLLEY', 'PIECE'),
+(2138, '3991 70 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), JITSUI', 'PIECE'),
+(2139, '3991 40 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), METRIX', 'PIECE'),
+(2140, '3991 45 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), RINJI', 'PIECE'),
+(2141, '3991 50 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), SAFARI', 'PIECE'),
+(2142, '3991 55 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), SEITON', 'PIECE'),
+(2143, '3991 60 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), SNFN', 'PIECE'),
+(2144, '3991 65 06', 'METER, KWHR., ELECTRONIC, 1P, 10(60), UNITECH', 'PIECE'),
+(2145, '5910 00 04', 'METER, KWHR., ELECTRONIC, 1P, CL-10, ABB', 'PIECE'),
+(2146, '5910 10 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, AMQ', 'PIECE'),
+(2147, '5910 20 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, G.E. FM1S', 'PIECE'),
+(2148, '5910 25 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, INTECH', 'PIECE'),
+(2149, '5910 30 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, METRIX', 'PIECE'),
+(2150, '5910 00 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, REHAB', 'PIECE'),
+(2151, '5910 35 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, SAFARI', 'PIECE'),
+(2152, '5910 40 07', 'METER, KWHR., ELECTRONIC, 1P, CL-100, W.H.', ''),
+(2153, '3991 11 02', 'METER, KWHR., ELECTRONIC, 1P, CLASS 2, 15(30) A', ''),
+(2154, '5910 10 00', 'METER, KWHR., SOCKET TYPE, SINGLE PHASE', ''),
+(2155, '4290 30 38', 'NUT, LOCK, MF TYPE, 1/2"', 'PIECE'),
+(2156, '4290 30 75', 'NUT, LOCK, MF TYPE, 3/4"', 'PIECE'),
+(2157, '4290 30 63', 'NUT, LOCK, MF TYPE, 5/8"', 'PIECE'),
+(2158, '4290 20 63', 'NUT, OVAL EYE, 5/8", CONVENTIONAL', 'PIECE'),
+(2159, '4290 50 50', 'NUT, SQUARE, 1/2"', 'PIECE'),
+(2160, '4290 50 38', 'NUT, SQUARE, 3/8"', 'PIECE'),
+(2161, '4290 60 63', 'NUT, THIMBLE EYE, 5/8" SINGLE EYE', 'PIECE'),
+(2162, '4541 12 54', 'PIN, CROSSARM, CLAMP TYPE, 1" THREAD DIAMETER', 'PIECE'),
+(2163, '4541 21 51', 'PIN, CROSSARM, LONG SHANK, 1" THREAD DIAMETER', 'PIECE'),
+(2164, '4541 21 06', 'PIN, CROSSARM, STEEL, 5/8" X 06"', 'PIECE'),
+(2165, '4541 21 10', 'PIN, CROSSARM, STEEL, 5/8" X 10-3/4"', 'PIECE'),
+(2166, '4561 21 20', 'PIN, POLE TOP, CHANNEL, 1" THREAD, 20" LONG', 'PIECE'),
+(2167, '4680 04 27', 'PLATE, GROUNDING, POLE BUTT', ''),
+(2168, '4680 06 19', 'PLATE, GUY', ''),
+(2169, '4680 08 21', 'PLATE, REINFORCING, CROSSARM, 6" X 8"', 'PIECE'),
+(2170, '4822 50 31', 'POLE, CONCRETE, 25''', ''),
+(2171, '4823 00 31', 'POLE, CONCRETE, 30''', ''),
+(2172, '4823 50 31', 'POLE, CONCRETE, 35''', ''),
+(2173, '4824 00 31', 'POLE, CONCRETE, 40''', ''),
+(2174, '4824 50 31', 'POLE, CONCRETE, 45''', ''),
+(2175, '4822 52 31', 'POLE, CONCRETE, 50''', ''),
+(2176, '4825 00 31', 'POLE, CONCRETE, 55''', ''),
+(2177, '4825 50 31', 'POLE, CONCRETE, 60''', ''),
+(2178, '4826 00 31', 'POLE, CONCRETE, 65''', ''),
+(2179, '4826 50 31', 'POLE, CONCRETE, 70''', ''),
+(2180, '4822 50 41', 'POLE, STEEL, 25'', STANDARD, 3 mm THICK', ''),
+(2181, '4823 00 41', 'POLE, STEEL, 30'', STANDARD, 3 mm THICK', ''),
+(2182, '4823 50 41', 'POLE, STEEL, 35'', STANDARD, 3 mm THICK', ''),
+(2183, '4824 00 41', 'POLE, STEEL, 40'', STANDARD, 3 mm THICK', ''),
+(2184, '4824 50 41', 'POLE, STEEL, 45'', STANDARD, 3 mm THICK', ''),
+(2185, '4822 52 41', 'POLE, STEEL, 50'', STANDARD', ''),
+(2186, '4825 00 41', 'POLE, STEEL, 55'', STANDARD', ''),
+(2187, '4825 50 41', 'POLE, STEEL, 60'', STANDARD', ''),
+(2188, '4826 00 41', 'POLE, STEEL, 65'', STANDARD', ''),
+(2189, '4826 50 41', 'POLE, STEEL, 70'', STANDARD', ''),
+(2190, '4822 52 51', 'POLE, WOOD, 25'', CLASS 2', ''),
+(2191, '4822 53 51', 'POLE, WOOD, 25'', CLASS 3', ''),
+(2192, '4822 54 51', 'POLE, WOOD, 25'', CLASS 4', ''),
+(2193, '4822 55 51', 'POLE, WOOD, 25'', CLASS 5', ''),
+(2194, '4822 56 51', 'POLE, WOOD, 25'', CLASS 6', ''),
+(2195, '4823 02 51', 'POLE, WOOD, 30'', CLASS 2', ''),
+(2196, '4823 04 51', 'POLE, WOOD, 30'', CLASS 4', ''),
+(2197, '4823 05 51', 'POLE, WOOD, 30'', CLASS 5', ''),
+(2198, '4823 06 51', 'POLE, WOOD, 30'', CLASS 6', ''),
+(2199, '4823 00 51', 'POLE, WOOD, 30'', LIGHT WEIGHT', ''),
+(2200, '4823 52 51', 'POLE, WOOD, 35'', CLASS 2', ''),
+(2201, '4823 54 51', 'POLE, WOOD, 35'', CLASS 4', ''),
+(2202, '4823 55 51', 'POLE, WOOD, 35'', CLASS 5', ''),
+(2203, '4823 50 51', 'POLE, WOOD, 35'', LIGHT WEIGHT', ''),
+(2204, '4824 02 51', 'POLE, WOOD, 40'', CLASS 2', ''),
+(2205, '4824 03 51', 'POLE, WOOD, 40'', CLASS 3', ''),
+(2206, '4824 04 51', 'POLE, WOOD, 40'', CLASS 4', ''),
+(2207, '4824 00 51', 'POLE, WOOD, 40'', STANDARD', ''),
+(2208, '4824 52 51', 'POLE, WOOD, 45'', CLASS 2', ''),
+(2209, '4824 53 51', 'POLE, WOOD, 45'', CLASS 3', ''),
+(2210, '4824 54 51', 'POLE, WOOD, 45'', CLASS 4', ''),
+(2211, '4824 50 51', 'POLE, WOOD, 45'', STANDARD', ''),
+(2212, '4825 00 51', 'POLE, WOOD, 50'', STANDARD', ''),
+(2213, '4825 50 51', 'POLE, WOOD, 55'', STANDARD', ''),
+(2214, '4826 00 51', 'POLE, WOOD, 60'', STANDARD', ''),
+(2215, '4826 50 51', 'POLE, WOOD, 65'', STANDARD', ''),
+(2216, '6530 05 04', 'POWER FUSE, SM 5, 400E', ''),
+(2217, '6530 01 01', 'POWER FUSE, SMD 1-A, 100E', ''),
+(2218, '6530 01 02', 'POWER FUSE, SMD 1-A, 200E', ''),
+(2219, '6530 01 50', 'POWER FUSE, SMD 1-A, 50E', ''),
+(2220, '6530 01 65', 'POWER FUSE, SMD 1-A, 65E', ''),
+(2221, '6530 50 65', 'POWER FUSE, SMD 50, 65E', ''),
+(2222, '6530 50 80', 'POWER FUSE, SMD 50, 80E', ''),
+(2223, '6530 20 02', 'POWER FUSE, SMU-20, 200E', ''),
+(2224, '5361 85 08', 'ROD, ANCHOR, SINGLE EYE, 5/8" X 08"', ''),
+(2225, '5361 43 07', 'ROD, ANCHOR, THREADED ,SINGLE EYE, 3/4" X 07''', ''),
+(2226, '5361 83 07', 'ROD, ANCHOR, THREADED ,SINGLE EYE, 3/8" X 07''', ''),
+(2227, '5361 43 08', 'ROD, ANCHOR, THREADED, SINGLE EYE, 3/4" X 08''', ''),
+(2228, '5361 85 07', 'ROD, ANCHOR, THREADED, SINGLE EYE, 5/8" X 07''', ''),
+(2229, '5362 10 10', 'ROD, ANCHOR, THREADED, TWIN EYE,  1" X 10''', ''),
+(2230, '5362 43 08', 'ROD, ANCHOR, THREADED, TWIN EYE, 3/4" X 08''', ''),
+(2231, '5362 85 07', 'ROD, ANCHOR, THREADED, TWIN EYE, 5/8" X 07''', ''),
+(2232, '5731 20 02', 'ROD, ARMOR, PREFORMED, 2/0 ACSR DOUBLE SUPPORT', ''),
+(2233, '5731 20 01', 'ROD, ARMOR, PREFORMED, 2/0 ACSR SINGLE SUPPORT', ''),
+(2234, '5731 40 02', 'ROD, ARMOR, PREFORMED, 4/0 ACSR DOUBLE SUPPORT', ''),
+(2235, '5731 40 01', 'ROD, ARMOR, PREFORMED, 4/0 ACSR SINGLE SUPPORT', ''),
+(2236, '5387 85 08', 'ROD, GROUND, COPPER 5/8" X 08''', ''),
+(2237, '5387 85 10', 'ROD, GROUND, COPPER 5/8" X 10''', ''),
+(2238, '5386 85 07', 'ROD, GROUND, STEEL, GALVANIZED, 5/8" X 07''', ''),
+(2239, '5386 85 08', 'ROD, GROUND, STEEL, GALVANIZED, 5/8" X 08''', ''),
+(2240, '5386 85 10', 'ROD, GROUND, STEEL, GALVANIZED, 5/8" X 10''', ''),
+(2241, '5731 40 00', 'ROD, TAPPING, PREFORMED, 4/0 ACSR', ''),
+(2242, '5980 16 01', 'SEAL, KWHR METER, HS081 TWIST LOCK, W/ WIRE, BLUE', 'PIECE'),
+(2243, '5980 16 06', 'SEAL, KWHR METER, HS081 TWIST LOCK, W/ WIRE, ORANGE', 'PIECE'),
+(2244, '5980 16 04', 'SEAL, KWHR METER, TWIST LOCK, W/ WIRE, YELLOW', 'PIECE'),
+(2245, '5980 18 00', 'SEAL, METER, ALUMINUM, FLAT', ''),
+(2246, '5980 00 00', 'SEAL, METER, ORANGE', ''),
+(2247, '5980 14 01', 'SEAL, METER, PLASTIC SECURITY, BLUE', ''),
+(2248, '5980 14 02', 'SEAL, METER, PLASTIC SECURITY, GRAY', ''),
+(2249, '5980 14 03', 'SEAL, METER, PLASTIC SECURITY, GREEN', ''),
+(2250, '5980 14 04', 'SEAL, METER, PLASTIC SECURITY, ORANGE', ''),
+(2251, '5980 14 05', 'SEAL, METER, PLASTIC SECURITY, RED', ''),
+(2252, '5980 14 06', 'SEAL, METER, PLASTIC SECURITY, YELLOW', ''),
+(2253, '5980 10 01', 'SEAL, METER, ROTO TOOLESS, BLUE', ''),
+(2254, '5980 10 02', 'SEAL, METER, ROTO TOOLESS, GRAY', ''),
+(2255, '5980 10 03', 'SEAL, METER, ROTO TOOLESS, GREEN', ''),
+(2256, '5980 10 06', 'SEAL, METER, ROTO TOOLESS, YELLOW', ''),
+(2257, '5980 12 01', 'SEAL, METER, ROTO WITH 12" GALVANIZED WIRE, BLUE', ''),
+(2258, '5980 12 02', 'SEAL, METER, ROTO WITH 12" GALVANIZED WIRE, GRAY', ''),
+(2259, '5980 12 03', 'SEAL, METER, ROTO WITH 12" GALVANIZED WIRE, GREEN', ''),
+(2260, '5980 12 05', 'SEAL, METER, ROTO WITH 12" GALVANIZED WIRE, ORANGE', ''),
+(2261, '5980 12 06', 'SEAL, METER, ROTO WITH 12" GALVANIZED WIRE, YELLOW', ''),
+(2262, '5980 20 00', 'SEAL, METER, SPRING-LOK, ORANGE', ''),
+(2263, '5980 22 00', 'SEAL, METER, TOOLLES-ROTO, PLASTIC, ORANGE', ''),
+(2264, '1230 28 00', 'SHACKLE, ANCHOR, FORGED STEEL, GALVANIZED', 'PIECE'),
+(2265, '6000 21 04', 'SPACER, PIPE, 1/2" X 4"', ''),
+(2266, '6000 75 01', 'SPACER, PIPE, 3/4" X 1-1/2"', ''),
+(2267, '6063 00 38', 'SPLICE, COMPRESSION SLEEVE, 3/8"', ''),
+(2268, '6066 59 10', 'SPLICE, PREFORMED, FULL TENSION, #1/0 ACSR', ''),
+(2269, '6066 59 02', 'SPLICE, PREFORMED, FULL TENSION, #2 ACSR', ''),
+(2270, '6066 59 20', 'SPLICE, PREFORMED, FULL TENSION, #2/0 ACSR', ''),
+(2271, '6066 59 30', 'SPLICE, PREFORMED, FULL TENSION, #3/0 ACSR', ''),
+(2272, '6066 59 33', 'SPLICE, PREFORMED, FULL TENSION, #336.40 ACSR', ''),
+(2273, '6066 59 40', 'SPLICE, PREFORMED, FULL TENSION, #4/0 ACSR', ''),
+(2274, '6180 28 10', 'STAPLE, GROUNDWIRE, 1/2" X 2"  (POUNDS)', ''),
+(2275, '1172 40 01', 'STRAIN CLAMP, GUN TYPE, #4/0 ACSR WITH SOCKET EYE', 'PIECE'),
+(2276, '1174 40 01', 'CLAMP, SUSPENSION, E TYPE, #4/0 ACSR WITH SOCKET EYE', 'PIECE'),
+(2277, '6555 14 11', 'SWITCH GEAR, CONTINOUS CURRENT, 14.4KV NOMINAL, 11', ''),
+(2278, '6540 00 00', 'SWITCH, AERIAL, 600 AMPS', ''),
+(2279, '6540 00 06', 'SWITCH, AERIAL, 600 AMPS, LOAD BUSTER', ''),
+(2280, '6545 15 08', 'SWITCH, AIR BREAK, 15 KV, 800 AMPS, GANG TYPE', ''),
+(2281, '6545 15 00', 'SWITCH, AIR BREAK, 3 POLE UNIT 15 KV', ''),
+(2282, '6550 69 00', 'SWITCH, DISCONNECT, 69 KV', ''),
+(2283, '6550 00 06', 'SWITCH, DISCONNECT, S & C, 600 AMPS.', ''),
+(2284, '1832 17 31', 'SWITCH, POWER FUSE, 69 KV, SMD-50', ''),
+(2285, '1832 13 21', 'SWITCH, POWER FUSE, SMD-20', ''),
+(2286, '6561 00 00', 'SWITCH, REGULATOR, BY-PASS DISC.', ''),
+(2287, '6912 06 00', 'TRANSFORMER, CURRENT, 0.6 KV OUTDOOR, RATIO', ''),
+(2288, '6912 15 03', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 100:5', ''),
+(2289, '6912 15 04', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 150:5', ''),
+(2290, '6912 15 05', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 200:5', ''),
+(2291, '6912 15 01', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 25:5', ''),
+(2292, '6912 15 06', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 300:5', ''),
+(2293, '6912 15 07', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 400:5', ''),
+(2294, '6912 15 02', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 50:5', ''),
+(2295, '6912 15 09', 'TRANSFORMER, CURRENT, 15 KV OUTDOOR, RATIO 800:5', ''),
+(2296, '6912 15 00', 'TRANSFORMER, CURRENT, 15 KV, 100/75/50/50:5A', ''),
+(2297, '6912 06 05', 'TRANSFORMER, CURRENT, 600 V OUTDOOR, RATIO 200:5', ''),
+(2298, '6912 06 06', 'TRANSFORMER, CURRENT, 600 V OUTDOOR, RATIO 300:5', ''),
+(2299, '6912 84 00', 'TRANSFORMER, CURRENT, 8400, WTW', ''),
+(2300, '6912 00 03', 'TRANSFORMER, CURRENT, ABB, 100:5', ''),
+(2301, '6912 00 05', 'TRANSFORMER, CURRENT, ABB, 200:5', ''),
+(2302, '6932 11 32', 'TRANSFORMER, DIST., 10 KVA, G.E. PROLEC', ''),
+(2303, '6932 11 64', 'TRANSFORMER, DIST., 10 KVA, PHILEC', ''),
+(2304, '6934 14 01', 'TRANSFORMER, DIST., 15 KVA, ABB, REHAB.', ''),
+(2305, '6934 14 00', 'TRANSFORMER, DIST., 15 KVA, NO PLATE, REHAB.', ''),
+(2306, '6933 11 64', 'TRANSFORMER, DIST., 15 KVA, PHILEC', ''),
+(2307, '6933 14 94', 'TRANSFORMER, DIST., 15 KVA, VIJAI, REHAB.', ''),
+(2308, '6933 14 99', 'TRANSFORMER, DIST., 15 KVA, WESTINGHOUSE, REHAB.', ''),
+(2309, '6934 14 01', 'TRANSFORMER, DIST., 25 KVA, ABB, REHAB.', ''),
+(2310, '6934 14 07', 'TRANSFORMER, DIST., 25 KVA, CENTRAL MOLONEY, REHAB', ''),
+(2311, '6934 11 32', 'TRANSFORMER, DIST., 25 KVA, G.E. PROLEC', ''),
+(2312, '6934 14 31', 'TRANSFORMER, DIST., 25 KVA, G.E., REHAB.', ''),
+(2313, '6934 11 37', 'TRANSFORMER, DIST., 25 KVA, HIPERCORE', ''),
+(2314, '6934 11 38', 'TRANSFORMER, DIST., 25 KVA, JOCELYN FORGE', ''),
+(2315, '6934 14 00', 'TRANSFORMER, DIST., 25 KVA, NO PLATE, REHAB.', ''),
+(2316, '6934 11 64', 'TRANSFORMER, DIST., 25 KVA, PHILEC', ''),
+(2317, '6934 14 70', 'TRANSFORMER, DIST., 25 KVA, PONGSAN., REHAB.', ''),
+(2318, '6935 11 32', 'TRANSFORMER, DIST., 37.5 KVA, G.E. PROLEC', ''),
+(2319, '6935 11 36', 'TRANSFORMER, DIST., 37.5 KVA, HIPERCORE, D/B', ''),
+(2320, '6935 11 37', 'TRANSFORMER, DIST., 37.5 KVA, HIPPERCORE', ''),
+(2321, '6935 14 67', 'TRANSFORMER, DIST., 37.5 KVA, POLE STAR, REHAB.', ''),
+(2322, '6935 14 79', 'TRANSFORMER, DIST., 37.5 KVA, SAN JIANG, REHAB.', ''),
+(2323, '6936 11 32', 'TRANSFORMER, DIST., 50 KVA, G.E. PROLEC', ''),
+(2324, '6936 14 31', 'TRANSFORMER, DIST., 50 KVA, G.E., REHAB.', ''),
+(2325, '6936 14 49', 'TRANSFORMER, DIST., 50 KVA, KUHLMAN, REHAB.', ''),
+(2326, '6936 14 76', 'TRANSFORMER, DIST., 50 KVA, RTE, REHAB.', ''),
+(2327, '6936 14 85', 'TRANSFORMER, DIST., 50 KVA, S/T, REHAB.', ''),
+(2328, '6936 14 90', 'TRANSFORMER, DIST., 50 KVA, TOP TRANS, REHAB.', ''),
+(2329, '6936 14 99', 'TRANSFORMER, DIST., 50 KVA, WESTINGHOUSE, REHAB.', ''),
+(2330, '6937 11 32', 'TRANSFORMER, DIST., 75 KVA, G.E. PROLEC', ''),
+(2331, '6937 12 67', 'TRANSFORMER, DIST., 75 KVA, G.E., SECOND HAND', ''),
+(2332, '6937 11 67', 'TRANSFORMER, DIST., 75 KVA, POLE STAR', ''),
+(2333, '6930 10 05', 'TRANSFORMER, POLE TYPE, CONVENTIONAL,  5 KVA', ''),
+(2334, '6930 10 50', 'TRANSFORMER, POLE TYPE, CONVENTIONAL,  50 KVA', ''),
+(2335, '6930 10 75', 'TRANSFORMER, POLE TYPE, CONVENTIONAL,  75 KVA', ''),
+(2336, '6930 10 10', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 10 KVA', ''),
+(2337, '6930 11 00', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 100 KVA', ''),
+(2338, '6930 10 15', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 15 KVA', ''),
+(2339, '6930 11 67', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 167 KVA', ''),
+(2340, '6930 10 25', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 25 KVA', ''),
+(2341, '6930 12 50', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 250 KVA', ''),
+(2342, '6930 13 33', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 333 KVA', ''),
+(2343, '6930 10 37', 'TRANSFORMER, POLE TYPE, CONVENTIONAL, 37.5 KVA', ''),
+(2344, '6930 20 10', 'TRANSFORMER, POLE TYPE, CSP, 10 KVA', ''),
+(2345, '6930 20 15', 'TRANSFORMER, POLE TYPE, CSP, 15 KVA', ''),
+(2346, '6930 20 25', 'TRANSFORMER, POLE TYPE, CSP, 25 KVA', ''),
+(2347, '6930 20 05', 'TRANSFORMER, POLE TYPE, CSP, 5 KVA', ''),
+(2348, '6930 20 50', 'TRANSFORMER, POLE TYPE, CSP, 50 KVA', ''),
+(2349, '6920 00 00', 'TRANSFORMER, POTENTIAL', ''),
+(2350, '6920 15 10', 'TRANSFORMER, POTENTIAL, 15.5 KV, 70:1', ''),
+(2351, '6920 00 20', 'TRANSFORMER, POTENTIAL, 4800', ''),
+(2352, '7101 59 13', 'WASHER, ROUND, 1-3/8" DIA.', 'PIECE'),
+(2353, '7103 59 31', 'WASHER, ROUND, 1-3/8" DIA., 9/16", HOLE', 'PIECE'),
+(2354, '7103 59 31', 'WASHER, ROUND, 1-3/8" DIA., 9/16", HOLE', 'PIECE'),
+(2355, '7102 20 00', 'WASHER, SQUARE, 2" X 2", FLAT', 'PIECE'),
+(2356, '7102 46 00', 'WASHER, SQUARE, 4" X 4" X 1/2"', 'PIECE'),
+(2357, '7102 44 00', 'WASHER, SQUARE, 4" X 4" X 1/4"', 'PIECE'),
+(2358, '7101 38 04', 'WASHER, SQUARE, CURVE, 3" X 3" X 5/16", 11/16" HOL', 'PIECE'),
+(2359, '7101 44 04', 'WASHER, SQUARE, CURVE, 4" X 4" X 1/4", 11/16" HOLE', 'PIECE'),
+(2360, '7101 47 04', 'WASHER, SQUARE, CURVE, 4" X 4" X 5/8", 11/16" HOLE', 'PIECE'),
+(2361, '7102 21 03', 'WASHER, SQUARE, FLAT, 2" X 2" X 1/16", 5/8" HOLE', 'PIECE'),
+(2362, '7102 24 03', 'WASHER, SQUARE, FLAT, 2" X 2" X 1/4", 5/8" HOLE', 'PIECE'),
+(2363, '7102 20 41', 'WASHER, SQUARE, FLAT, 2-1/4" X 2-1/4" X 3/16", 3/4 HOLE', 'PIECE'),
+(2364, '7102 46 06', 'WASHER, SQUARE, FLAT, 4" X 4" X 1/2", 7/8" HOLE', 'PIECE'),
+(2365, '7102 44 03', 'WASHER, SQUARE, FLAT, 4" X 4" X 1/4", 5/8" HOLE', 'PIECE'),
+(2366, '7102 42 05', 'WASHER, SQUARE, FLAT, 4" X 4" X 1/8", 5/8" HOLE', 'PIECE'),
+(2367, '7102 43 01', 'WASHER, SQUARE, FLAT, 4" X 4" X 3/16"', 'PIECE'),
+(2368, '7102 45 04', 'WASHER, SQUARE, FLAT, 4" X 4" X 3/8", 11/16" HOLE', 'PIECE'),
+(2369, '7102 47 04', 'WASHER, SQUARE, FLAT, 4" X 4" X 5/8", 11/16" HOLE', 'PIECE'),
+(2370, '7510 10 22', 'WIRE HOLDER, SERVICE', ''),
+(2371, '7232 14 03', 'WIRE, GROUND, GALVANIZED, 3 STRAND, #4 AWG', ''),
+(2372, '7232 04 03', 'WIRE, GROUNDING, ALUMINUM ALLOY, 3 STRAND #4 AWG', ''),
+(2373, '7386 07 00', 'WIRE, GUY, HIGH STRENGTH, 7/16", GALVANIZED', ''),
+(2374, '7386 41 00', 'WIRE, GUY, STEEL, 1/4"', ''),
+(2375, '7383 83 07', 'WIRE, GUY, STEEL, 3/8, 7 STRAND', ''),
+(2376, '6999 00 10', 'WIRE, MAGNETIC, #10', ''),
+(2377, '6999 00 12', 'WIRE, MAGNETIC, #12', ''),
+(2378, '6999 00 13', 'WIRE, MAGNETIC, #13', ''),
+(2379, '6999 00 14', 'WIRE, MAGNETIC, #14', ''),
+(2380, '6999 00 15', 'WIRE, MAGNETIC, #15', ''),
+(2381, '6999 00 16', 'WIRE, MAGNETIC, #16', ''),
+(2382, '6999 00 17', 'WIRE, MAGNETIC, #17', ''),
+(2383, '6999 00 18', 'WIRE, MAGNETIC, #18', ''),
+(2384, '3999 00 00', 'WIRE, SEALING, 2 STRAND, 1000 FT/ ROLL', ''),
+(2385, '7231 05 03', 'WIRE, TAPE, ARMOR, ALLOY, 0.5" X 0.3"', ''),
+(2386, '7232 04 01', 'WIRE, TIE, ALUMINUM ALLOY, SOFT, #4 AWG', ''),
+(2387, 'HM001 01 00 00', 'ADAPTER, PVC, 1"', ''),
+(2388, 'HM001 01 05 00', 'ADAPTER, PVC, 1 1/2"', ''),
+(2389, 'HM001 02 00 00', 'ADAPTER, PVC, 2"', ''),
+(2390, 'HM001 05 00 00', 'ADAPTER, PVC, 1/2"', ''),
+(2391, 'HM002 01 00 00', 'ALIGATOR CLIP BIG', ''),
+(2392, 'HM002 02 00 00', 'ALIGATOR CLIP SMALL', ''),
+(2393, 'HM003 02 05 38', 'ANGLE VALVE, 1/2" X 3/8"', ''),
+(2394, 'HM003 02 25 38', 'ANGLE VALVE, 1/4" X 3/8"', ''),
+(2395, 'HM003 02 38 38', 'ANGLE VALVE, 3/8" X 3/8"', ''),
+(2396, 'HM004 40 00 00', 'BALLAST, 40WATTS', ''),
+(2397, 'HM005 05 00 00', 'BALL VALVE, 1/2"', ''),
+(2398, 'HM005 75 00 00', 'BALL VALVE 3/4"', ''),
+(2399, 'HM005 80 00 10', 'BLADE, HACKSAW, STEEL', ''),
+(2400, 'HM006 03 00 00', 'BARREL BOLT, CP DIAMOND BRAND 3"', 'PIECE'),
+(2401, 'HM008 01 00 00', 'BRASS ADAPTER, #1', ''),
+(2402, 'HM008 01 25 00', 'BRASS ADAPTER, #11/4', ''),
+(2403, 'HM008 02 00 00', 'BRASS FAUCET', ''),
+(2404, 'HM008 05 00 00', 'BRASS ADAPTER, #1/2', ''),
+(2405, 'HM008 75 00 00', 'BRASS ADAPTER, #3/4', ''),
+(2406, 'HM009 01 18 00', 'BULB, CFL, 18W', ''),
+(2407, 'HM009 01 26 00', 'BULB, CFL, 26W', ''),
+(2408, 'HM009 02 18 00', 'BULB, SL, 18W', ''),
+(2409, 'HM009 02 26 00', 'BULB, SL, 26W', ''),
+(2410, 'HM009 03 26 00', 'BULB, S2, 26W', ''),
+(2411, 'HM010 01 36 00', 'BULB, FLOURECENT, 36W', ''),
+(2412, 'HM010 01 40 00', 'BULB, FLOURECENT, 40 W', ''),
+(2413, 'HM010 02 00 00', 'BULB, INCANDESCENT', ''),
+(2414, 'HM010 03 12 00', 'BULB, HALOGEN 12v', ''),
+(2415, 'HM011 06 00 00', 'CABLE TIE, 6", PLASTIC, 100 PC/PACK', ''),
+(2416, 'HM011 08 00 00', 'CABLE TIE, 8", PLASTIC, 100 PC/PACK', ''),
+(2417, 'HM012 01 00 00', 'CHECK VALVE #1', ''),
+(2418, 'HM013 75 00 00', 'C- CLAMP 3/4', 'PIECE'),
+(2419, 'HM014 30 00 00', 'CIRCUIT BREAKER 30A W/ ENCLOSURE', ''),
+(2420, 'HM014 40 00 10', 'CONDUIT, METAL, FLEXIBLE, 1"', ''),
+(2421, 'HM014 40 00 12', 'CONDUIT, METAL, FLEXIBLE, 1/2"', ''),
+(2422, 'HM014 50 00 01', 'CONNECTOR, ST., 1"', ''),
+(2423, 'HM014 50 00 12', 'CONNECTOR, ST., 1/2"', ''),
+(2424, 'HM014 50 00 34', 'CONNECTOR, ST., 3/4"', ''),
+(2425, 'HM015 12 00 00', 'CORR.12", G.I.', ''),
+(2426, 'HM016 01 01 00', 'COUPLING, G.I. #1', ''),
+(2427, 'HM017 01 75 00', 'COUPLING, G.I. #3/4', ''),
+(2428, 'HM018 02 75 00', 'COUPLING, PVC,  #3/4', ''),
+(2429, 'HM019 01 01 25', 'COUPLING, G.I. 11/4', ''),
+(2430, 'HM019 01 50 00', 'COUPLING, G.I. 1/2', ''),
+(2431, 'HM020 01 02 90', 'ELBOW, PVC, 2", 90Ã¯Â¿Â½, ORANGE', ''),
+(2432, 'HM020 01 50 90', 'ELBOW, PVC, 1/2", 90Ã¯Â¿Â½, ORANGE', ''),
+(2433, 'HM020 02 01 00', 'ELBOW, G.I. #1', ''),
+(2434, 'HM020 02 01 45', 'ELBOW, G.I. 1 X 45', ''),
+(2435, 'HM020 02 01 50', 'ELBOW, G.I. 1-1/2"', ''),
+(2436, 'HM020 02 50 00', 'ELBOW, G.I. 1/2"', ''),
+(2437, 'HM020 02 75 00', 'ELBOW, G.I., 3/4', ''),
+(2438, 'HM020 02 75 12', 'ELBOW, G.I., 3/4 X 1/2', ''),
+(2439, 'HM020 03 01 50', 'ELBOW, PLASTIC, 1-1/2"', ''),
+(2440, 'HM021 01 00 50', 'ENTRANCE CAP, 1/2"', ''),
+(2441, 'HM021 01 01 00', 'ENTRANCE CAP, 1"', ''),
+(2442, 'HM021 01 02 00', 'ENTRANCE CAP, 2"', ''),
+(2443, 'HM021 01 75 00', 'ENTRANCE CAP, 3/4"', ''),
+(2444, 'HM022 01 44 04', 'FAUCET, PB #4404', ''),
+(2445, 'HM023 01 06 00', 'FILE #6', ''),
+(2446, 'HM024 01 16 00', 'FLAT CORD #16', ''),
+(2447, 'HM025 01 02 25', 'FLOOD LIGHT, METAL HALIDE, 250W', ''),
+(2448, 'HM026 01 36 00', 'FLOURESCENT, TUBE, 36W', ''),
+(2449, 'HM026 01 40 00', 'FLOURESCENT, TUBE, 40W', ''),
+(2450, 'HM027 00 01 00', 'GATE VALVE #1', ''),
+(2451, 'HM027 01 50 00', 'GATE VALVE, 1/2', ''),
+(2452, 'HM028 01 00 00', 'INSTALLATION TOOL KIT, BURYDY,W/ ACCESSORIES', ''),
+(2453, 'HM028 10 20 30', 'NEMA 3M ENCL., 2P/3P, TOC', ''),
+(2454, 'HM029 01 00 00', 'KNIFE SWITCH', ''),
+(2455, 'HM030 60 00 00', 'KSB 60A', ''),
+(2456, 'HM031 01 50 00', 'LAG SCREW, 1 1/2', ''),
+(2457, 'HM031 01 50 04', 'LAG SCREW, 1/2 X 4', ''),
+(2458, 'HM032 01 00 00', 'LED MEGATORCH LAMP', ''),
+(2459, 'HM033 01 00 00', 'MOULDING, PLASTIC', ''),
+(2460, 'HM034 01 25 40', 'NIPPLE ,1-1/4 X 4"', ''),
+(2461, 'HM034 38 03 01', 'NIPPLE, 3/8 X 3" G.I.', ''),
+(2462, 'HM034 50 01 00', 'NIPPLE, 1X2, G.I', ''),
+(2463, 'HM034 50 02 01', 'NIPPLE, 1/2 X 2, G.I.', ''),
+(2464, 'HM034 50 03 01', 'NIPPLE, 1/2 X 3, G.I.', ''),
+(2465, 'HM034 50 04 01', 'NIPPLE, 1/2 X 4, G.I.', ''),
+(2466, 'HM034 50 06 01', 'NIPPLE, 1/2 X 6, G.I.', ''),
+(2467, 'HM035 03 01 00', 'OUTLET, 3-GANG, EAGLE', ''),
+(2468, 'HM036 01 05 16', 'PHILIP SCREW, 5/16 X 8', ''),
+(2469, 'HM036 01 14 08', 'PHILIP SCREW, 1/4 X 8', ''),
+(2470, 'HM037 01 75 00', 'PIPE CLAMP 3/4"', 'PIECE'),
+(2471, 'HM037 02 00 00', 'PIPE SPACER', ''),
+(2472, 'HM037 03 01 01', 'PIPE, CLAMP, 1", PVC', 'PIECE'),
+(2473, 'HM037 03 01 25', 'PIPE, CLAMP, 1 1/4", PVC', 'PIECE'),
+(2474, 'HM038 03 50 20', 'PIPE, CLAMP, 1/2 X 20mm, POLY', 'PIECE'),
+(2475, 'HM039 03 03 00', 'PIPE, CLAMP, METAL', 'PIECE'),
+(2476, 'HM039 03 50 00', 'PIPE, CLAMP, 1/2"', 'PIECE'),
+(2477, 'HM040 01 02 00', 'PIPE, G.I., 2"', ''),
+(2478, 'HM040 02 01 00', 'PIPE, PVC, 1"', ''),
+(2479, 'HM040 02 01 50', 'PIPE, PVC CONDUIT, 1/2"', ''),
+(2480, 'HM040 02 02 00', 'PIPE, PVC, 2"', ''),
+(2481, 'HM040 02 02 50', 'PIPE, PVC, BLUE, 1/2', ''),
+(2482, 'HM040 02 03 00', 'PIPE, PVC, 3"', ''),
+(2483, 'HM040 03 01 25', 'PIPE, P.E. 1-1/4"', ''),
+(2484, 'HM040 03 25 00', 'PIPE, P.E., 1/2', ''),
+(2485, 'HM040 03 75 00', 'PIPE, P.E., 3/4', ''),
+(2486, 'HM041 00 01 00', 'PLASTIC CAP FOR STEEL POLE', ''),
+(2487, 'HM042 00 50 00', 'PLUG, 1/2', ''),
+(2488, 'HM042 01 01 00', 'PLUG, G.I., #1', ''),
+(2489, 'HM042 01 02 00', 'PLUG, FEMALE, BACKLITE', ''),
+(2490, 'HM042 02 03 00', 'PLUG, MALE, H.D', ''),
+(2491, 'HM043 00 02 00', 'P-TRAP 2"', ''),
+(2492, 'HM044 30 00 00', 'RSB, 30A', ''),
+(2493, 'HM045 00 44 00', 'RECEPTACLE, 4X4', ''),
+(2494, 'HM045 01 44 00', 'RECEPTACLE, PORCELAIN 4 X 4', ''),
+(2495, 'HM045 02 00 00', 'RECEPTACLE BACKLITE, CLOSED PLASTIC', ''),
+(2496, 'HM045 03 01 00', 'RECEPTACLE W/ CHAIN, PLASTIC', ''),
+(2497, 'HM046 00 00 00', 'RECHARGEABLE FLASHLIGHT W/ CAR CHARGER & AC CHARGE', ''),
+(2498, 'HM047 01 75 50', 'REDUCER, G.I. 3/4 X 1/2', ''),
+(2499, 'HM048 10 02 00', 'ROYAL CORD 10/2', ''),
+(2500, 'HM048 14 02 00', 'ROYAL CORD 14/2', ''),
+(2501, 'HM049 00 00 00', 'RUBBER GROMMET', ''),
+(2502, 'HM050 00 00 00', 'SAFETY BOX', ''),
+(2503, 'HM050 01 81 50', 'SCREW, METAL, 8X1 1/2, SELF TAPPING', ''),
+(2504, 'HM050 01 83 75', 'SCREW, METAL, 8X3 3/4, SELF TAPPING', ''),
+(2505, 'HM051 01 25 01', 'SOCKET, G. I.,1 1/4 X 1"', ''),
+(2506, 'HM051 01 25 75', 'SOCKET, G. I., 1 1/4" X 3/4"', ''),
+(2507, 'HM052 01 00 00', 'SOLAR SWITCH', ''),
+(2508, 'HM053 01 40 01', 'SOLVENT,S-BLUE, 400cc', ''),
+(2509, 'HM054 01 75 00', 'STAPLE NAIL, 3/4"', ''),
+(2510, 'HM055 40 00 00', 'STARTER, 40W', ''),
+(2511, 'HM056 01 10 00', 'STEEL CABLE10MM', ''),
+(2512, 'HM057 00 00 00', 'STEW BOLT', ''),
+(2513, 'HM058 01 02 00', 'STREET LIGHTS WITH CAP, GREEN', ''),
+(2514, 'HM058 02 01 00', 'STREET LIGHTS  CAP, GREEN (COVER)', ''),
+(2515, 'HM059 01 00 00', 'TAPE, TEPLON', ''),
+(2516, 'HM059 02 00 00', 'ELECTRICAL TAPE, ARMAK', ''),
+(2517, 'HM059 02 00 00', 'TAPE, ELECTRICAL', 'ROLL'),
+(2518, 'HM060 01 01 00', 'TEE, G.I. #1', ''),
+(2519, 'HM060 01 01 50', 'TEE, G.I., 1-1/4" X 1/2"', ''),
+(2520, 'HM060 01 01 75', 'TEE, G.I. 1 X 3/4', ''),
+(2521, 'HM060 01 50 00', 'TEE, G.I. 1/2', ''),
+(2522, 'HM060 01 75 00', 'TEE, G.I.3/4', ''),
+(2523, 'HM061 01 00 00', 'TUMBLER SWITCH', ''),
+(2524, 'HM062 01 12 00', 'TROUBLE LIGHT, HALOGEN 12v', ''),
+(2525, 'HM063 01 00 00', 'UNION CONNECTOR', '');
+INSERT INTO `tbl_materials` (`entry_id`, `materialCode`, `materialDesc`, `unit`) VALUES
+(2526, 'HM064 01 00 00', 'U NAIL SKECH POINT', ''),
+(2527, 'HM065 00 00 00', 'WELDING CABLE', ''),
+(2528, 'HM066 03 16 75', 'WOOD SCREW, 3/16" X 3/4"', ''),
+(2529, 'HM066 08 01 00', 'WOOD SCREW, 8 X 1"', ''),
+(2530, 'HM066 08 50 02', 'WOOD SCREW, 8 X 1/2", SELF TAPPING', ''),
+(2531, 'HM066 10 01 02', 'WOOD SCREW, 10 X 1", SELF TAPPING', ''),
+(2532, 'HM067 01 12 02', 'WRENCH, ADJUSTABLE 12", KLEIN', ''),
+(2533, 'HM068 00 00 00', 'RUBBER GROMMET', ''),
+(2534, 'TL001 00 00 00', 'BOLO W/O SCAVARD', ''),
+(2535, 'TL001 00 01 00', 'BOLO W/  SCAVARD', ''),
+(2536, 'TL002 00 12 00', 'CLAMP STICK, GRIP ALL, STAINLESS STEEL, COMPONENTS', 'PIECE'),
+(2537, 'TL002 00 12 01', 'CLAMP STICK, Grip All, Shotgun, Folding, 6''-4" Fol', 'PIECE'),
+(2538, 'TL003 01 16 00', 'DISCONNECT, TOOL( HOTSTICK) TELESCOPIC, 24"', ''),
+(2539, 'TL003 01 20 00', 'DISCONNECT, TOOL( HOTSTICK) TELESCOPIC, 20", HASTI', ''),
+(2540, 'TL003 01 24 00', 'DISCONNECT, TOOL( HOTSTICK) TELESCOPIC, 16"', ''),
+(2541, 'TL003 01 35 00', 'DISCONNECT, TOOL( HOTSTICK) TELESCOPIC, 35"', ''),
+(2542, 'TL004 01 00 24', 'LADDER EXTENSION, 24-STEPS, RIGID, FIBERGLASS', ''),
+(2543, 'TL004 01 00 28', 'LADDER EXTENSION, 28-STEPS, RIGID, FIBERGLASS', ''),
+(2544, 'TL004 01 00 32', 'LADDER EXTENSION, 32-STEPS, RIGID, FIBERGLASS', ''),
+(2545, 'TL00500 00 00', 'SCYTHE W/O SIPONG', ''),
+(2546, 'TL00500 01 00', 'SCYTHE W/ SIPONG', ''),
+(2547, 'TL007 00 00 12', 'ADJUSTABLE WRENCH, 12"', ''),
+(2548, 'TL008 00 00 00', 'GRASS CUTTER, ELECTRIC', ''),
+(2549, 'TL009 00 00 08', 'PLIER, INSULATED GRIP, BRAND: NICHOLSON 8"', ''),
+(2550, 'TL010 00 00 00', 'CLAMP AMMETER CM-450BRAND :GREENLEE', 'PIECE'),
+(2551, 'TL012 00 00 00', 'BOLT CUTTER', ''),
+(2552, 'TL014 00 00 08', 'SIDE CUTTING PLIERS, 8"', ''),
+(2553, 'TL014 00 00 09', 'SIDE CUTTING PLIERS, 9"', ''),
+(2554, 'TL015 00 00 06', 'LONG NOSE, PLIERS, 6"', ''),
+(2555, 'TL015 00 01 00', 'LONG NOSE, CRESCENT', ''),
+(2556, 'TL016 00 00 00', 'STEEL TAPE', ''),
+(2557, 'TL017 00 00 00', 'VICE GRIP', ''),
+(2558, 'TL018 00 00 00', 'POLE DIGGER', ''),
+(2559, 'TL022 00 00 00', 'KYRITSU HIGH VOLTAGE INSOLATION', ''),
+(2560, 'TL024 00 00 00', 'PROTECTIVE WORKING CLOTHES (W/ PRINT & LOGO)', ''),
+(2561, 'TL026 00 00 00', 'HIGH VOLTAGE DIGITAL AMMETER (HALO-II)', ''),
+(2562, 'TL028 00 00 00', 'CLAMP AMMETER, DIGITAL, EXTECH,362066, TRUE RSM', 'PIECE'),
+(2563, 'TL031 00 00 00', 'CRIMPING TOOLS, "Burndy"', 'PIECE'),
+(2564, 'TL032 00 00 00', 'COMPRESSION TOOL', ''),
+(2565, 'TL033 00 00 00', 'CUTTER, Knife', ''),
+(2566, 'TL034 00 00 00', 'DEVICE, Early Warning', ''),
+(2567, 'TL035 00 00 00', 'DIGGING BAR', ''),
+(2568, 'TL044 01 00 00', 'AMPLIFIER, Model NE-5020C, S/N 44005776', ''),
+(2569, 'TL045 01 01 00', 'AMPLIFIER, Portable Wireless P.A. System, Rossetti', ''),
+(2570, 'TL046 00 58 18', 'AUGER BIT, 5/8" x 18"', ''),
+(2571, 'TL047 00 00 00', 'BLADE, Hacksaw', ''),
+(2572, 'TL049 00 00 00', 'IRON, Electric Flat', ''),
+(2573, 'TL050 00 00 00', 'LEG IRON, Without Gaff', ''),
+(2574, 'TL050 00 01 00', 'LEG IRON, With Gaff', ''),
+(2575, 'TL052 00 00 00', 'LEG STRAP', ''),
+(2576, 'TL053 00 00 00', 'MULTIPLE EARTH LOOP', ''),
+(2577, 'TL054 00 08 00', 'PLIER, Combination, 8", Unistar', ''),
+(2578, 'TL055 00 08 00', 'PLIER, Electrical, "Klien"8', ''),
+(2579, 'TL055 00 09 00', 'PLIER, Electrical, "Klien"9', ''),
+(2580, 'TL056 00 07 00', 'PLIER, Sealing, #7, With Engrave and Logo', ''),
+(2581, 'TL064 00 00 00', 'RATCHET', ''),
+(2582, 'TL068 00 00 00', 'SAW, Circular', ''),
+(2583, 'TL069 00 06 00', 'SCREWDRIVER, "Craftsman", 6"', ''),
+(2584, 'TL069 00 08 00', 'SCREWDRIVER, "Klein Tools", 8"', ''),
+(2585, 'TL077 00 00 01', 'SHOVEL, Hand, "Yombo"', ''),
+(2586, 'TL077 00 00 02', 'SHOVEL, Oshkos, 8 Feet, USA Made', ''),
+(2587, 'TL079 00 00 00', 'SIGNAL LIGHT', ''),
+(2588, 'TL083 01 00 00', 'TESTER, "Megger"', ''),
+(2589, 'TL085 00 00 00', 'UNIVERSAL JOINT, GMB', ''),
+(2590, 'TL087 00 00 00', 'WHEEL BARROW', ''),
+(2591, 'TL088 00 00 00', 'WIRE BIT', ''),
+(2592, 'TL089 00 00 01', 'WIRE GRIP, Big', ''),
+(2593, 'TL089 00 00 02', 'WIRE GRIP, Small', ''),
+(2594, 'TL090 00 10 00', 'WRENCH, Adjustable, 10"', ''),
+(2595, 'TL090 00 12 00', 'WRENCH, Adjustable, 12"', ''),
+(2596, 'TL103 00 00 00', 'CUTTER, Wire, With Nylon Rope', ''),
+(2597, 'TL104 00 00 00', 'HAMMER, Ball', ''),
+(2598, 'TL106 00 00 00', 'VOLT METER, Recording, "Angus"', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_meter`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_meter` (
+`mid` int(11) NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `subId` int(11) NOT NULL,
+  `feedId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_meter_profile`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_meter_profile` (
+  `mid` int(11) NOT NULL,
+  `appId` varchar(12) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `mReading` varchar(50) NOT NULL,
+  `mBrand` varchar(50) NOT NULL,
+  `mClass` varchar(50) NOT NULL,
+  `mSerial` varchar(50) NOT NULL,
+  `mERC` varchar(50) NOT NULL,
+  `mLabSeal` varchar(50) NOT NULL,
+  `mTerminal` varchar(50) NOT NULL,
+  `multiplier` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_meter_reading`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_meter_reading` (
+  `mid` int(11) NOT NULL,
+  `initial_reading` int(11) NOT NULL,
+  `old_reading` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_mr`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_mr` (
+  `mrNo` varchar(100) NOT NULL,
+  `mrDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `mrPurpose` varchar(100) NOT NULL,
+  `isSend` tinyint(4) NOT NULL,
+  `isApproved` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_mr`
+--
+
+INSERT INTO `tbl_mr` (`mrNo`, `mrDate`, `mrPurpose`, `isSend`, `isApproved`) VALUES
+('MR-M-15-0001', '2015-10-05 06:37:32', '', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_mr_content`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_mr_content` (
+  `mrNo` varchar(100) NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `mrQuantity` int(11) NOT NULL,
+  `issuedQuantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_mr_content`
+--
+
+INSERT INTO `tbl_mr_content` (`mrNo`, `entry_id`, `mrQuantity`, `issuedQuantity`) VALUES
+('MR-M-15-0001', 2042, 1, 0),
+('MR-M-15-0001', 2040, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_mr_wo`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_mr_wo` (
+  `mrNo` varchar(100) NOT NULL,
+  `wo` varchar(100) NOT NULL,
+  `appId` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_mr_wo`
+--
+
+INSERT INTO `tbl_mr_wo` (`mrNo`, `wo`, `appId`) VALUES
+('MR-M-15-0001', 'APEC-WOT-2015-9379', '20150911012'),
+('MR-M-15-0001', 'APEC-WOT-2015-0001', '20150914001');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_municipality`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_municipality` (
+`munId` int(11) NOT NULL,
+  `munDesc` varchar(20) NOT NULL,
+  `branch` varchar(2) DEFAULT NULL,
+  `area` varchar(4) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_municipality`
+--
+
+INSERT INTO `tbl_municipality` (`munId`, `munDesc`, `branch`, `area`) VALUES
+(1, 'BACACAY', 'B1', NULL),
+(2, 'CAMALIG', 'B2', 'A2'),
+(3, 'DARAGA', 'B2', 'A2'),
+(4, 'GUINOBATAN', 'B3', 'A1'),
+(5, 'JOVELLAR', 'B3', 'A1'),
+(6, 'LEGAZPI CITY', 'B2', 'A1'),
+(7, 'LIBON', 'B3', 'A2'),
+(8, 'LIGAO CITY', 'B3', 'A1'),
+(9, 'MALILIPOT', 'B1', NULL),
+(10, 'MALINAO', 'B1', NULL),
+(11, 'MANITO', 'B2', 'A1'),
+(12, 'OAS', 'B3', 'A2'),
+(13, 'PIO DURAN', 'B3', 'A1'),
+(14, 'POLANGUI', 'B3', 'A2'),
+(15, 'RAPU-RAPU', 'B2', 'A2'),
+(16, 'STO. DOMINGO', 'B1', NULL),
+(17, 'TABACO CITY', 'B1', NULL),
+(18, 'TIWI', 'B1', NULL),
+(19, 'ALBAY', 'B2', 'A1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_old_meter`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_old_meter` (
+  `mid` int(11) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `remarks` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_payment`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_payment` (
+`pid` int(11) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `appOR` int(11) NOT NULL,
+  `totalAmount` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_payment_inclusions`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_payment_inclusions` (
+`iid` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
+  `feeId` int(11) NOT NULL,
+  `amount` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_protection`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_protection` (
+`protectionId` tinyint(4) NOT NULL,
+  `protectionDesc` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_protection`
+--
+
+INSERT INTO `tbl_protection` (`protectionId`, `protectionDesc`) VALUES
+(1, 'FUSE'),
+(2, 'CIRCUIT BREAKER');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_reasons`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_reasons` (
+`reasonId` int(11) NOT NULL,
+  `reasonDesc` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_reasons`
+--
+
+INSERT INTO `tbl_reasons` (`reasonId`, `reasonDesc`) VALUES
+(1, 'Burned Meter'),
+(2, 'Damaged/Defective Meter'),
+(3, 'Stop Meter'),
+(4, 'Requested by consumer'),
+(5, 'For Calibration/Testing'),
+(6, 'Non-payment of bills'),
+(7, 'Illegal use of power'),
+(8, 'Contract expiration of service connection');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_seal`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_seal` (
+  `mid` int(11) NOT NULL,
+  `sealType` tinyint(4) NOT NULL COMMENT '1-erc, 2-terminal, 3-apec',
+  `sealNo` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_service`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_service` (
+`serviceId` int(11) NOT NULL,
+  `typeId` int(11) NOT NULL,
+  `serviceCode` varchar(5) NOT NULL,
+  `serviceDesc` varchar(30) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_service`
+--
+
+INSERT INTO `tbl_service` (`serviceId`, `typeId`, `serviceCode`, `serviceDesc`) VALUES
+(1, 1, 'NC', 'NEW CONNECTION'),
+(2, 2, 'RC', 'RECONNECTION'),
+(3, 2, 'CM', 'CHANGE METER'),
+(4, 3, 'TL', 'TEMPORARY LIGHTING'),
+(5, 3, 'TW', 'TEMPORARY WELDING'),
+(6, 4, 'RELOC', 'RELOCATE METER'),
+(7, 4, 'TM', 'TRANSFER METER'),
+(8, 5, 'CHECK', 'CHECK METER'),
+(9, 6, 'DC', 'DISCONNECTION'),
+(10, 7, 'UPG', 'UPGRADE TRANSFORMER'),
+(11, 7, 'DOWNG', 'DOWNGRADE TRANSFORMER'),
+(12, 7, 'RP', 'TRANSFORMER REPLACEMENT'),
+(13, 8, 'CB', 'CHANGE BILLING NAME/ADDRESS'),
+(14, 5, 'TEST', 'TEST METER'),
+(15, 3, 'SL', 'SPECIAL LIGHTING'),
+(16, 3, 'SW', 'SPECIAL WELDING');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_so`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_so` (
+`soId` int(11) NOT NULL,
+  `soNum` varchar(10) NOT NULL,
+  `soDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `soRemarks` varchar(50) DEFAULT NULL,
+  `mId` int(11) NOT NULL,
+  `cId` int(11) NOT NULL,
+  `appId` varchar(12) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_so`
+--
+
+INSERT INTO `tbl_so` (`soId`, `soNum`, `soDate`, `soRemarks`, `mId`, `cId`, `appId`) VALUES
+(1, 'A05465', '2015-10-03 08:05:07', NULL, 0, 35, '20150914001'),
+(2, 'A05466', '2015-10-05 06:32:08', NULL, 0, 28, '20150911012'),
+(3, 'A05467', '2015-10-05 06:44:04', NULL, 0, 17, '20150911001');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_so_fee`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_so_fee` (
+  `soId` int(11) NOT NULL,
+  `tfId` int(11) NOT NULL,
+  `feeAmount` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_so_fee`
+--
+
+INSERT INTO `tbl_so_fee` (`soId`, `tfId`, `feeAmount`) VALUES
+(1, 1, '5.00'),
+(1, 2, '2000.00'),
+(2, 1, '0.00'),
+(2, 2, '0.00'),
+(3, 1, '0.00'),
+(3, 2, '0.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_so_reason`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_so_reason` (
+  `soId` int(11) NOT NULL,
+  `trId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_so_undertake`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_so_undertake` (
+  `soId` int(11) NOT NULL,
+  `typeUndertakeId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_so_undertake`
+--
+
+INSERT INTO `tbl_so_undertake` (`soId`, `typeUndertakeId`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(2, 1),
+(2, 2),
+(2, 3),
+(2, 4),
+(2, 5),
+(3, 1),
+(3, 2),
+(3, 3),
+(3, 4),
+(3, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_status`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_status` (
+`statId` int(11) NOT NULL,
+  `statName` varchar(25) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_status`
+--
+
+INSERT INTO `tbl_status` (`statId`, `statName`) VALUES
+(1, 'FOR INSPECTION'),
+(2, 'FOR ACCOUNT NUMBER'),
+(3, 'FOR SO'),
+(4, 'FOR WO'),
+(5, 'FOR MR'),
+(6, 'FOR MCT'),
+(7, 'FOR INSTALLATION'),
+(8, 'FOR BILLING');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_substation`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_substation` (
+`subId` int(11) NOT NULL,
+  `subDescription` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_substation`
+--
+
+INSERT INTO `tbl_substation` (`subId`, `subDescription`) VALUES
+(1, 'TABACO'),
+(2, 'MALINAO'),
+(3, 'BITANO'),
+(4, 'WASHINGTON'),
+(5, 'LIGAO'),
+(6, 'POLANGUI');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_transactions`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_transactions` (
+`tid` int(11) NOT NULL,
+  `appId` varchar(12) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '1-inspection 2-account no 3-so 4-mr 5-mct 6-installation 7-billing',
+  `action` tinyint(4) NOT NULL DEFAULT '0',
+  `processedBy` tinyint(4) NOT NULL DEFAULT '0',
+  `approvedBy` tinyint(4) NOT NULL DEFAULT '0',
+  `dateApproved` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `dateProcessed` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `remarks` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_transactions`
+--
+
+INSERT INTO `tbl_transactions` (`tid`, `appId`, `cid`, `status`, `action`, `processedBy`, `approvedBy`, `dateApproved`, `dateProcessed`, `remarks`) VALUES
+(1, '20150909001', 1, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 01:44:20', NULL),
+(2, '20150909002', 2, 1, 1, 12, 13, '2015-09-18 02:51:42', '2015-09-09 02:39:54', ''),
+(3, '20150909003', 3, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 05:47:14', NULL),
+(4, '20150909005', 5, 1, 1, 12, 13, '2015-09-22 04:10:07', '2015-09-09 06:38:43', 'NEW CONNECTION-RESIDENTIAL'),
+(5, '20150909006', 6, 1, 1, 12, 13, '2015-09-15 06:30:06', '2015-09-09 06:46:12', ''),
+(6, '20150909007', 7, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 06:55:29', NULL),
+(7, '20150909008', 8, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 07:05:59', NULL),
+(8, '20150909009', 9, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 07:17:07', NULL),
+(9, '20150909010', 10, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 07:20:55', NULL),
+(10, '20150909011', 11, 1, 1, 12, 13, '2015-09-18 02:41:09', '2015-09-09 07:23:48', 'HOUSE METERING'),
+(11, '20150909012', 12, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 07:26:32', NULL),
+(12, '20150909014', 14, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-09 09:22:39', NULL),
+(13, '20150910001', 15, 1, 1, 12, 13, '2015-09-22 02:25:13', '2015-09-10 05:05:18', ''),
+(14, '20150910002', 16, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-10 08:47:43', NULL),
+(15, '20150909013', 13, 1, 1, 12, 13, '2015-09-18 02:38:18', '2015-09-09 07:29:32', 'POST METERING'),
+(16, '20150911001', 17, 1, 1, 12, 13, '2015-09-22 03:43:52', '2015-09-11 01:00:10', 'NEW CONNECTION- RESIDENTIAL'),
+(17, '20150911002', 18, 1, 1, 12, 13, '2015-09-22 03:40:48', '2015-09-11 01:05:35', 'NEW CONNECTION- RESIDENTIAL'),
+(18, '20150911003', 19, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-11 02:33:31', NULL),
+(19, '20150911004', 20, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-11 02:59:31', NULL),
+(20, '20150911006', 22, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-11 03:42:57', NULL),
+(21, '20150911007', 23, 1, 1, 12, 13, '2015-09-18 02:55:15', '2015-09-11 05:36:44', ''),
+(22, '20150911008', 24, 1, 1, 12, 13, '2015-09-18 02:44:16', '2015-09-11 05:51:42', 'POST METERING'),
+(23, '20150911009', 25, 1, 1, 12, 13, '2015-09-22 03:07:53', '2015-09-11 07:32:29', 'NEW CONNECTION- RESIDENTIAL'),
+(24, '20150911011', 27, 1, 1, 12, 13, '2015-09-22 03:14:55', '2015-09-11 08:04:36', 'NEW CONNECTION- RESIDENTIAL'),
+(25, '20150911012', 28, 1, 1, 12, 13, '2015-09-22 03:11:57', '2015-09-11 08:07:50', 'NEW CONNECTION-RESIDENTIAL'),
+(26, '20150912001', 29, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-12 01:26:55', NULL),
+(27, '20150912002', 30, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-12 02:21:49', NULL),
+(28, '20150912003', 31, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-12 07:57:02', NULL),
+(29, '20150912004', 32, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-12 08:10:40', NULL),
+(30, '20150912005', 33, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-12 08:17:48', NULL),
+(31, '20150912006', 34, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-12 08:34:33', NULL),
+(32, '20150914001', 35, 1, 1, 12, 13, '2015-09-22 03:37:12', '2015-09-14 00:41:57', 'NEW CONNECTION'),
+(33, '20150914002', 36, 1, 1, 12, 13, '2015-09-28 02:13:52', '2015-09-14 01:10:44', ''),
+(34, '20150914003', 37, 1, 1, 12, 13, '2015-09-28 02:11:38', '2015-09-14 01:23:13', ''),
+(35, '20150914004', 38, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-14 06:05:12', NULL),
+(36, '20150914005', 39, 1, 1, 12, 13, '2015-09-28 02:01:32', '2015-09-14 06:15:52', ''),
+(37, '20150914006', 40, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-14 06:22:41', NULL),
+(38, '20150914007', 41, 1, 1, 12, 13, '2015-09-28 01:54:59', '2015-09-14 06:46:20', ''),
+(39, '20150914008', 42, 1, 1, 12, 13, '2015-09-28 02:10:00', '2015-09-14 06:53:29', ''),
+(40, '20150914009', 43, 1, 1, 12, 13, '2015-09-28 02:03:55', '2015-09-14 07:06:18', 'METER 2'),
+(41, '20150915001', 44, 1, 1, 12, 13, '2015-09-28 02:07:38', '2015-09-15 00:52:30', ''),
+(42, '20150915002', 45, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-15 01:25:46', NULL),
+(43, '20150915003', 46, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-15 05:29:04', NULL),
+(44, '20150915004', 47, 1, 1, 12, 13, '2015-09-28 02:18:18', '2015-09-15 05:41:23', ''),
+(45, '20150909006', 6, 2, 1, 12, 11, '2015-10-02 02:01:27', '2015-09-15 06:30:06', NULL),
+(46, '20150916001', 48, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-16 05:00:31', NULL),
+(47, '20150916002', 49, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-16 08:16:30', NULL),
+(48, '20150917001', 50, 1, 1, 12, 13, '2015-09-28 01:44:46', '2015-09-17 02:21:09', ''),
+(49, '20150917002', 51, 1, 1, 12, 13, '2015-09-28 02:32:57', '2015-09-17 07:41:08', ''),
+(50, '20150909013', 13, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 02:38:18', NULL),
+(51, '20150909011', 11, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 02:41:09', NULL),
+(52, '20150911008', 24, 2, 1, 12, 11, '2015-10-02 02:00:20', '2015-09-18 02:44:16', NULL),
+(53, '20150909002', 2, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 02:51:42', NULL),
+(54, '20150911007', 23, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 02:55:15', NULL),
+(55, '20150918001', 52, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 05:31:50', NULL),
+(56, '20150918002', 53, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 06:58:19', NULL),
+(57, '20150918003', 54, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-18 07:01:47', NULL),
+(58, '20150919001', 55, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-19 01:21:42', NULL),
+(59, '20150919002', 56, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-19 06:43:53', NULL),
+(60, '20150919003', 57, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-19 08:31:52', NULL),
+(61, '20150921001', 58, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-21 01:14:26', NULL),
+(62, '20150921002', 59, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-21 09:14:45', NULL),
+(63, '20150921003', 60, 1, 1, 12, 13, '2015-09-28 02:21:14', '2015-09-21 09:15:37', ''),
+(64, '20150921004', 61, 1, 1, 12, 13, '2015-09-28 02:24:11', '2015-09-21 09:16:42', ''),
+(65, '20150921005', 62, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-21 09:17:45', NULL),
+(66, '20150910001', 15, 2, 1, 12, 11, '2015-10-02 01:59:28', '2015-09-22 02:25:13', NULL),
+(67, '20150922001', 63, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 02:48:36', NULL),
+(68, '20150911009', 25, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 03:07:53', NULL),
+(69, '20150911012', 28, 2, 1, 12, 11, '2015-10-02 01:58:28', '2015-09-22 03:11:57', NULL),
+(70, '20150911011', 27, 2, 1, 12, 11, '2015-10-02 01:57:45', '2015-09-22 03:14:55', NULL),
+(71, '20150914001', 35, 2, 1, 12, 11, '2015-10-02 01:57:09', '2015-09-22 03:37:12', NULL),
+(72, '20150911002', 18, 2, 1, 12, 11, '2015-10-02 01:56:26', '2015-09-22 03:40:48', NULL),
+(73, '20150911001', 17, 2, 1, 12, 11, '2015-10-02 01:55:40', '2015-09-22 03:43:52', NULL),
+(74, '20150909005', 5, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 04:10:07', NULL),
+(75, '20150922002', 64, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 05:50:39', NULL),
+(76, '20150922003', 65, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 05:57:18', NULL),
+(77, '20150922004', 66, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 07:36:30', NULL),
+(78, '20150923001', 67, 1, 1, 12, 13, '2015-09-28 01:51:57', '2015-09-23 05:42:09', ''),
+(79, '20150923002', 68, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-23 08:06:53', NULL),
+(80, '20150924001', 69, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-24 01:13:02', NULL),
+(81, '20150924002', 70, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-24 02:00:06', NULL),
+(82, '20150924003', 71, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-24 04:01:15', NULL),
+(83, '20150924004', 72, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-24 06:16:19', NULL),
+(84, '20150924005', 73, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-24 07:38:55', NULL),
+(85, '20150917001', 50, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 01:44:46', NULL),
+(86, '20150928001', 74, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 01:46:51', NULL),
+(87, '20150923001', 67, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 01:51:57', NULL),
+(88, '20150914007', 41, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 01:54:59', NULL),
+(89, '20150914005', 39, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:01:32', NULL),
+(90, '20150914009', 43, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:03:55', NULL),
+(91, '20150915001', 44, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:07:38', NULL),
+(92, '20150928002', 75, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:07:47', NULL),
+(93, '20150914008', 42, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:10:00', NULL),
+(94, '20150914003', 37, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:11:38', NULL),
+(95, '20150914002', 36, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:13:52', NULL),
+(96, '20150915004', 47, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:18:18', NULL),
+(97, '20150921003', 60, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:21:14', NULL),
+(98, '20150921004', 61, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:24:11', NULL),
+(99, '20150917002', 51, 2, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-22 03:12:57', NULL),
+(100, '20150928003', 76, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 02:07:47', NULL),
+(101, '20150928004', 77, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 06:57:57', NULL),
+(102, '20150928005', 78, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 07:02:35', NULL),
+(103, '20150928006', 79, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 07:16:51', NULL),
+(104, '20150928007', 80, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 08:12:40', NULL),
+(105, '20150928008', 81, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 08:58:05', NULL),
+(106, '20150928009', 82, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-28 09:28:30', NULL),
+(107, '20150929001', 83, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 01:09:36', NULL),
+(108, '20150929002', 84, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 01:14:56', NULL),
+(109, '20150929003', 85, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 01:39:40', NULL),
+(110, '20150929004', 86, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 02:02:46', NULL),
+(111, '20150929005', 87, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 02:53:29', NULL),
+(112, '20150929006', 88, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 02:56:06', NULL),
+(113, '20150929007', 89, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 05:15:35', NULL),
+(114, '20150929008', 90, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 06:03:37', NULL),
+(115, '20150929009', 91, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-29 06:44:41', NULL),
+(116, '20150930001', 92, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-30 06:36:23', NULL),
+(117, '20150930002', 93, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-30 06:47:29', NULL),
+(118, '20150930003', 94, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-09-30 07:09:50', NULL),
+(119, '20151001001', 95, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-01 08:22:32', NULL),
+(120, '20151001002', 96, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-01 08:23:12', NULL),
+(121, '20151001003', 97, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-01 08:24:19', NULL),
+(122, '20151002001', 98, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 00:47:14', NULL),
+(123, '20151002002', 99, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 00:59:21', NULL),
+(124, '20151002003', 100, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 01:01:20', NULL),
+(125, '20151002004', 101, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 01:07:49', NULL),
+(126, '20150911001', 17, 3, 1, 12, 12, '2015-10-05 06:44:05', '2015-10-02 01:55:40', NULL),
+(127, '20150911002', 18, 3, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 01:56:26', NULL),
+(128, '20150914001', 35, 3, 1, 12, 12, '2015-10-03 08:05:08', '2015-10-02 01:57:09', NULL),
+(129, '20150911011', 27, 3, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 01:57:45', NULL),
+(130, '20150911012', 28, 3, 1, 12, 12, '2015-10-05 06:32:08', '2015-10-02 01:58:28', NULL),
+(131, '20150910001', 15, 3, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 01:59:28', NULL),
+(132, '20150911008', 24, 3, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 02:00:20', NULL),
+(133, '20150909006', 6, 3, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 02:01:27', NULL),
+(134, '20151002005', 102, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 05:40:23', NULL),
+(135, '20151002006', 103, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 05:41:26', NULL),
+(136, '20151002007', 104, 1, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-02 07:50:29', NULL),
+(137, '20150914001', 35, 4, 1, 12, 6, '2015-10-05 03:45:34', '2015-10-03 08:05:08', NULL),
+(138, '20150914001', 35, 5, 1, 12, 6, '2015-10-05 06:37:33', '2015-10-05 03:45:34', NULL),
+(139, '20150911012', 28, 4, 1, 12, 6, '2015-10-05 06:34:27', '2015-10-05 06:32:08', NULL),
+(140, '20150911012', 28, 5, 1, 12, 6, '2015-10-05 06:37:33', '2015-10-05 06:34:27', NULL),
+(141, '20150911012', 28, 6, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-05 06:37:33', NULL),
+(142, '20150914001', 35, 6, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-05 06:37:33', NULL),
+(143, '20150911001', 17, 4, 0, 12, 0, '0000-00-00 00:00:00', '2015-10-05 06:44:05', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_type`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_type` (
+`typeId` int(11) NOT NULL,
+  `typeCode` varchar(1) NOT NULL,
+  `typeDesc` varchar(25) DEFAULT NULL,
+  `typeIcon` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_type`
+--
+
+INSERT INTO `tbl_type` (`typeId`, `typeCode`, `typeDesc`, `typeIcon`) VALUES
+(1, 'A', 'NEW CONNECTION', NULL),
+(2, 'B', 'RECONNECTION/CHANGE METER', 'connect.png'),
+(3, 'C', 'TEMPORARY/SPECIAL SERVICE', 'lightbulb.png'),
+(4, 'D', 'RELOCATION/TRANSFER METER', 'transmit.png'),
+(5, 'E', 'CHECK/TEST METER', 'meter_check.png'),
+(6, 'F', 'DISCONNECTION', 'disconnect.png'),
+(7, 'G', 'UPGRADE/DOWNGRADE', 'meter_updown.png'),
+(8, 'H', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_type_fee`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_type_fee` (
+`tfId` int(11) NOT NULL,
+  `typeId` int(11) NOT NULL,
+  `feeId` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_type_fee`
+--
+
+INSERT INTO `tbl_type_fee` (`tfId`, `typeId`, `feeId`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 3),
+(4, 3, 4),
+(5, 3, 5),
+(6, 3, 2),
+(7, 4, 6),
+(8, 7, 7),
+(9, 7, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_type_reason`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_type_reason` (
+`trId` int(11) NOT NULL,
+  `typeId` int(11) NOT NULL,
+  `reasonId` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_type_reason`
+--
+
+INSERT INTO `tbl_type_reason` (`trId`, `typeId`, `reasonId`) VALUES
+(1, 2, 1),
+(2, 2, 2),
+(3, 2, 3),
+(4, 5, 2),
+(5, 5, 3),
+(6, 6, 4),
+(7, 6, 5),
+(8, 6, 6),
+(9, 6, 7),
+(10, 6, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_type_undertake`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_type_undertake` (
+`suId` int(11) NOT NULL,
+  `typeId` int(11) NOT NULL,
+  `undertakeId` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_type_undertake`
+--
+
+INSERT INTO `tbl_type_undertake` (`suId`, `typeId`, `undertakeId`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 1, 4),
+(5, 1, 5),
+(6, 2, 6),
+(7, 2, 7),
+(8, 2, 8),
+(9, 2, 9),
+(10, 2, 10),
+(11, 3, 1),
+(12, 3, 2),
+(13, 3, 3),
+(14, 3, 4),
+(15, 4, 11),
+(16, 4, 12),
+(17, 4, 3),
+(18, 4, 13),
+(19, 4, 4),
+(20, 5, 14),
+(21, 5, 15),
+(22, 6, 16),
+(23, 6, 17),
+(24, 6, 18),
+(25, 6, 19),
+(26, 7, 20),
+(27, 7, 21),
+(28, 7, 22),
+(29, 7, 23),
+(30, 7, 24),
+(31, 7, 25);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_undertake`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_undertake` (
+`undertakeId` int(11) NOT NULL,
+  `undertakeDesc` varchar(45) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_undertake`
+--
+
+INSERT INTO `tbl_undertake` (`undertakeId`, `undertakeDesc`) VALUES
+(1, 'Connect Service Drop Wire'),
+(2, 'Install Meter'),
+(3, 'Seal Meter'),
+(4, 'Record Meter Data'),
+(5, 'Mount Transformer'),
+(6, 'Reconnect Service Drop Wire'),
+(7, 'Install Brand New Kwhr Meter'),
+(8, 'Reinstall Old Working Kwhr Meter'),
+(9, 'Retrieve Old Meter & Return to APEC'),
+(10, 'Record Old Meter & New Meter Data'),
+(11, 'Relocate Service Drop Wire & Meter'),
+(12, 'Transfer Service Drop Wire & Meter'),
+(13, 'Check Load'),
+(14, 'Check Meter'),
+(15, 'Test Meter'),
+(16, 'Disconnect Meter'),
+(17, 'Record Last Meter Reading'),
+(18, 'Return Meter to APEC'),
+(19, 'Secure Drop Wire'),
+(20, 'Install & Seal Kwhr Meter'),
+(21, 'Mount Distribution Transformer'),
+(22, 'Mount & Seal Curr./Volt. Transformer'),
+(23, 'Record Meter & Transformer Data'),
+(24, 'Change Status from Residential to Commercial'),
+(25, 'Change Status from Commercial to Residential');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_users` (
+`id` int(100) NOT NULL,
+  `Username` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `First_name` varchar(100) DEFAULT NULL,
+  `Mid_name` varchar(100) DEFAULT NULL,
+  `Last_name` varchar(100) DEFAULT NULL,
+  `Contact_No` varchar(100) DEFAULT NULL,
+  `Position` varchar(100) DEFAULT NULL,
+  `Department` varchar(100) DEFAULT NULL,
+  `Branch` varchar(100) DEFAULT NULL,
+  `area` varchar(2) DEFAULT NULL,
+  `Municipality` varchar(100) DEFAULT NULL,
+  `Status` tinyint(1) DEFAULT NULL,
+  `Type` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`id`, `Username`, `Password`, `First_name`, `Mid_name`, `Last_name`, `Contact_No`, `Position`, `Department`, `Branch`, `area`, `Municipality`, `Status`, `Type`) VALUES
+(13, 'a.bodino', 'fec3078305a7fb8477c7549ffd567255', 'ALEMAR', 'B', 'BODINO', NULL, 'INSPECTOR', 'TSD', 'B1', NULL, NULL, 1, 3),
+(10, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'admin', 'admin', NULL, 'admin', 'it', NULL, NULL, NULL, 1, 1),
+(11, 'dmg', 'a1053f60459c2f20d87ba9a2f484dfd2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 8),
+(2, 'frafer', '21232f297a57a5a743894a0e4a801fc3', 'Francis', NULL, 'Rafer', NULL, 'IT', 'IT', 'B3', 'A1', NULL, 1, 2),
+(1, 'gbalana', '21232f297a57a5a743894a0e4a801fc3', 'Gilbert', 'Bongalos', 'Balana', NULL, 'IT', 'IT', 'B2', 'A1', NULL, 1, 2),
+(3, 'inspector', '8e96c1fb87ac069c2a39f1ed61b10428', NULL, NULL, NULL, NULL, NULL, NULL, 'B2', NULL, NULL, 1, 3),
+(4, 'it', '21232f297a57a5a743894a0e4a801fc3', NULL, NULL, NULL, NULL, 'IT', 'IT', NULL, NULL, NULL, 0, 0),
+(12, 'l.imperial', '6d0fe598a082b7d535625ab14a307c3e', 'LEAH', NULL, 'IMPERIAL', NULL, 'ACCOUNT OFFICER', NULL, 'B1', NULL, 'TABACO', 1, 2),
+(5, 'markabo', '21232f297a57a5a743894a0e4a801fc3', 'Mark Jessie', 'Melitante', 'Abo', '09333514847', 'IT', 'IT', 'B2', 'A1', 'Daraga', 1, 4),
+(9, 'mmd', '2bfd74adce8bb8d8c10364902a2ae19c', 'mmd', 'mmd', 'mmd', NULL, NULL, NULL, NULL, NULL, NULL, 1, 5),
+(7, 'ogm', '21232f297a57a5a743894a0e4a801fc3', 'ogm', 'ogm', 'ogm', 'ogm', 'ogm', 'ogm', NULL, NULL, 'Albay', 1, 7),
+(14, 'r.molenilla', '5f4dcc3b5aa765d61d8327deb882cf99', 'RAYMOND', 'BATAGON', 'MOLENILLA', NULL, NULL, NULL, 'B2', NULL, NULL, 1, 2),
+(6, 'tsd', '7c59373bfdb38201b9215ff86f0ce6af', 'ROWELL', 'B', 'CAÑETA', NULL, NULL, 'TSD', 'B1', NULL, NULL, 1, 4),
+(8, 'urd', '21232f297a57a5a743894a0e4a801fc3', 'urd', 'urd', 'urd', 'urd', 'urd', 'urd', 'B2', NULL, 'daraga', 1, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_user_groups`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_user_groups` (
+`groupId` int(11) NOT NULL,
+  `groupName` varchar(20) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_user_groups`
+--
+
+INSERT INTO `tbl_user_groups` (`groupId`, `groupName`) VALUES
+(1, 'ADMIN'),
+(2, 'ao'),
+(3, 'INSPECTOR'),
+(4, 'TSD'),
+(5, 'MMD'),
+(6, 'URD'),
+(7, 'OGM'),
+(8, 'DMG');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_work_order`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_work_order` (
+  `wo` varchar(100) NOT NULL,
+  `appId` varchar(12) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `woDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `scope` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_work_order`
+--
+
+INSERT INTO `tbl_work_order` (`wo`, `appId`, `cid`, `woDate`, `scope`) VALUES
+('APEC-WOT-2015-0001', '20150914001', 35, '2015-10-05 03:45:34', 'NEW CONNECTION'),
+('APEC-WOT-2015-9379', '20150911012', 28, '2015-10-05 06:34:27', 'NEW CONNECTION');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_applications`
+--
+ALTER TABLE `tbl_applications`
+ ADD PRIMARY KEY (`appId`);
+
+--
+-- Indexes for table `tbl_barangay`
+--
+ALTER TABLE `tbl_barangay`
+ ADD PRIMARY KEY (`brgyId`), ADD KEY `munId` (`munId`), ADD KEY `subId` (`subId`), ADD KEY `feedId` (`feedId`);
+
+--
+-- Indexes for table `tbl_connection_sub`
+--
+ALTER TABLE `tbl_connection_sub`
+ ADD PRIMARY KEY (`subId`);
+
+--
+-- Indexes for table `tbl_connection_type`
+--
+ALTER TABLE `tbl_connection_type`
+ ADD PRIMARY KEY (`conId`);
+
+--
+-- Indexes for table `tbl_consumers`
+--
+ALTER TABLE `tbl_consumers`
+ ADD PRIMARY KEY (`cid`);
+
+--
+-- Indexes for table `tbl_consumer_address`
+--
+ALTER TABLE `tbl_consumer_address`
+ ADD KEY `cid` (`cid`), ADD KEY `brgyId` (`brgyId`), ADD KEY `munId` (`munId`);
+
+--
+-- Indexes for table `tbl_consumer_contact`
+--
+ALTER TABLE `tbl_consumer_contact`
+ ADD KEY `cid` (`cid`);
+
+--
+-- Indexes for table `tbl_consumer_photos`
+--
+ALTER TABLE `tbl_consumer_photos`
+ ADD KEY `cid` (`cid`);
+
+--
+-- Indexes for table `tbl_consumer_relation`
+--
+ALTER TABLE `tbl_consumer_relation`
+ ADD KEY `cid` (`cid`);
+
+--
+-- Indexes for table `tbl_entrance_type`
+--
+ALTER TABLE `tbl_entrance_type`
+ ADD PRIMARY KEY (`eid`);
+
+--
+-- Indexes for table `tbl_fee`
+--
+ALTER TABLE `tbl_fee`
+ ADD PRIMARY KEY (`feeId`);
+
+--
+-- Indexes for table `tbl_feeder`
+--
+ALTER TABLE `tbl_feeder`
+ ADD PRIMARY KEY (`feedId`), ADD KEY `subId` (`subId`);
+
+--
+-- Indexes for table `tbl_inspection`
+--
+ALTER TABLE `tbl_inspection`
+ ADD PRIMARY KEY (`inspectionId`);
+
+--
+-- Indexes for table `tbl_materials`
+--
+ALTER TABLE `tbl_materials`
+ ADD PRIMARY KEY (`entry_id`);
+
+--
+-- Indexes for table `tbl_meter`
+--
+ALTER TABLE `tbl_meter`
+ ADD PRIMARY KEY (`mid`);
+
+--
+-- Indexes for table `tbl_meter_reading`
+--
+ALTER TABLE `tbl_meter_reading`
+ ADD KEY `mid` (`mid`);
+
+--
+-- Indexes for table `tbl_mr`
+--
+ALTER TABLE `tbl_mr`
+ ADD PRIMARY KEY (`mrNo`);
+
+--
+-- Indexes for table `tbl_municipality`
+--
+ALTER TABLE `tbl_municipality`
+ ADD PRIMARY KEY (`munId`);
+
+--
+-- Indexes for table `tbl_old_meter`
+--
+ALTER TABLE `tbl_old_meter`
+ ADD KEY `mid` (`mid`);
+
+--
+-- Indexes for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+ ADD PRIMARY KEY (`pid`), ADD KEY `cid` (`cid`);
+
+--
+-- Indexes for table `tbl_payment_inclusions`
+--
+ALTER TABLE `tbl_payment_inclusions`
+ ADD PRIMARY KEY (`iid`), ADD KEY `fid` (`feeId`), ADD KEY `pid` (`pid`);
+
+--
+-- Indexes for table `tbl_protection`
+--
+ALTER TABLE `tbl_protection`
+ ADD PRIMARY KEY (`protectionId`);
+
+--
+-- Indexes for table `tbl_reasons`
+--
+ALTER TABLE `tbl_reasons`
+ ADD PRIMARY KEY (`reasonId`);
+
+--
+-- Indexes for table `tbl_seal`
+--
+ALTER TABLE `tbl_seal`
+ ADD KEY `mid` (`mid`);
+
+--
+-- Indexes for table `tbl_service`
+--
+ALTER TABLE `tbl_service`
+ ADD PRIMARY KEY (`serviceId`), ADD KEY `typeId` (`typeId`);
+
+--
+-- Indexes for table `tbl_so`
+--
+ALTER TABLE `tbl_so`
+ ADD PRIMARY KEY (`soId`);
+
+--
+-- Indexes for table `tbl_status`
+--
+ALTER TABLE `tbl_status`
+ ADD PRIMARY KEY (`statId`);
+
+--
+-- Indexes for table `tbl_substation`
+--
+ALTER TABLE `tbl_substation`
+ ADD PRIMARY KEY (`subId`);
+
+--
+-- Indexes for table `tbl_transactions`
+--
+ALTER TABLE `tbl_transactions`
+ ADD PRIMARY KEY (`tid`), ADD KEY `appId` (`appId`);
+
+--
+-- Indexes for table `tbl_type`
+--
+ALTER TABLE `tbl_type`
+ ADD PRIMARY KEY (`typeId`);
+
+--
+-- Indexes for table `tbl_type_fee`
+--
+ALTER TABLE `tbl_type_fee`
+ ADD PRIMARY KEY (`tfId`);
+
+--
+-- Indexes for table `tbl_type_reason`
+--
+ALTER TABLE `tbl_type_reason`
+ ADD PRIMARY KEY (`trId`);
+
+--
+-- Indexes for table `tbl_type_undertake`
+--
+ALTER TABLE `tbl_type_undertake`
+ ADD PRIMARY KEY (`suId`);
+
+--
+-- Indexes for table `tbl_undertake`
+--
+ALTER TABLE `tbl_undertake`
+ ADD PRIMARY KEY (`undertakeId`);
+
+--
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+ ADD PRIMARY KEY (`Username`), ADD UNIQUE KEY `Username` (`Username`), ADD KEY `Username_2` (`Username`), ADD KEY `id` (`id`);
+
+--
+-- Indexes for table `tbl_user_groups`
+--
+ALTER TABLE `tbl_user_groups`
+ ADD PRIMARY KEY (`groupId`);
+
+--
+-- Indexes for table `tbl_work_order`
+--
+ALTER TABLE `tbl_work_order`
+ ADD PRIMARY KEY (`wo`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_barangay`
+--
+ALTER TABLE `tbl_barangay`
+MODIFY `brgyId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=830;
+--
+-- AUTO_INCREMENT for table `tbl_connection_sub`
+--
+ALTER TABLE `tbl_connection_sub`
+MODIFY `subId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tbl_connection_type`
+--
+ALTER TABLE `tbl_connection_type`
+MODIFY `conId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tbl_consumers`
+--
+ALTER TABLE `tbl_consumers`
+MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=105;
+--
+-- AUTO_INCREMENT for table `tbl_entrance_type`
+--
+ALTER TABLE `tbl_entrance_type`
+MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tbl_fee`
+--
+ALTER TABLE `tbl_fee`
+MODIFY `feeId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tbl_feeder`
+--
+ALTER TABLE `tbl_feeder`
+MODIFY `feedId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `tbl_meter`
+--
+ALTER TABLE `tbl_meter`
+MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_municipality`
+--
+ALTER TABLE `tbl_municipality`
+MODIFY `munId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_payment_inclusions`
+--
+ALTER TABLE `tbl_payment_inclusions`
+MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_protection`
+--
+ALTER TABLE `tbl_protection`
+MODIFY `protectionId` tinyint(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tbl_reasons`
+--
+ALTER TABLE `tbl_reasons`
+MODIFY `reasonId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tbl_service`
+--
+ALTER TABLE `tbl_service`
+MODIFY `serviceId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `tbl_so`
+--
+ALTER TABLE `tbl_so`
+MODIFY `soId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tbl_status`
+--
+ALTER TABLE `tbl_status`
+MODIFY `statId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tbl_substation`
+--
+ALTER TABLE `tbl_substation`
+MODIFY `subId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `tbl_transactions`
+--
+ALTER TABLE `tbl_transactions`
+MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=144;
+--
+-- AUTO_INCREMENT for table `tbl_type`
+--
+ALTER TABLE `tbl_type`
+MODIFY `typeId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tbl_type_fee`
+--
+ALTER TABLE `tbl_type_fee`
+MODIFY `tfId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `tbl_type_reason`
+--
+ALTER TABLE `tbl_type_reason`
+MODIFY `trId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `tbl_type_undertake`
+--
+ALTER TABLE `tbl_type_undertake`
+MODIFY `suId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+--
+-- AUTO_INCREMENT for table `tbl_undertake`
+--
+ALTER TABLE `tbl_undertake`
+MODIFY `undertakeId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+MODIFY `id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `tbl_user_groups`
+--
+ALTER TABLE `tbl_user_groups`
+MODIFY `groupId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
